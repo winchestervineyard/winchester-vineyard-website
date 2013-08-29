@@ -1,8 +1,333 @@
 !!! 5
-%html
+:plain
+  <!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+%head
+  %meta{:charset => "utf-8"}/
+  %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+  %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+  %meta{:content => "Responsive Single Page HTML5 CSS3 Template", :name => "description"}/
+  %meta{:content => "HTML,CSS,XML,JavaScript,Template,HTML5,CSS3,JS,jQuery,Ajax,portfolio,single-page,one-page,Theme,bootstrap,bootstrap 3,twitter,facebook,instagram", :name => "keywords"}/
+  %title Winchester Vineyard
+  %link{:href => "favicon1.ico", :rel => "icon", :type => "image/x-icon"}/
+  / STYLESHEETS
+  %link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
+  %link{:href => "css/font-awesome.min.css", :rel => "stylesheet"}/
+  %link{:href => "css/styles.css", :rel => "stylesheet"}/
+  / FONTS
+  %script{:src => "js/custom.modernizr.js"}
 %body
-  FOO!
-  = yield
+  / START PAGE
+  #page
+    / START HEADER
+    %header#header.smooth
+      .row
+        .col-xs-12
+          #intro.text-container
+            #logo
+              %img{:alt => "logo", :src => "images/logo-400w-white-on-clear.png"}/
+            %h1
+              Rooted in God.
+              %br
+              Transforming our community.
+            %h2 Find out our story.
+            #explore
+              %a.scroll{:href => "#story"}
+                %i.icon-angle-down.icon-4x
+    / END HEADER
+    / START TOP-BAR
+    #top-bar
+      .container
+        .row
+          .col-md-4
+            #logo-lettering
+              %a.scroll{:href => "#header"}
+                %img{:alt => "Logo Lettering", :src => "images/logo-50h-white-on-clear.png"}/
+            /
+              the hidden classes of the official release are no accumlative. that's why we used the @TurchenkoAlex ones.
+              https://github.com/TurchenkoAlex/bootstrap/tree/3.0.0-wip/dist/css
+            #menu-mobile.hidden-md.hidden-lg
+              %i.icon-reorder.icon-2x
+          .col-md-8
+            %nav#top-navigation
+              %ul.list-inline
+                %li
+                  %a{:href => "#story"} story
+                %li
+                  %a{:href => "#sundays"} sundays
+                %li
+                  %a{:href => "#activity"} activities
+                %li
+                  %a{:href => "#news"} news
+                %li
+                  %a{:href => "#contact"} contact
+    / END TOP-BAR
+    / START STORY SECTION
+    %section#story
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3.intro
+          %h1 Our Stories
+          %p "It began almost 20 years ago, in a small living room near the centre of town. Now, the church is all over the city and beyond."
+          %p "I was an emotional wreck before coming back to church. They call this church the church of the second chance (and the third, and the fourth...!) and I've definitely experienced that first hand."
+          %p "We don't just exist for the members. Following Jesus is supposed to be about loving your city and neighbourhood, and we're trying to do that as best we can."
+          %p "You should come along and check it out on a Sunday. It's worth seeing for yourself whether God is actually real and the difference it might make to your life. Don't just believe what other people say!"
+      .studio
+        .row
+          .col-xs-12
+            #swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide
+                  %img{:alt => "slider image 1", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
+                .swiper-slide
+                  %img{:alt => "slider image 2", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
+                .swiper-slide
+                  %img{:alt => "slider image 3", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
+                .swiper-slide
+                  %img{:alt => "slider image 4", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
+                .swiper-slide
+                  %img{:alt => "slider image 5", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
+                .swiper-slide
+                  %img{:alt => "slider image 6", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
+    / END STUDIO SECTION
+    / START SUNDAYS SECTION
+    %section#sundays
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3.intro
+          %h1 Sunday
+          %p
+            "The church meets each Sunday morning. Things kick off around 10:30, but most people show up early to get coffee."
+          %p
+            %a{:href => '#contact'} Find out how to get to the meeting &raquo;
+      #services-list.container.row
+        .col-xs-3.col-sm-6.col-md-3
+          #worship.service.smooth
+            %i.icon-music.icon-4x
+            %h5.hidden-xs Worship
+        .col-xs-3.col-sm-6.col-md-3
+          #teaching.service.smooth
+            %i.icon-book.icon-4x
+            %h5.hidden-xs Teaching
+        .col-xs-3.col-sm-6.col-md-3
+          #praying.service.smooth
+            %i.icon-cloud-download.icon-4x
+            %h5.hidden-xs Praying
+        .col-xs-3.col-sm-6.col-md-3
+          #coffee.service.smooth
+            %i.icon-coffee.icon-4x
+            %h5.hidden-xs Coffee
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            #worship-skills.skills-bar
+              .row
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p "We normally spend about half an hour with a band playing a few simple songs, and people sing if they want to or just sit and watch."
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  %p "We're connecting with God. He helps us focus on him alone and not on ourselves. It's pretty liberating."
+            #teaching-skills.skills-bar
+              .row
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p "Most Sundays we have 20-30 minutes of teaching based on something in the bible. It's always really practical: like a fuel injection for the soul."
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  %p "I think it's really important to know what's real and what isn't, otherwise we are ruled by our feelings and whims."
+              %p
+                %a{:href => '#news'} Latest talk downloads &raquo;
+            #praying-skills.skills-bar
+              .row
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p "People come in all sorts of places emotionally and spiritually. God always meets them where they're at - he's so kind and merciful."
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  %p "The people leading the service always make space to pray for the sick and for those who need help, and anyone challenged by the events of the morning."
+            #coffee-skills.skills-bar
+              .row
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p "We always make time to hang out, drink coffee, and chat after things are finished up."
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  %p "Usually everyone finally gets kicked out at least an hour after the official finish!"
+    / END SERVICES SECTION
+    / START WORKS SECTION
+    %section#activity
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3.intro
+          %h1 Things we do
+          %p "I really wanted to be a part of a church that hangs out and is active throughout the week, not just on a Sunday morning all dressed up."
+          %p "There's a huge amount that goes on here: band jamming sessions, life group meetups, children's clothes giveaways, feeding the homeless on a Saturday night."
+      #work-container.container.row
+        .col-xs-12.col-md-4.mix.all.branding
+          #work-1.work
+            %img{:alt => "work", :src => "http://placehold.it/720x540/999999/1a1a1a&amp;text=720x540"}/
+            .work-info
+              %h6 Sample Caption 1
+        .col-xs-12.col-md-4.mix.all.branding
+          #work-2.work
+            %img{:alt => "work", :src => "http://placehold.it/720x540/999999/1a1a1a&amp;text=aspect+ratio+4:3"}/
+            .work-info
+              %h6 Sample Caption 2
+        .col-xs-12.col-md-4.end.mix.all.branding
+          #work-3.work
+            %img{:alt => "work", :src => "http://placehold.it/720x540/999999/1a1a1a&amp;text=720x540"}/
+            .work-info
+              %h6 Sample Caption 3
+    / END WORKS SECTION
+    / START SOCIAL SECTION
+    %section#news
+      .row
+        .col-xs-12.col-sm-8
+          %h1 Latest news
+          %br
+          .row
+            .col-xs-12.col-sm-4.mix.all
+              %h3 Quiz Night
+              %p
+                "Form a team to take on all comers at our Quiz night on 4th October. We're raising money for the XLP Research Trust."
+                %a
+                  Sign up
+              %br
+              %br
+            .col-xs-12.col-sm-4.mix.all
+              %h3 Love after Marriage
+              %p
+                "Take an in-depth look at your marriage combining excellent teaching, practical application and the power of the Holy Spirit. Starts Sat 14th September."
+                %a
+                  Call to find out more
+              %br
+              %br
+            .col-xs-12.col-sm-4.end.mix.all
+              %h3 Burn
+              %p
+                "Some of us are meeting to pray and worship on the second Friday of every month at St John's house from 7pm."
+                %a
+                  Email Steve for details
+              %br
+              %br
+        .col-xs-12.col-sm-4
+          %h1 Sunday talks
+          %br
+          .row
+            .col-xs-12.mix.all
+              %h3 27th August 2013
+              %p
+                "The key to all of this is love..."
+                %br
+                Peter Davey,
+                %strong Fruits of the Spirit
+                %br
+                %a
+                  Listen
+                %a
+                  Download
+                %a
+                  Slides
+              %br
+              %br
+            .col-xs-12.mix.all
+              %h3 27th August 2013
+              %p
+                "The key to all of this is love..."
+                %br
+                Peter Davey,
+                %strong Fruits of the Spirit
+                %br
+                %a
+                  Listen
+                %a
+                  Download
+                %a
+                  Slides
+              %br
+              %br
 
-  BAR BAR
-  END
+    / END SOCIAL SECTION
+    / START CONTACTS SECTION
+    %section#contact
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3.intro
+          %h1 Contact us
+          %p "Get in touch if you have questions. Our office is open Monday to Friday from 9:30, or just show up on a Sunday morning."
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3
+          .contact-info
+            .row
+              .col-sm-4.contact
+                .icon
+                  %a{:href => 'mailto:hello@winvin.org.uk'}
+                    %i.icon-envelope.icon-3x
+                %p hello@winvin.org.uk
+              .col-sm-4.contact
+                .icon
+                  %a#map-link
+                    %i.icon-pushpin.icon-3x
+                %p
+                  Winchester Vineyard
+                  %br
+                  Bar End Road
+                  %br
+                  Winchester SO23 9NP
+              .col-sm-4.contact
+                .icon
+                  %a{:href => 'callto:+441962863217'}
+                    %i.icon-phone.icon-3x
+                %p +44 1962 863 217
+    / END CONTACTS SECTION
+    / START FOOTER
+    %footer
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3
+          %hr/
+          #social-profiles
+            %ul.centerUl
+              %li
+                %a
+                  %i.icon-facebook.icon-2x
+              %li
+                %a{:href => "https://twitter.com/winvinchurch", :target => "_blank"}
+                  %i.icon-twitter.icon-2x
+              %li
+                %a
+                  %i.icon-instagram.icon-2x
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3
+          %p#copyrights== Winchester Vineyard is part of the wider Vineyard® family of churches. This website is &copy; #{Time.now.year} Winchester Vineyard. All rights reserved.
+    / END FOOTER
+    #map
+      .arrow_box
+      #google-map
+  / END PAGE
+  / START PROJECT PAGE
+  #project-page
+    / START PROJECT-TOP-BAR
+    #project-top-bar
+      .row
+        .col-xs-2
+          #previous-project
+          #previous-project-name
+        .col-xs-8
+          #close-project
+        .col-xs-2
+          #next-project
+          #next-project-name
+    / END PROJECT-TOP-BAR
+    / START PROJECT
+    #project
+    / END PROJECT
+  / END PROJECT PAGE
+  / Bootstrap Scripts
+  %script{:src => "js/jquery.js"}
+  %script{:src => "js/bootstrap.min.js"}
+  / Jquery Scripts
+  %script{:src => "js/jquery.mixitup.min.js"}
+  %script{:src => "js/jquery.easing.js"}
+  / Swiper Plugin
+  %script{:src => "js/idangerous.swiper-1.9.3.js"}
+  / Feed Plugins
+  %script{:src => "js/jquery.timeago.js"}
+  %script{:src => "js/tweetable.jquery.js"}
+  %script{:src => "js/jquery.flickr.js"}
+  %script{:src => "js/jquery.instagram.js"}
+  / Cotton Specific Scripts
+  %script{:src => "js/scripts.js"}
+  / Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond)
+  %script{:src => "js/respond.min.js"}
+  %script{:src => 'http://maps.google.com/maps/api/js?sensor=false'}
+  %script{:src => 'js/jquery.gmap.js'}
+

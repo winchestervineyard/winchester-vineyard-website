@@ -16,6 +16,25 @@ $skyblue: rgb(121, 196, 198);
 $cornyellow: rgb(253, 212, 26);
 $lightgrey: rgb(246, 246, 244);
 
+.bg-grassgreen { background: $grassgreen; }
+.bg-purple { background: $purple; }
+.bg-red { background: $red; }
+.bg-darkgrey { background: $darkgrey; }
+.bg-seablue { background: $seablue; }
+.bg-skyblue { background: $skyblue; }
+.bg-cornyellow { background: $cornyellow; }
+.bg-lightgrey { background: $lightgrey !important }
+
+.grassgreen { color: $grassgreen; }
+.purple { color: $purple; }
+.red { color: $red; }
+.darkgrey { color: $darkgrey; }
+.seablue { color: $seablue; }
+.skyblue { color: $skyblue; }
+.cornyellow { color: $cornyellow; }
+.lightgrey { color: $lightgrey !important }
+.white { color: white; }
+
 $col-header: $seablue;
 $col-link: $seablue;
 $col-arrow: $skyblue;
@@ -49,7 +68,15 @@ time{color:#f00;}
    ========================================================================== */
 
 .text-right{text-align: right;}
-.intro{margin-bottom: 3.125em;text-align: center;}
+.intro {
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+.quote p {
+  color: #999 !important;
+}
+
 .fixed{position:fixed;top:-60px;}
 .smooth,.smooth img{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 
@@ -100,7 +127,15 @@ height: 100%;
 
 /* Intro Styles */
 
-#intro h1{margin-top: 0.5em;margin-bottom: 0;color: white;font-size: 1.875em;opacity:0;padding-top: 2em;}
+#intro h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  color: white;
+  font-size: 1.875em;
+  opacity:0;
+  padding-top: 2em;
+}
+
 #intro h2{margin-bottom: 0;font-size: 1.5em;opacity:0;padding-top: 2em; color: $cornyellow}
 #intro p{color:white;}
 #intro { text-align: center; background: url('/images/swatch-black50.png');  padding: 50px; display:none; }
@@ -108,7 +143,7 @@ height: 100%;
 #explore {opacity:0;margin-top: 0em;}
 #explore a {text-decoration: none;}
 #explore a i{font-size:6em;margin:0 auto; color:white; cursor:pointer; color:white;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
-.touch #explore a i:hover,.no-touch #explore a i:hover{color:$col-hover;}
+.touch #explore a i:hover,.no-touch #explore a i:hover{color:$cornyellow;}
 
 /* ==========================================================================
    Navigation Styles
@@ -129,7 +164,7 @@ height: 100%;
    All Section Styles
    ========================================================================== */
 
-section{padding-top: 3.125em;padding-bottom: 1.875em;text-align: center;}
+section{padding-top: 3.125em;padding-bottom: 1.875em;}
 section h1,.intro p{margin-bottom: 0; }
 
 
@@ -176,8 +211,8 @@ ul.social li a:hover i{color:white;}
 /* ==========================================================================
    Studio Styles
    ========================================================================== */
-section#story{padding-bottom: 0;overflow:hidden;}
-#story, #contact{background:$lightgrey;}
+section#stories{padding-bottom: 0;overflow:hidden;}
+#about, #contact{background:$lightgrey;}
 .swiper-slide:not(.swiper-slide-active) img{-webkit-filter: grayscale(100%);filter: url("data:image/svg+xml;filter: gray;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");}
 
 /* Swiper - Mobile Touch Slider CSS
@@ -250,7 +285,12 @@ section#story{padding-bottom: 0;overflow:hidden;}
    Feed Styles
    ========================================================================== */
 
-#news{background-color:white; text-align: center;padding-bottom: 0;}
+#news {
+  background-color:white;
+  padding-bottom: 0;
+  text-align: center
+}
+
 #news .row{max-width: none;}
 #news .intro, #news .intro h2{margin-bottom: 0;}
 
@@ -296,7 +336,10 @@ span.valid{background-image:url("../images/notifications/valid.svg");}
 
 .contact{margin-bottom: 1em;}
 
-.contact-info {margin-top:0em;}
+.contact-info {
+  margin-top: 0em;
+  text-align: center;
+}
 .contact-info p{margin-top: 1em;font-size: 1em;}
 .contact-info .icon a i{text-decoration: none;color:$col-icon;}
 .contact-info .icon a:hover i{color:black;}
@@ -362,6 +405,11 @@ footer
 /* Styles for Specific for bigger divices */
 @media (min-width: 992px) {
 
+  .quote p {
+    color: #999;
+  }
+
+
 
 
 	.intro{margin-bottom: 6.25em;}
@@ -376,7 +424,10 @@ footer
 
   #logo img{width:400px;}
 
-	#intro h1{margin-top: 1.25em;font-size: 3em;}
+  #intro h1 {
+    margin-top: 1.25em;
+    font-size: 3em;
+  }
 	#intro h2{font-size: 2.5em;}
 
 	#explore{margin-top: 0em;}

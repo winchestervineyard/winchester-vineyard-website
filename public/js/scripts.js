@@ -47,10 +47,10 @@ jQuery(document).ready(function() {
     /* Animation for Top Navigation */
     var scrollTop = jQuery(window).scrollTop();
 
-    if (scrollTop > jQuery('#story').offset().top-60 && animate == 'down') {
+    if (scrollTop > jQuery('#about').offset().top-60 && animate == 'down') {
       animate='up';
       jQuery('#top-bar').stop().animate({top:'0'}, 300);
-    } else if(scrollTop < jQuery('#story').offset().top-60 && animate == 'up'){
+    } else if(scrollTop < jQuery('#about').offset().top-60 && animate == 'up'){
       animate='down';
       jQuery('#top-bar').stop().animate({top:'-75px'}, 300);
     }
@@ -163,11 +163,24 @@ jQuery(document).ready(function() {
   /*-----------------------------------------------------------------------------------*/
   /*	Services
   /*-----------------------------------------------------------------------------------*/
+  var curAbout = 'community';
+
+  /* Services Animations */
+  jQuery('#about-list .service').click(function(){
+    jQuery('.service').removeClass('active');
+    jQuery(this).addClass('active');
+    var target = jQuery(this).attr('id');
+    jQuery("#"+curAbout+"-skills").slideUp(500, 'easeInOutExpo',function(){jQuery("#"+target+"-skills").slideDown(500, 'easeInOutExpo')});
+    curAbout = jQuery(this).attr('id');
+    jQuery('html, body').stop().animate({
+      scrollTop: jQuery('#about-list').offset().top-100
+    }, 1000,'easeInOutExpo');
+  });
 
   var curSkills="worship";
 
   /* Services Animations */
-  jQuery('.service').click(function(){
+  jQuery('#services-list .service').click(function(){
     jQuery('.service').removeClass('active');
     jQuery(this).addClass('active');
     var target = jQuery(this).attr('id');

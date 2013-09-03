@@ -32,7 +32,7 @@
               Transforming our community.
             %h2 Find out our story.
             #explore
-              %a.scroll{:href => "#story"}
+              %a.scroll{:href => "#about"}
                 %i.icon-angle-down.icon-4x
     / END HEADER
     / START TOP-BAR
@@ -52,7 +52,7 @@
             %nav#top-navigation
               %ul.list-inline
                 %li
-                  %a{:href => "#story"} story
+                  %a{:href => "#about"} about
                 %li
                   %a{:href => "#sundays"} sundays
                 %li
@@ -62,15 +62,70 @@
                 %li
                   %a{:href => "#contact"} contact
     / END TOP-BAR
-    / START STORY SECTION
-    %section#story
+    / START about SECTION
+    %section#about
+      .row
+        .col-xs-12.col-sm-6.col-sm-offset-3.intro
+          %h1 Winchester Vineyard
+          %p We are a christian church in Winchester, UK that's part of the wider Vineyard Family of Churches.
+          %p We have several hundred members from Winchester, Basingstoke, Southampton and the surrounding area.
+
+      #about-list.container.row
+        .col-xs-4
+          #community.service.smooth
+            %i.icon-home.icon-4x
+            %h5.hidden-xs Community
+        .col-xs-4
+          #small-groups.service.smooth
+            %i.icon-group.icon-4x
+            %h5.hidden-xs Small groups
+        .col-xs-4
+          #sundays.service.smooth
+            %i.icon-cloud-upload.icon-4x
+            %h5.hidden-xs Sundays
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            #community-skills.skills-bar
+              .row
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p We spend a good deal of our time out in the community.
+                  %p
+                    %a Things we do in the community &raquo;
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  .quote
+                    %p "We don't just exist for the members. Following Jesus is supposed to be about loving your city and neighbourhood, and we're trying to do that as best we can."
+            #small-groups-skills.skills-bar
+              .row
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p There are always small groups meeting throughout the week: some to pray and encourage each other in their faith, others just to have some fun.
+                  %p
+                    %a Find a small group near you &raquo;
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  .quote
+                    %p "I'm going through a very tough time with my family right now, and without the support of the people in my life group, I'm not sure how I would have got through the last six months."
+            #sundays-skills.skills-bar
+              .row.intro
+                .col-xs-12.col-sm-4.col-sm-offset-1
+                  %p Sunday mornings kick off at 10:30am, with childrens groups starting at 10:20. You are welcome to come early for coffee in the café area.
+                  %p
+                    %a More on what to expect on a Sunday &raquo;
+                .col-xs-12.col-sm-4.col-sm-offset-2
+                  .quote
+                    %p "It's a cliché, but it's really true that anyone is welcome on Sundays. There are new people every week, and plenty of people who aren't sure what they believe."
+    %section#stories
       .row
         .col-xs-12.col-sm-6.col-sm-offset-3.intro
           %h1 A few of our stories
           %p "It began almost 20 years ago, in a small living room near the centre of town. Now, the church is all over the city and beyond."
+          .quote
+            %p ~
           %p "I was an emotional wreck before coming back to church. They call this church the church of the second chance (and the third, and the fourth...!) and I've definitely experienced that first hand."
-          %p "We don't just exist for the members. Following Jesus is supposed to be about loving your city and neighbourhood, and we're trying to do that as best we can."
+          .quote
+            %p ~
           %p "Deep down, I never thought God actually intervened in people's lives: I figured he was far off and disinterested. That is, until I prayed for someone's back pain to go... and it did."
+          .quote
+            %p ~
           %p "You should come along and check it out on a Sunday. It's worth seeing for yourself whether God is actually real. Don't just believe what other people say!"
       .studio
         .row
@@ -99,8 +154,6 @@
             "The church meets each Sunday morning. Things kick off around 10:30, but most people show up early to get coffee."
           %p
             %a{:href => '#contact'} Find out how to get to the meeting &raquo;
-          %p
-            "The kids groups start from about 10:20 or so. They've got wonderful leaders who pray with them, sing with them and do loads of crafts and activites."
       #services-list.container.row
         .col-xs-3.col-sm-6.col-md-3
           #worship.service.smooth
@@ -133,8 +186,11 @@
                   %p "Most Sundays we have 20-30 minutes of teaching based on something in the bible. It's always really practical: like a fuel injection for the soul."
                 .col-xs-12.col-sm-4.col-sm-offset-2
                   %p "I think it's really important to know what's real and what isn't, otherwise we are ruled by our feelings and whims."
-              %p
-                %a{:href => '#news'} Latest talk downloads &raquo;
+              .row
+                .col-xs-12.col-sm-6.col-sm-offset-3
+                  %p
+                    We record all our Sunday talks.
+                    %a{:href => '#news'} Listen to the latest ones &raquo;
             #praying-skills.skills-bar
               .row
                 .col-xs-12.col-sm-4.col-sm-offset-1
@@ -183,6 +239,7 @@
               %h3 Quiz Night
               %p
                 "Form a team to take on all comers at our Quiz night on 4th October. We're raising money for the XLP Research Trust."
+                %br
                 %a
                   Sign up
               %br
@@ -191,6 +248,7 @@
               %h3 Love after Marriage
               %p
                 "Take an in-depth look at your marriage combining excellent teaching, practical application and the power of the Holy Spirit. Starts Sat 14th September."
+                %br
                 %a
                   Call to find out more
               %br
@@ -199,6 +257,7 @@
               %h3 Burn
               %p
                 "Some of us are meeting to pray and worship on the second Friday of every month at St John's house from 7pm."
+                %br
                 %a
                   Email Steve for details
               %br

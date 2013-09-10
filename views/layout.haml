@@ -54,7 +54,7 @@
                 %li
                   %a{:href => "#about"} about
                 %li
-                  %a{:href => "#sundays"} sundays
+                  %a{:href => "#sunday"} sundays
                 %li
                   %a{:href => "#activity"} activities
                 %li
@@ -89,9 +89,9 @@
             #community-skills.skills-bar
               .row
                 .col-xs-12.col-sm-4.col-sm-offset-1
-                  %p We spend a good deal of our time out in the community.
+                  %p We are a community focused church, spending lots of time serving the people around us.
                   %p
-                    %a Things we do in the community &raquo;
+                    %a{:href => '#activity'} Things we do in the community &raquo;
                 .col-xs-12.col-sm-4.col-sm-offset-2
                   .quote
                     %p "We don't just exist for the members. Following Jesus is supposed to be about loving your city and neighbourhood, and we're trying to do that as best we can."
@@ -113,40 +113,40 @@
                 .col-xs-12.col-sm-4.col-sm-offset-2
                   .quote
                     %p "It's a cliché, but it's really true that anyone is welcome on Sundays. There are new people every week, and plenty of people who aren't sure what they believe."
-    %section#stories
-      .row
-        .col-xs-12.col-sm-6.col-sm-offset-3.intro
-          %h1 A few of our stories
-          %p "It began almost 20 years ago, in a small living room near the centre of town. Now, the church is all over the city and beyond."
-          .quote
-            %p ~
-          %p "I was an emotional wreck before coming back to church. They call this church the church of the second chance (and the third, and the fourth...!) and I've definitely experienced that first hand."
-          .quote
-            %p ~
-          %p "Deep down, I never thought God actually intervened in people's lives: I figured he was far off and disinterested. That is, until I prayed for someone's back pain to go... and it did."
-          .quote
-            %p ~
-          %p "You should come along and check it out on a Sunday. It's worth seeing for yourself whether God is actually real. Don't just believe what other people say!"
-      .studio
-        .row
-          .col-xs-12
-            #swiper.swiper-container
-              .swiper-wrapper
-                .swiper-slide
-                  %img{:alt => "slider image 1", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
-                .swiper-slide
-                  %img{:alt => "slider image 2", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
-                .swiper-slide
-                  %img{:alt => "slider image 3", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
-                .swiper-slide
-                  %img{:alt => "slider image 4", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
-                .swiper-slide
-                  %img{:alt => "slider image 5", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
-                .swiper-slide
-                  %img{:alt => "slider image 6", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
+    -#%section#stories
+      -#.row
+        -#.col-xs-12.col-sm-6.col-sm-offset-3.intro
+          -#%h1 A few of our stories
+          -#%p "It began almost 20 years ago, in a small living room near the centre of town. Now, the church is all over the city and beyond."
+          -#.quote
+            -#%p ~
+          -#%p "I was an emotional wreck before coming back to church. They call this church the church of the second chance (and the third, and the fourth...!) and I've definitely experienced that first hand."
+          -#.quote
+            -#%p ~
+          -#%p "Deep down, I never thought God actually intervened in people's lives: I figured he was far off and disinterested. That is, until I prayed for someone's back pain to go... and it did."
+          -#.quote
+            -#%p ~
+          -#%p "You should come along and check it out on a Sunday. It's worth seeing for yourself whether God is actually real. Don't just believe what other people say!"
+      -#.studio
+        -#.row
+          -#.col-xs-12
+            -##swiper.swiper-container
+              -#.swiper-wrapper
+                -#.swiper-slide
+                  -#%img{:alt => "slider image 1", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
+                -#.swiper-slide
+                  -#%img{:alt => "slider image 2", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
+                -#.swiper-slide
+                  -#%img{:alt => "slider image 3", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
+                -#.swiper-slide
+                  -#%img{:alt => "slider image 4", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
+                -#.swiper-slide
+                  -#%img{:alt => "slider image 5", :src => "http://placehold.it/960x540/999999/1a1a1a&amp;text=960x540"}/
+                -#.swiper-slide
+                  -#%img{:alt => "slider image 6", :src => "http://placehold.it/960x540//1a1a1a/999999&amp;text=Best+with+aspect+ratio+16:9"}/
     / END STUDIO SECTION
     / START SUNDAYS SECTION
-    %section#sundays
+    %section#sunday
       .row
         .col-xs-12.col-sm-6.col-sm-offset-3.intro
           %h1 Sunday
@@ -214,17 +214,17 @@
       #work-container.container.row
         .col-xs-12.col-md-4.mix.all.branding
           #work-1.work
-            %img{:alt => "work", :src => "http://placehold.it/720x540/999999/1a1a1a&amp;text=720x540"}/
+            %img{:alt => "work", :src => "/images/photos/facepainting-fun-day.jpg"}/
             .work-info
               %h6 Sample Caption 1
         .col-xs-12.col-md-4.mix.all.branding
           #work-2.work
-            %img{:alt => "work", :src => "http://placehold.it/720x540/999999/1a1a1a&amp;text=aspect+ratio+4:3"}/
+            %img{:alt => "work", :src => "/images/photos/keyboard-fun-day.jpg"}/
             .work-info
               %h6 Sample Caption 2
         .col-xs-12.col-md-4.end.mix.all.branding
           #work-3.work
-            %img{:alt => "work", :src => "http://placehold.it/720x540/999999/1a1a1a&amp;text=720x540"}/
+            %img{:alt => "work", :src => "/images/photos/cakes-fun-day.jpg"}/
             .work-info
               %h6 Sample Caption 3
     / END WORKS SECTION
@@ -238,7 +238,7 @@
             .col-xs-12.col-sm-4.mix.all
               %h3 Quiz Night
               %p
-                "Form a team to take on all comers at our Quiz night on 4th October. We're raising money for the XLP Research Trust."
+                Form a team to take on all comers at our Quiz night on 4th October. We're raising money for the XLP Research Trust.
                 %br
                 %a
                   Sign up
@@ -247,7 +247,7 @@
             .col-xs-12.col-sm-4.mix.all
               %h3 Love after Marriage
               %p
-                "Take an in-depth look at your marriage combining excellent teaching, practical application and the power of the Holy Spirit. Starts Sat 14th September."
+                Take an in-depth look at your marriage combining excellent teaching, practical application and the power of the Holy Spirit. Starts Sat 14th September.
                 %br
                 %a
                   Call to find out more
@@ -305,7 +305,7 @@
       .row
         .col-xs-12.col-sm-6.col-sm-offset-3.intro
           %h1 Contact us
-          %p "Get in touch if you have questions. Our office is open Monday to Friday from 9:30, or just show up on a Sunday morning."
+          %p Get in touch if you have questions. Our office is open Monday to Friday from 9:30, or just show up on a Sunday morning.
       .row
         .col-xs-12.col-sm-6.col-sm-offset-3
           .contact-info

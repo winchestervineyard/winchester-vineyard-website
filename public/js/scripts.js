@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 /* Starting Animation on Load */
-$('<img/>').attr('src', '/images/high-st.jpg').load(function() {
+$('<img/>').attr('src', '/images/hero1.jpg').load(function() {
   jQuery('#intro').fadeIn(2000, function() {
     jQuery('h1').animate({opacity: '1', 'padding-top': '0'}, 1000,function() {
       jQuery('h2').animate({opacity: '1', 'padding-top': '0'}, 1000,function() {
@@ -142,11 +142,11 @@ jQuery(document).ready(function() {
   /*-----------------------------------------------------------------------------------*/
 
   /* Initialize Slider */
-  var swiper = jQuery('#swiper').swiper({
-    loop:true,
-    grabCursor: true,
-    autoPlay: 4000
-  });
+  //var swiper = jQuery('#swiper').swiper({
+    //loop:true,
+    //grabCursor: true,
+    //autoPlay: 4000
+  //});
 
   /* On Load swiper height should adjust to img size */
   jQuery('.swiper-slide img').load(function() {

@@ -18,7 +18,7 @@ p, .wv-title {
   -webkit-transition: 3s opacity !important;
   transition: 3s opacity !important;
 
-  max-height: 700px;
+  max-height: 650px;
 }
 
 .carousel .active.left {left:0;opacity:0;z-index:2;}
@@ -27,16 +27,18 @@ p, .wv-title {
 .carousel .carousel-caption {
   background: url('/images/swatch-black25.png');
   border-radius: 10px;
+  margin: 0 3em;
 
   img {
-    width: 50%;
+    width: 75%;
   }
 
   a {
-    text-decoration: none;
-    color: white;
+    color: $cornyellow;
 
     .wv-down-arrow {
+      text-decoration: none;
+      color: white;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
@@ -53,7 +55,9 @@ p, .wv-title {
   padding-top: 70px;
 
   p {
-    padding: 20px 0;
+    padding: 20px 0 10px 0;
+    margin: 0;
+    font-size: 150%;
     line-height: 1.75em;
   }
 }
@@ -94,9 +98,14 @@ footer {
   background: url('/images/handmadepaper.png');
   padding: 30px 0 40px 0;
   margin: 0;
-  .caption.wv-title {
+  .wv-title {
     font-weight: bold;
   }
+  img {
+    width: 100%;
+    padding: 10px 0;
+  }
+
 }
 
 #wv-talks {

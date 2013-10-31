@@ -5,59 +5,62 @@
         %img{:src => "/images/photos/carousel/#{x}.jpg"}
         .carousel-caption
           %img{:src => '/images/logo-400w-white-on-clear.png'}
-          %br
-          %br
           %p
             Rooted in God.
             %br
             Transforming our community.
-            %br
-            %span.cornyellow Find out our story.
           %p
             %a{:href => '#wv-welcome'}
-              %i.wv-down-arrow.icon-angle-down.icon-2x
+              Find out our story
 
-.container#wv-welcome
-  .row.wv-intro
-    .col-md-8.col-xs-12
-      %h1 winchester vineyard church
+%section#wv-welcome
+  .container
+    .row.wv-intro
+      .col-md-8.col-xs-12
+        %p{:style => 'font-size: 250%'} We are Winchester Vineyard Church.
 
-      %p We are a christian church in Winchester, UK that's part of the wider Vineyard Family of Churches. We have several hundred members from Winchester, Basingstoke, Southampton and the surrounding area.
+        %p
+          We are a christian church in Winchester, UK, part of the wider
+          %span
+            %a{:href => 'http://www.vineyardchurches.org.uk/'}> Vineyard Family of Churches
+            \.
+          We have several hundred members from Winchester, Basingstoke, Southampton and the surrounding area.
 
-      %p
-        Our office is open Monday to Friday from 9:30, or just show up on a Sunday morning: our services start at 10:30am but you might want to get there early for coffee.
-        %br
-        %br
-        %a Get directions to the Vineyard Centre &raquo;
-    .col-md-4.col-xs-12
-      .wv-areas
-        .row
-          .col-xs-6
-            .thumbnail
-              %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
-              .caption Community work
-          .col-xs-6
-            .thumbnail
-              %img{:src => "/images/photos/areas/life-groups.jpg"}
-              .caption Life groups
-        .row
-          .col-xs-6
-            .thumbnail
-              %img{:src => "/images/photos/areas/what-we-believe.jpg"}
-              .caption Beliefs
-          .col-xs-6
-            .thumbnail
-              %img{:src => "/images/photos/areas/news.jpg"}
-              .caption News
-        .row
-          .col-xs-6
-            .thumbnail
-              %img{:src => "/images/photos/areas/sunday.jpg"}
-              .caption Sundays
-          .col-xs-6
-            .thumbnail
-              %img{:src => "/images/photos/areas/how-to-get-here.jpg"}
-              .caption Find us
+        %p
+          Our office is open Monday to Friday from 9:30, or just show up on a Sunday morning. The service kicks off at 10:30am, but you might want to get there early for coffee.
+          %br
+          %br
+          %a Get directions to the Vineyard Centre &raquo;
+      .col-md-4.col-xs-12
+        .wv-areas
+          .row
+            .col-xs-6
+              .thumbnail
+                %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
+                .caption Community work
+            .col-xs-6
+              .thumbnail
+                %img{:src => "/images/photos/areas/life-groups.jpg"}
+                .caption Life groups
+          .row
+            .col-xs-6
+              .thumbnail
+                %img{:src => "/images/photos/areas/what-we-believe.jpg"}
+                .caption Beliefs
+            .col-xs-6
+              .thumbnail
+                %img{:src => "/images/photos/areas/news.jpg"}
+                .caption
+                  %a{:href => '#wv-news'} News
+          .row
+            .col-xs-6
+              .thumbnail
+                %img{:src => "/images/photos/areas/sunday.jpg"}
+                .caption Sundays
+            .col-xs-6
+              .thumbnail
+                %img{:src => "/images/photos/areas/how-to-get-here.jpg"}
+                .caption Find us
 %section#wv-news
   .container
     .row
@@ -67,47 +70,68 @@
           .col-sm-8
             %p
               %strong This week
-            .panel.panel-default
-              .panel-heading
-                3rd Nov: Welcome meal after church
-              .panel-body
-                .btn-group.pull-right
-                  %a.btn.btn-small.btn-default{:role => 'button'} Book now
-                We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
-            .panel.panel-default
-              .panel-heading
-                3rd Nov: Welcome meal after church
-              .panel-body
-                .btn-group.pull-right
-                  %a.btn.btn-small.btn-default{:role => 'button'} Book now
-                We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+            .row
+              .col-sm-6
+                .panel.panel-default
+                  .panel-heading
+                    3rd Nov: Welcome meal after church
+                  .panel-body
+                    We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+                    %br
+                    %br
+                    .btn-group
+                      %a.btn.btn-default{:role => 'button'} Book now
+              .col-sm-6
+                .panel.panel-default
+                  .panel-heading
+                    3rd Nov: Welcome meal after church
+                  .panel-body
+                    We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+                    %br
+                    %br
+                    .btn-group
+                      %a.btn.btn-default{:role => 'button'} Book now
             %p
               %strong In the next month
-            .panel.panel-default
-              .panel-heading
-                23rd Nov: Brian Doerksen
-              .panel-body
-                .btn-group.pull-right
-                  %a.btn.btn-small.btn-default{:role => 'button'} Book now
-                We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+            .row
+              .col-sm-6
+                .panel.panel-default
+                  .panel-heading
+                    3rd Nov: Welcome meal after church
+                  .panel-body
+                    We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+                    %br
+                    %br
+                    .btn-group
+                      %a.btn.btn-default{:role => 'button'} Book now
+              .col-sm-6
+                .panel.panel-default
+                  .panel-heading
+                    3rd Nov: Welcome meal after church
+                  .panel-body
+                    We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+                    %br
+                    %br
+                    .btn-group
+                      %a.btn.btn-default{:role => 'button'} Book now
             %p
               %strong Further ahead
             .panel.panel-default
               .panel-body
                 This is happening
           .col-sm-4
-            .thumbnail
-              .caption.wv-title Brian Doerksen visits Winchester
-              %img{:src => "/images/news/briand.jpg"}
-              .caption
-                %p 23rd November
+            .panel.panel-info
+              .panel-heading
+                .wv-title 23rd Nov: Brian Doerksen visit
+              .panel-body
+                %img{:src => "/images/news/briand.jpg"}
                 %p
                   Training Seminar: 4pm - 5:30pm
                   %br
                   Night of Worship: 7:30pm
                 %p
-                  We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
-                %a.btn.btn-default{:role => 'button'} Book now
+                  We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but you'll need to book to reserve your places.
+                %a.btn.btn-info{:role => 'button'} Book now
 
 %section#wv-talks
   .container

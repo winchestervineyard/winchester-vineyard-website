@@ -1,1 +1,160 @@
-%h1 HAR!
+#carousel-example-generic.carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '5000', :'data-pause' => 'false'}
+  .carousel-inner
+    - (0..5).to_a.shuffle.each_with_index do |x, idx|
+      .item{:class => idx == 0 ? 'active' : ''}
+        %img{:src => "/images/photos/carousel/#{x}.jpg"}
+        .carousel-caption
+          %img{:src => '/images/logo-400w-white-on-clear.png'}
+          %br
+          %br
+          %p
+            Rooted in God.
+            %br
+            Transforming our community.
+            %br
+            %span.cornyellow Find out our story.
+          %p
+            %a{:href => '#wv-welcome'}
+              %i.wv-down-arrow.icon-angle-down.icon-2x
+
+.container#wv-welcome
+  .row.wv-intro
+    .col-md-8.col-xs-12
+      %h1 winchester vineyard church
+
+      %p We are a christian church in Winchester, UK that's part of the wider Vineyard Family of Churches. We have several hundred members from Winchester, Basingstoke, Southampton and the surrounding area.
+
+      %p
+        Our office is open Monday to Friday from 9:30, or just show up on a Sunday morning: our services start at 10:30am but you might want to get there early for coffee.
+        %br
+        %br
+        %a Get directions to the Vineyard Centre &raquo;
+    .col-md-4.col-xs-12
+      .wv-areas
+        .row
+          .col-xs-6
+            .thumbnail
+              %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
+              .caption Community work
+          .col-xs-6
+            .thumbnail
+              %img{:src => "/images/photos/areas/life-groups.jpg"}
+              .caption Life groups
+        .row
+          .col-xs-6
+            .thumbnail
+              %img{:src => "/images/photos/areas/what-we-believe.jpg"}
+              .caption Beliefs
+          .col-xs-6
+            .thumbnail
+              %img{:src => "/images/photos/areas/news.jpg"}
+              .caption News
+        .row
+          .col-xs-6
+            .thumbnail
+              %img{:src => "/images/photos/areas/sunday.jpg"}
+              .caption Sundays
+          .col-xs-6
+            .thumbnail
+              %img{:src => "/images/photos/areas/how-to-get-here.jpg"}
+              .caption Find us
+%section#wv-news
+  .container
+    .row
+      .col-xs-12
+        %h1 news and events
+        .row
+          .col-sm-8
+            %p
+              %strong This week
+            .panel.panel-default
+              .panel-heading
+                3rd Nov: Welcome meal after church
+              .panel-body
+                .btn-group.pull-right
+                  %a.btn.btn-small.btn-default{:role => 'button'} Book now
+                We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+            .panel.panel-default
+              .panel-heading
+                3rd Nov: Welcome meal after church
+              .panel-body
+                .btn-group.pull-right
+                  %a.btn.btn-small.btn-default{:role => 'button'} Book now
+                We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+            %p
+              %strong In the next month
+            .panel.panel-default
+              .panel-heading
+                23rd Nov: Brian Doerksen
+              .panel-body
+                .btn-group.pull-right
+                  %a.btn.btn-small.btn-default{:role => 'button'} Book now
+                We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+            %p
+              %strong Further ahead
+            .panel.panel-default
+              .panel-body
+                This is happening
+          .col-sm-4
+            .thumbnail
+              .caption.wv-title Brian Doerksen visits Winchester
+              %img{:src => "/images/news/briand.jpg"}
+              .caption
+                %p 23rd November
+                %p
+                  Training Seminar: 4pm - 5:30pm
+                  %br
+                  Night of Worship: 7:30pm
+                %p
+                  We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
+                %a.btn.btn-default{:role => 'button'} Book now
+
+%section#wv-talks
+  .container
+    .row
+      .col-xs-12
+        .row
+          .col-sm-6
+            .wv-caption
+              %h1 talk downloads
+              %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
+              %p
+                %strong Within the last month
+            - 2.times do
+              .row
+                - 2.times do |x|
+                  .col-sm-6
+                    .panel
+                      .panel-body
+                        %strong
+                          == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
+                          Fruits of the Spirit
+                        %br
+
+                        Peter Davey
+                        %br
+                        %br
+                        %a.btn.btn-primary{:role => 'button'} download
+                        %a.btn.btn-default{:role => 'button'} slides
+
+        .wv-caption
+          %p
+            %strong Older talks
+        .row
+          - 4.times do |x|
+            .col-sm-3
+              .panel
+                .panel-body
+                  %strong
+                    == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
+                    Fruits of the Spirit
+                  %br
+                  Peter Davey
+                  %br
+                  %br
+                  %a.btn.btn-primary{:role => 'button'} download
+                  %a.btn.btn-default{:role => 'button'} slides
+
+%footer.row
+  .col-sm-10.col-sm-offset-1
+    %p This is a footer

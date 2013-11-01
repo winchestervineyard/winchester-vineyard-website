@@ -18,90 +18,168 @@
   .container
     .row.wv-intro
       .col-xs-8
-        .tab-content
-          .tab-pane.fade.in.active
-            %p{:style => 'font-size: 250%'} We are Winchester Vineyard Church.
+        %p{:style => 'font-size: 250%'} We are Winchester Vineyard Church.
 
-            %p
-              We are a christian church in Winchester, UK, part of the wider
-              %a{:href => 'http://www.vineyardchurches.org.uk/'} Vineyard
-              family of churches.
-              We have several hundred members from Winchester, Basingstoke, Southampton and the surrounding area.
+        %p
+          We are a christian church in Winchester, UK, part of the wider
+          %a{:href => 'http://www.vineyardchurches.org.uk/'} Vineyard
+          family of churches.
+          We have several hundred members from Winchester, Basingstoke, Southampton and the surrounding area.
 
-            %p
-              Our office is open Monday to Friday from 9:30am, or just show up on a Sunday morning. The service kicks off at 10:30am, but you might want to get there early for coffee.
-              %br
-              %br
-              %a Get directions to the Vineyard Centre &raquo;
-          #sundays.tab-pane.fade
-            %p{:style => 'font-size: 250%'} Sundays: what to expect
-            %p.pull-right
-              12:45pm finish
-            %p 10:30am start
-            .progress
-              %a{:href => '#coffee', :'data-toggle' => 'tab'}
-                .progress-bar.progress-bar-danger{:style => 'width: 15%'}
-                  welcome
-              %a{:href => '#worship', :'data-toggle' => 'tab'}
-                .progress-bar.progress-bar-info{:style => 'width: 25%'}
-                  live band
-              %a{:href => '#talk', :'data-toggle' => 'tab'}
-                .progress-bar.progress-bar-success{:style => 'width: 25%'}
-                  insight
-              %a{:href => '#response', :'data-toggle' => 'tab'}
-                .progress-bar.progress-bar-warning{:style => 'width: 15%'}
-                  response
-              %a{:href => '#coffee', :'data-toggle' => 'tab'}
-                .progress-bar.progress-bar-danger{:style => 'width: 20%'}
-                  coffee &amp; cake
-            .tab-content
-              #intro.tab-pane.fade.in.active
-                please select
-
-              #coffee.tab-pane.fade
-                coffee
-              #worship.tab-pane.fade
-                worship
-              #notices.tab-pane.fade
-                notices
-              #talk.tab-pane.fade
-                talk
-              #response.tab-pane.fade
-                response
-          #life-groups.tab-pane.fade
-            %p{:style => 'font-size: 250%'} Home groups
+        %p
+          Our office is open Monday to Friday from 9:30am, or just show up on a Sunday morning. The service kicks off at 10:30am, but you might want to get there early for coffee.
+          %br
+          %br
+          %a Get directions to the Vineyard Centre &raquo;
       .col-xs-4
         .wv-areas
           .row
             .col-md-6
-              .thumbnail
-                %img{:src => "/images/photos/areas/sunday.jpg"}
-                .caption
-                  %a{:href => '#sundays', :'data-toggle' => 'tab'} Sundays
+              %a{:href => '#wv-sundays'}
+                .thumbnail
+                  %img{:src => "/images/photos/areas/sunday.jpg"}
+                  .caption Sundays
             .col-md-6
-              .thumbnail
-                %img{:src => "/images/photos/areas/life-groups.jpg"}
-                .caption
-                  %a{:href => '#life-groups', :'data-toggle' => 'tab'} Home groups
+              %a{:href => '#wv-life-groups'}
+                .thumbnail
+                  %img{:src => "/images/photos/areas/life-groups.jpg"}
+                  .caption Home groups
           .row
             .col-md-6
-              .thumbnail
-                %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
-                .caption What we do
+              %a{:href => '#wv-what-we-do'}
+                .thumbnail
+                  %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
+                  .caption What we do
             .col-md-6
-              .thumbnail
-                %img{:src => "/images/news/briand.jpg"}
-                .caption
-                  %a{:href => '#wv-news'} What's happening
+              %a{:href => '#wv-news'}
+                .thumbnail
+                  %img{:src => "/images/news/briand.jpg"}
+                  .caption
+                    What's happening
           .row
             .col-md-6
-              .thumbnail
-                %img{:src => "/images/photos/areas/what-we-believe.jpg"}
-                .caption Our story
+              %a{:href => '#wv-story'}
+                .thumbnail
+                  %img{:src => "/images/photos/areas/what-we-believe.jpg"}
+                  .caption Our story
             .col-md-6
-              .thumbnail
-                %img{:src => "/images/photos/areas/how-to-get-here.jpg"}
-                .caption Find us
+              %a{:href => '#wv-find-us'}
+                .thumbnail
+                  %img{:src => "/images/photos/areas/how-to-get-here.jpg"}
+                  .caption Find us
+
+%section#wv-sundays
+  .shadow
+  .container
+    .row
+      .col-sm-8
+        .wv-sundays-nav
+          %h1 sundays
+          %p Click on the timeline below to find out what happens on a typical Sunday morning.
+          %p.pull-right
+            12:00pm finish
+          %p 10:30am start
+          .progress
+            %a{:href => '#sunday-welcome', :'data-toggle' => 'tab'}
+              .progress-bar.progress-bar-danger{:style => 'width: 15%'}
+                welcome
+            %a{:href => '#live-band', :'data-toggle' => 'tab'}
+              .progress-bar.progress-bar-info{:style => 'width: 25%'}
+                live band
+            %a{:href => '#insight', :'data-toggle' => 'tab'}
+              .progress-bar.progress-bar-success{:style => 'width: 25%'}
+                insight
+            %a{:href => '#response', :'data-toggle' => 'tab'}
+              .progress-bar.progress-bar-warning{:style => 'width: 15%'}
+                response
+            %a{:href => '#coffee', :'data-toggle' => 'tab'}
+              .progress-bar.progress-bar-danger{:style => 'width: 20%'}
+                coffee &amp; cake
+        .tab-content
+          #intro.tab-pane.fade.in.active
+          #sunday-welcome.tab-pane.fade
+            %h3 welcome
+            %p We kick off about 10:30am, but most people show up about 15 to 20 minutes early to grab coffee. The kids groups open for check in about 10:20am.
+          #live-band.tab-pane.fade
+            %h3 live band
+            %p We always have a live band playing music for about 30 minutes at the beginning of the service. They play a mixture of loud and quiet contemporary songs and hymns.
+            %p The words are shown on a screen: feel free to join in, or sit and watch if you prefer.
+          #insight.tab-pane.fade
+            %h3 insight
+            %p After the music, there's a talk given by someone in the church or a visiting speaker basic on the bible. It's not just theory: there's always ways to apply what's being shared to our day to day lives.
+            %p
+              %a{:href => '#wv-talks'} Listen to recordings of past talks &raquo;
+          #response.tab-pane.fade
+            %h3 response
+            %p We believe in the supernatural. Often during the morning God speaks to people about medical conditions that others in the room have.
+            %p We always have time to pray for people for emotional and physical at this point in the morning.
+          #coffee.tab-pane.fade
+            %h3 coffee and cake
+            %p We finish up around noon. People collect their kids and often stick around for coffee for almost an hour before they get kicked out!
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+%section#wv-talks
+  .shadow
+  .container
+    .row
+      .col-xs-12
+        .row
+          .col-sm-6
+            .wv-caption
+              %h1 talk downloads
+              %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
+              %p
+                %strong Within the last month
+            - 2.times do
+              .row
+                - 2.times do |x|
+                  .col-sm-6
+                    .panel
+                      .panel-body
+                        %strong
+                          == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
+                          Fruits of the Spirit
+                        %br
+
+                        Peter Davey
+                        %br
+                        %br
+                        %a.btn.btn-primary{:role => 'button'} download
+                        %a.btn.btn-default{:role => 'button'} slides
+
+        .wv-caption
+          %p
+            %strong Older talks
+        .row
+          - 4.times do |x|
+            .col-sm-3
+              .panel
+                .panel-body
+                  %strong
+                    == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
+                    Fruits of the Spirit
+                  %br
+                  Peter Davey
+                  %br
+                  %br
+                  %a.btn.btn-primary{:role => 'button'} download
+                  %a.btn.btn-default{:role => 'button'} slides
+%section#wv-life-groups
+  .container
+    .row
+      .col-xs-12
+        %h1 life groups
+%section#wv-what-we-do
+  .container
+    .row
+      .col-xs-12
+        %h1 what we do
 %section#wv-news
   .container
     .row
@@ -173,54 +251,13 @@
                 %p
                   We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but you'll need to book to reserve your places.
                 %a.btn.btn-info{:role => 'button'} Book now
-
-%section#wv-talks
-  .shadow
+%section#wv-story
   .container
     .row
       .col-xs-12
-        .row
-          .col-sm-6
-            .wv-caption
-              %h1 talk downloads
-              %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
-              %p
-                %strong Within the last month
-            - 2.times do
-              .row
-                - 2.times do |x|
-                  .col-sm-6
-                    .panel
-                      .panel-body
-                        %strong
-                          == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
-                          Fruits of the Spirit
-                        %br
+        %h1 our story
 
-                        Peter Davey
-                        %br
-                        %br
-                        %a.btn.btn-primary{:role => 'button'} download
-                        %a.btn.btn-default{:role => 'button'} slides
-
-        .wv-caption
-          %p
-            %strong Older talks
-        .row
-          - 4.times do |x|
-            .col-sm-3
-              .panel
-                .panel-body
-                  %strong
-                    == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
-                    Fruits of the Spirit
-                  %br
-                  Peter Davey
-                  %br
-                  %br
-                  %a.btn.btn-primary{:role => 'button'} download
-                  %a.btn.btn-default{:role => 'button'} slides
-%footer
+%footer#wv-find-us
   .shadow
   .container
     .row

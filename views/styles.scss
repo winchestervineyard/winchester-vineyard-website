@@ -112,6 +112,18 @@ footer {
   position: relative;
 }
 
+.progress {
+  height: 50px;
+  a {
+    text-decoration: underline;
+    color: white;
+  }
+  .progress-bar {
+    padding: 12px;
+    font-size: 125%;
+  }
+}
+
 .panel {
   a.btn {
     text-decoration: none;

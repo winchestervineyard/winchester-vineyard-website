@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $('.wv-down-arrow').click(function() {
-    $('.wv-welcome').scrollTop(100);
+  $('#top-link').topLink({
+    min: 1279,
+    fadeSpeed: 100
   });
 });

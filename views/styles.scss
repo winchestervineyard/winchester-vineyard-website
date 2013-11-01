@@ -92,7 +92,7 @@ section {
 footer {
   position: relative;
   margin: 0;
-  padding: 70px 0;
+  padding: 50px 0;
   background: #222 url('/images/debut_dark.png');
   color: #ddd;
 
@@ -182,3 +182,24 @@ footer {
     color: white;
   }
 }
+
+#top-link {
+  z-index: 1000;
+  display:none;
+  position:fixed;
+  right:50px;
+  top:0px;
+  font-weight:bold;
+  text-decoration:none;
+  padding: 10px 20px;
+  background: #222 url('/images/debut_dark.png');
+  border-radius: 0 0 10px 10px;
+  color: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  img {
+    padding-right: 10px;
+    width: 100px;
+  }
+}
+

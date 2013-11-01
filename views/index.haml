@@ -178,6 +178,33 @@
                   %a.btn.btn-primary{:role => 'button'} download
                   %a.btn.btn-default{:role => 'button'} slides
 
-%footer.row
-  .col-sm-10.col-sm-offset-1
-    %p This is a footer
+%footer
+  .container
+    .row
+      .col-sm-6
+        %img.logo{:src => '/images/logo-50h-white-on-clear.png', :alt => "Winchester Vineyard Church"}
+        %br
+        %br
+        1 Bar End Industrial Estate
+        %br
+        Bar End Road
+        %br
+        Winchester
+        %br
+        SO23 9NP
+        %br
+        %br
+        %a{:href => 'callto:+441962863217'} +44 (0) 1962 863 217
+        %br
+        %a{:href => 'mailto:hello@winvin.org.uk'} hello@winvin.org.uk
+        %br
+        %br
+        %small
+          == All content and images &copy; #{Time.now.year} Winchester Vineyard except where noted. All rights reserved.
+          %br
+          Winchester Vineyard is affiliated to VINEYARD&reg; CHURCHES UK and registered as a charitable company in England and Wales. Company No. 3073426. Charity No. 1047868.
+        %br
+        %br
+      .col-sm-5.col-sm-offset-1
+        %a{:href => 'https://maps.google.co.uk/maps?q=Winchester+Vineyard,+Winchester,+UK&hl=en&ll=51.052833,-1.306343&spn=0.138984,0.308647&sll=51.053319,-1.297975&sspn=0.017373,0.038581&t=m&z=12'}
+          %img.map{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=Winchester+Vineyard+Winchester+UK+SO23+9NP&zoom=12&size=400x266&maptype=roadmap&markers=color:blue%7C51.052867,-1.306236&sensor=false'}

@@ -77,8 +77,25 @@ p, .wv-title {
 footer {
   margin: 0;
   padding: 70px 0;
-  background: #444;
-  color: white;
+  background: #222;
+  color: #ddd;
+
+  a {
+    color: #ddd;
+  }
+
+  small {
+    color: #999;
+  }
+
+  img.logo {
+    padding-top: 7px;
+  }
+
+  img.map {
+    border: 10px solid #444;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8)
+  }
 }
 
 #wv-welcome {

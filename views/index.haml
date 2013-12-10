@@ -58,15 +58,15 @@
                     What's happening
           .row
             .col-md-6
+              %a{:href => '#wv-jesus'}
+                .thumbnail
+                  %img{:src => '/images/jesus.png'}
+                  .caption Jesus
+            .col-md-6
               %a{:href => '#wv-story'}
                 .thumbnail
                   %img{:src => "/images/photos/areas/what-we-believe.jpg"}
                   .caption Our story
-            .col-md-6
-              %a{:href => '#wv-find-us'}
-                .thumbnail
-                  %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=Winchester+Vineyard+Winchester+UK+SO23+9NP&zoom=15&size=400x266&maptype=roadmap&markers=color:blue%7C51.052867,-1.306236&sensor=false'}
-                  .caption Find us
 
 %section#wv-sundays
   .shadow
@@ -240,6 +240,23 @@
             .panel.panel-default
               .panel-body
                 This is happening
+%section#wv-jesus
+  .container
+    %h1 jesus
+    .row
+      .col-md-6
+
+        %p Jesus of Nazareth was a working-class carpenter from a dusty town in the Middle East. He was born around two thousand years ago.
+        %p We believe that he was unique, and special among all people to have walked the earth: that he was God in human form.
+        %p He came willingly to be with us to pay the cost of humanity's selfishness and disobedience, allowing himself to be brutally executed by the authorities that we might once again have relationship with God.
+        %p We believe that he's still alive today, and calling all people to himself to join his mission to save humanity.
+        %p
+          %a{:href => 'mailto:hello@winvin.org.uk'} I want to find out more &raquo;
+
+      .col-md-6
+        :plain
+          <iframe width="560" height="315" src="//www.youtube.com/embed/d2BW_yButTk" frameborder="0" allowfullscreen></iframe>
+
 %section#wv-story
   .container
     .row

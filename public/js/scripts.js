@@ -2,6 +2,7 @@ var images = {
   'talks': 0,
   'news': 0,
 };
+var preloaded = {};
 
 var lastTop = 0;
 
@@ -15,6 +16,9 @@ $(document).ready(function() {
     var section = $('#wv-' + key);
     var top = section.offset().top;
     images[key] = { top: top, bottom: top + section.outerHeight() }
+
+    preloaded[key] = new Image();
+    preloaded[key].src = '/images/photos/borders/'+key+'.jpg';
   }
 
   $(window).on('scroll', function() {

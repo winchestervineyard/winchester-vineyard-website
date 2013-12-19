@@ -1,6 +1,3 @@
-// Make carousel fade
-// http://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-plugin-fade-in-and-out-on-slide-transition
-
 $grassgreen: rgb(232, 228, 64);
 $purple: rgb(178, 67, 131);
 $red: rgb(200, 7, 45);
@@ -15,6 +12,36 @@ $lightgrey: rgb(246, 246, 244);
   margin: 15px 0px 25px 0px;
 }
 
+@mixin section-padding {
+  padding: 30px 0 40px 0;
+  margin: 0;
+}
+
+@mixin panel-photo-background {
+  .panel {
+    background: url('/images/swatch-black50.png');
+    border: 1px solid #444;
+    color: white;
+    .panel-heading {
+      background: transparent;
+      border: 0;
+      font-size: 1.2em;
+    }
+    .panel-footer {
+      background: transparent;
+      border: 0px;
+      .wv-wherewhen a {
+        color: white;
+      }
+    }
+  }
+}
+
+body {
+  background: #111 no-repeat right top;
+  background-size: 100%;
+  background-attachment: fixed;
+}
 
 a.btn {
   text-decoration: none;
@@ -24,6 +51,8 @@ p, .wv-title {
   font-size: 150%;
 }
 
+// Make carousel fade
+// http://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-plugin-fade-in-and-out-on-slide-transition
 .carousel-inner > .item {
   -webkit-transition: 3s opacity !important;
   transition: 3s opacity !important;
@@ -125,7 +154,8 @@ footer {
 }
 
 #wv-sundays {
-  padding: 30px 0 40px 0;
+  @include section-padding;
+  background: white;
   img {
     width: 100%;
     margin-bottom: 10px;
@@ -133,7 +163,9 @@ footer {
 }
 
 #wv-welcome {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 0px;
+  background: white;
 }
 
 .panel {
@@ -145,12 +177,18 @@ footer {
   }
 }
 
+.wv-caption {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
+}
+
 #wv-life-groups {
+  background: white;
   @media (min-width: 992px) {
     margin: 0;
     .row {
       background: #fff url('/images/photos/areas/life-groups/life-group-background.jpg') no-repeat right bottom;
-      padding: 30px 0 40px 0;
+      @include section-padding;
     }
     iframe {
       @include shadow-iframe;
@@ -159,13 +197,16 @@ footer {
 }
 
 #wv-jesus {
+  background: white;
+  margin: 0;
   iframe {
     @include shadow-iframe;
   }
 }
 
 #wv-what-we-do {
-  padding: 30px 0 40px 0;
+  background: white;
+  @include section-padding;
 
   img {
     width: 100%;
@@ -174,9 +215,10 @@ footer {
 }
 
 #wv-news {
-  background: url('/images/handmadepaper.png');
-  padding: 30px 0 40px 0;
+  @include section-padding;
+  @include panel-photo-background;
   margin: 0;
+  color: white;
   .wv-title {
     font-weight: bold;
   }
@@ -188,19 +230,15 @@ footer {
 }
 
 #wv-talks {
-  padding: 30px 0 40px 0;
+  @include section-padding;
   margin: 0;
-  background: #111 url('/images/photos/borders/talks.jpg') no-repeat right top;
-  background-size: 100%;
-  .wv-caption {
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
-  }
-  .panel {
-    background: url('/images/swatch-black50.png');
-    border: 1px solid #444;
-    color: white;
-  }
+  @include panel-photo-background;
+}
+
+#wv-story {
+  @include section-padding;
+  margin: 0;
+  background: white;
 }
 
 #top-link {

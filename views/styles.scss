@@ -38,7 +38,7 @@ $lightgrey: rgb(246, 246, 244);
 }
 
 body {
-  background: #111 no-repeat right top;
+  background: #000 no-repeat right top;
   background-size: 100%;
   background-attachment: fixed;
 }
@@ -184,8 +184,9 @@ footer {
 
 #wv-life-groups {
   background: white;
+  margin: 0;
+  padding-bottom: 20px;
   @media (min-width: 992px) {
-    margin: 0;
     .row {
       background: #fff url('/images/photos/areas/life-groups/life-group-background.jpg') no-repeat right bottom;
       @include section-padding;

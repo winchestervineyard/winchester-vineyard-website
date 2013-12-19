@@ -26,7 +26,6 @@ $(document).ready(function() {
     for(var key in images) {
       if ((windowBottom > images[key].top && lastBottom <= images[key].top) ||
       (windowTop <= images[key].bottom && lastTop > images[key].bottom)) {
-        console.log("changed image to " + key);
         $('body').css("background-image", "url('/images/photos/borders/" + key + ".jpg')");
       }
     }

@@ -99,28 +99,27 @@
     .row
       .col-xs-12
         .row
-          .col-sm-6
+          .col-sm-12
             .wv-caption
               %h1 talk downloads
               %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
               %p
                 %strong Within the last month
-            - 2.times do
-              .row
-                - 2.times do |x|
-                  .col-sm-6
-                    .panel
-                      .panel-body
-                        %strong
-                          == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
-                          Fruits of the Spirit
-                        %br
+            .row
+              - 4.times do |x|
+                .col-sm-3
+                  .panel
+                    .panel-body
+                      %strong
+                        == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
+                        Fruits of the Spirit
+                      %br
 
-                        Peter Davey
-                        %br
-                        %br
-                        %a.btn.btn-primary{:role => 'button'} download
-                        %a.btn.btn-default{:role => 'button'} slides
+                      Peter Davey
+                      %br
+                      %br
+                      %a.btn.btn-primary{:role => 'button'} download
+                      %a.btn.btn-default{:role => 'button'} slides
 
         .wv-caption
           %p
@@ -199,8 +198,9 @@
           %h1 what's happening
         .row
           .col-sm-12
-            %p
-              %strong This week
+            .wv-caption
+              %p
+                %strong This week
             .row
               - 3.times do
                 .col-sm-4
@@ -220,8 +220,9 @@
                       .pull-right
                         %a.btn.btn-primary{:role => 'button'} Learn more
                         %a.btn.btn-default{:role => 'button'} Book now
-            %p
-              %strong In the next month
+            .wv-caption
+              %p
+                %strong In the next month
             .row
               .col-sm-6
                 .panel

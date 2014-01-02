@@ -14,10 +14,15 @@
   %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
   %link{:href => "http://winvin-style-guide.herokuapp.com/css/style.css", :rel => "stylesheet"}/
   %link{:href => "/css/styles.css", :rel => "stylesheet"}/
+  %script#wv-news-item-template{:type => 'text/x-template'}
+    = haml :_news_item
 %body
   = yield
   %script{:src => "/js/jquery.js"}
   %script{:src => "/js/custom.modernizr.js"}
   %script{:src => "/js/bootstrap.min.js"}
   %script{:src => "/js/jquery.toplink.js"}
+  %script{:src => "/js/mustache.js"}
+  %script{:src => "/js/strftime.min.js"}
   %script{:src => "/js/scripts.js"}
+  %script{:src => 'https://cdn.firebase.com/v0/firebase.js', :type => 'text/javascript'}

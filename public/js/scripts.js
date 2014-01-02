@@ -35,4 +35,38 @@ $(document).ready(function() {
     }
     lastTop = windowTop;
   });
+
+  var news = new Firebase('https://winvin.firebaseio.com/news');
+  news.on('child_added', function(snapshot) {
+    var data = snapshot.val();
+    if (new Date(data.datetime) < new Date()) {
+      return;
+    }
+
+    data = applyFilters(data);
+    var div = $('#wv-news-item-template').html();
+    $(newsDivForDate(data)).append(Mustache.render(div, data));
+  });
 });
+
+function applyFilters(data) {
+  var date = new Date(data.datetime);
+  data.dow = date.strftime("%a");
+  data.fulldatetime = date.strftime("%a %d %b %H:%M%p");
+  return data;
+}
+
+function newsDivForDate(data) {
+  var date = new Date(data.datetime);
+  var now = new Date();
+  var nextSunday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + (7 - now.getDay()));
+
+  if (date < nextSunday) {
+    return '#wv-news-this-week';
+  }
+
+  if (date.getMonth() == now.getMonth() && date.getFullYear() == now.getFullYear()) {
+    return '#wv-news-this-month';
+  }
+  return '#wv-news-further-ahead';
+}

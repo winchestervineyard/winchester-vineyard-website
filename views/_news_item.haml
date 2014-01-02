@@ -1,0 +1,17 @@
+.col-sm-4
+  .panel
+    .panel-heading {{ dow }}: {{ title }}
+    .panel-body
+      %img{:src => '{{ image_url }}', :style => 'width: 50%; float: right; padding: 0px 0px 10px 10px'}
+      {{ text }}
+      %br
+      %br
+    .panel-footer.clearfix
+      .wv-wherewhen.pull-left
+        {{ fulldatetime }}
+        %br
+        %a{:href => '{{ location_url }}'} {{ location_title }}
+      .pull-right
+        {{#booking_url}}
+        %a.btn.btn-default{:role => 'button', :href => '{{ booking_url }}'} Book now
+        {{/booking_url}}

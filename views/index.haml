@@ -201,54 +201,15 @@
             .wv-caption
               %p
                 %strong This week
-            .row
-              - 3.times do
-                .col-sm-4
-                  .panel
-                    .panel-heading
-                      Monday: Welcome meal after church
-                    .panel-body
-                      %img{:src => '/images/news/briand.jpg', :style => 'width: 50%; float: right; padding: 0px 0px 10px 10px'}
-                      We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.
-                      %br
-                      %br
-                    .panel-footer.clearfix
-                      .wv-wherewhen.pull-left
-                        3rd Nov 8pm
-                        %br
-                        %a{:href => '#'} Vineyard centre
-                      .pull-right
-                        %a.btn.btn-primary{:role => 'button'} Learn more
-                        %a.btn.btn-default{:role => 'button'} Book now
+            .row#wv-news-this-week
             .wv-caption
               %p
                 %strong In the next month
-            .row
-              .col-sm-6
-                .panel
-                  .panel-heading
-                    3rd Nov: Welcome meal after church
-                  .panel-body
-                    We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
-                    %br
-                    %br
-                    .btn-group
-                      %a.btn.btn-default{:role => 'button'} Book now
-              .col-sm-6
-                .panel
-                  .panel-heading
-                    3rd Nov: Welcome meal after church
-                  .panel-body
-                    We’re thrilled to welcome Brian back for an evening of celebration & worship which is open to anyone to attend.  Cost £5 for one or both events - you can pay on the door but book please to reserve your places.
-                    %br
-                    %br
-                    .btn-group
-                      %a.btn.btn-default{:role => 'button'} Book now
-            %p
-              %strong Further ahead
-            .panel
-              .panel-body
-                This is happening
+            .row#wv-news-this-month
+            .wv-caption
+              %p
+                %strong Further ahead
+            .row#wv-news-further-ahead
 %section#wv-jesus
   .container
     %h1 jesus

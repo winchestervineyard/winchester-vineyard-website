@@ -47,13 +47,34 @@ $(document).ready(function() {
     var div = $('#wv-news-item-template').html();
     $(newsDivForDate(data)).append(Mustache.render(div, data));
   });
+
+  var talks = new Firebase('https://winvin.firebaseio.com/talks');
+  talks.on('child_added', function(snapshot) {
+    var data = snapshot.val();
+    data = applyFilters(data);
+    var div = $('#wv-talk-item-template').html();
+    $(talkDivForDate(data)).append(Mustache.render(div, data));
+  });
 });
 
 function applyFilters(data) {
   var date = new Date(data.datetime);
   data.dow = date.strftime("%a");
   data.fulldatetime = date.strftime("%a %d %b %H:%M%p");
+  data.date = date.strftime("%a %d %b %Y");
   return data;
+}
+
+var FOUR_WEEKS_IN_MS = 1000 * 60 * 60 * 24 * 28;
+
+function talkDivForDate(data) {
+  var date = new Date(data.datetime);
+  var now = new Date();
+  if (date >= (now - FOUR_WEEKS_IN_MS)) {
+    return '#wv-talks-within-last-month';
+  }
+
+  return '#wv-talks-older';
 }
 
 function newsDivForDate(data) {

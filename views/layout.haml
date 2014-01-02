@@ -14,8 +14,10 @@
   %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
   %link{:href => "http://winvin-style-guide.herokuapp.com/css/style.css", :rel => "stylesheet"}/
   %link{:href => "/css/styles.css", :rel => "stylesheet"}/
-  %script#wv-news-item-template{:type => 'text/x-template'}
+  %script#wv-news-item-template{:type => 'text/template'}
     = haml :_news_item
+  %script#wv-talk-item-template{:type => 'text/template'}
+    = haml :_talk_item
 %body
   = yield
   %script{:src => "/js/jquery.js"}

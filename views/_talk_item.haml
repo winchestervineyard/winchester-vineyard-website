@@ -1,0 +1,19 @@
+.col-sm-3
+  .panel
+    .panel-body
+      %strong
+        {{ date }}
+        %br
+        {{ title }}
+      %br
+      {{ who }}
+      %br
+      %br
+      {{#download_url}}
+      %a.btn.btn-primary{:role => 'button', :href => '{{ download_url }}'} download
+      {{/download_url}}
+      {{#slides_url}}
+      %a.btn.btn-default{:role => 'button', :href => '{{ slides_url }}'} slides
+      {{/slides_url}}
+
+

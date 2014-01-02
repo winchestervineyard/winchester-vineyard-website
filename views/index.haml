@@ -98,46 +98,16 @@
   .container
     .row
       .col-xs-12
-        .row
-          .col-sm-12
-            .wv-caption
-              %h1 talk downloads
-              %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
-              %p
-                %strong Within the last month
-            .row
-              - 4.times do |x|
-                .col-sm-3
-                  .panel
-                    .panel-body
-                      %strong
-                        == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
-                        Fruits of the Spirit
-                      %br
-
-                      Peter Davey
-                      %br
-                      %br
-                      %a.btn.btn-primary{:role => 'button'} download
-                      %a.btn.btn-default{:role => 'button'} slides
-
+        .wv-caption
+          %h1 talk downloads
+          %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
+          %p
+            %strong Within the last month
+        .row#wv-talks-within-last-month
         .wv-caption
           %p
             %strong Older talks
-        .row
-          - 4.times do |x|
-            .col-sm-3
-              .panel
-                .panel-body
-                  %strong
-                    == #{(Time.now - 86400 * 7 * x).strftime("%d %b")}:
-                    Fruits of the Spirit
-                  %br
-                  Peter Davey
-                  %br
-                  %br
-                  %a.btn.btn-primary{:role => 'button'} download
-                  %a.btn.btn-default{:role => 'button'} slides
+        .row#wv-talks-older
 %section#wv-life-groups
   .shadow
   .container

@@ -12,6 +12,9 @@
       {{#download_url}}
       %a.btn.btn-primary{:role => 'button', :href => '{{ download_url }}'} download
       {{/download_url}}
+      {{^download_url}}
+      %a.btn.btn-default{:disabled => 'disabled', :role => 'button'} coming soon
+      {{/download_url}}
       {{#slides_url}}
       %a.btn.btn-default{:role => 'button', :href => '{{ slides_url }}'} slides
       {{/slides_url}}

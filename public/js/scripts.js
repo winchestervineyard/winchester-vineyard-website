@@ -39,6 +39,10 @@ $(document).ready(function() {
   var news = new Firebase('https://winvin.firebaseio.com/news');
   news.on('child_added', function(snapshot) {
     var data = snapshot.val();
+    if (!data.published) {
+      return;
+    }
+
     if (new Date(data.datetime) < new Date()) {
       return;
     }

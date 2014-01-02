@@ -1,8 +1,8 @@
 .col-sm-4
   .panel
     .panel-heading {{ dow }}: {{ title }}
-    .panel-body
-      %img{:src => '{{ image_url }}', :style => 'width: 50%; float: right; padding: 0px 0px 10px 10px'}
+    .panel-body.clearfix
+      %img{:src => '{{ image_url }}', :style => 'width: 50%; float: right; padding: 0px 0px 0px 10px'}
       {{ text }}
       %br
       %br
@@ -11,7 +11,7 @@
         {{ fulldatetime }}
         %br
         %a{:href => '{{ location_url }}'} {{ location_title }}
+      {{#booking_url}}
       .pull-right
-        {{#booking_url}}
         %a.btn.btn-default{:role => 'button', :href => '{{ booking_url }}'} Book now
-        {{/booking_url}}
+      {{/booking_url}}

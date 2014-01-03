@@ -39,27 +39,59 @@ $(document).ready(function() {
   var news = new Firebase('https://winvin.firebaseio.com/news');
   news.on('child_added', function(snapshot) {
     var data = snapshot.val();
-    if (!data.published) {
-      return;
+    if (div = renderNews(data)) {
+      $(newsDivForDate(data)).append(div);
     }
+  });
 
-    if (new Date(data.datetime) < new Date()) {
-      return;
+  news.on('child_changed', function(snapshot) {
+    var data = snapshot.val();
+    $('#news-'+data.id).remove();
+    if (div = renderNews(data)) {
+      $(newsDivForDate(data)).append(div);
     }
-
-    data = applyFilters(data);
-    var div = $('#wv-news-item-template').html();
-    $(newsDivForDate(data)).append(Mustache.render(div, data));
   });
 
   var talks = new Firebase('https://winvin.firebaseio.com/talks');
   talks.on('child_added', function(snapshot) {
     var data = snapshot.val();
-    data = applyFilters(data);
-    var div = $('#wv-talk-item-template').html();
-    $(talkDivForDate(data)).append(Mustache.render(div, data));
+    if (div = renderTalk(data)) {
+      $(talkDivForDate(data)).append(div);
+    }
+  });
+
+  talks.on('child_changed', function(snapshot) {
+    var data = snapshot.val();
+    $('#talk-'+data.id).remove();
+    if (div = renderTalk(data)) {
+      $(talkDivForDate(data)).append(div);
+    }
   });
 });
+
+function renderTalk(data) {
+  if (!data.published) {
+    return;
+  }
+
+  data = applyFilters(data);
+  var div = $('#wv-talk-item-template').html();
+  return Mustache.render(div, data);
+}
+
+function renderNews(data) {
+  if (!data.published) {
+    return;
+  }
+
+  if (new Date(data.datetime) < new Date()) {
+    return;
+  }
+
+  data = applyFilters(data);
+  var div = $('#wv-news-item-template').html();
+  return Mustache.render(div, data);
+}
 
 function applyFilters(data) {
   var date = new Date(data.datetime);

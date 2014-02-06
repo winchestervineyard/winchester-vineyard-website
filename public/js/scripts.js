@@ -8,7 +8,7 @@ var lastTop = 0;
 
 $(document).ready(function() {
   $('#top-link').topLink({
-    min: 1279,
+    min: 650,
     fadeSpeed: 100
   });
 

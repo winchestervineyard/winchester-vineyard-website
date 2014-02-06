@@ -1,17 +1,40 @@
-#carousel-example-generic.carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '5000', :'data-pause' => 'false'}
+#wv-home
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse.navbar-static-top{:role => 'navigation'}
+      .container
+        .navbar-header
+          %button.navbar-toggle{:type => "button", :'data-toggle' => 'collapse', :'data-target' => 'navbar-collapse'}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a{:href => '/'}
+            %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 5px; height: 50px'}
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav{:style => 'margin-top: 3px'}
+            %li
+              %a{:href => '#wv-sundays'} Sundays
+            %li
+              %a{:href => '#wv-life-groups'} Life groups
+            %li
+              %a{:href => '#wv-what-we-do'} Outreach
+            %li
+              %a{:href => '#wv-news'} What's happening
+            %li
+              %a{:href => '#wv-jesus'} Jesus
+            %li
+              %a{:href => '#wv-story'} Our story
+
+.carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
-    - (0..5).to_a.shuffle.each_with_index do |x, idx|
+    - (0..4).to_a.shuffle.each_with_index do |x, idx|
       .item{:class => idx == 0 ? 'active' : ''}
         %img{:src => "/images/photos/carousel/#{x}.jpg"}
         .carousel-caption
-          %img{:src => '/images/logo-400w-white-on-clear.png'}
-          %p
-            Rooted in God.
-            %br
-            Transforming our community.
-          %p
-            %a{:href => '#wv-welcome'}
-              Find out more &raquo;
+          Rooted in God.  Transforming our community.
+          %a{:href => '#wv-welcome'}
+            Find out more &raquo;
 
 %section#wv-welcome
   .shadow
@@ -238,5 +261,5 @@
         %a{:href => 'https://maps.google.co.uk/maps?q=Winchester+Vineyard,+Winchester,+UK&hl=en&ll=51.052833,-1.306343&spn=0.138984,0.308647&sll=51.053319,-1.297975&sspn=0.017373,0.038581&t=m&z=12'}
           %img.map{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=Winchester+Vineyard+Winchester+UK+SO23+9NP&zoom=12&size=400x266&maptype=roadmap&markers=color:blue%7C51.052867,-1.306236&sensor=false'}
 
-%a#top-link{:href => '#wv-welcome'}
+%a#top-link{:href => '#wv-home'}
   &laquo; home

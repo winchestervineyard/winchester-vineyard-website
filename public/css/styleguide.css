@@ -1,0 +1,126 @@
+.bg-grassgreen {
+  background: #e8e440; }
+
+.bg-purple {
+  background: #b24383; }
+
+.bg-red {
+  background: #c8072d; }
+
+.bg-darkgrey {
+  background: #333333; }
+
+.bg-seablue {
+  background: #00957e; }
+
+.bg-skyblue {
+  background: #79c4c6; }
+
+.bg-cornyellow {
+  background: #fdd41a; }
+
+.bg-lightgrey {
+  background: #f6f6f4 !important; }
+
+.grassgreen {
+  color: #e8e440; }
+
+.purple {
+  color: #b24383; }
+
+.red {
+  color: #c8072d; }
+
+.darkgrey {
+  color: #333333; }
+
+.seablue {
+  color: #00957e; }
+
+.skyblue {
+  color: #79c4c6; }
+
+.cornyellow {
+  color: #fdd41a; }
+
+.lightgrey {
+  color: #f6f6f4 !important; }
+
+.white {
+  color: white; }
+
+@font-face {
+  font-family: "Vineyard Light";
+  src: url("/font/Vineyard-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #333333; }
+
+.hero-unit {
+  border-radius: 0px; }
+
+h1 {
+  font-family: "Vineyard Light", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 200;
+  font-stretch: normal;
+  letter-spacing: 0.04em !important; }
+
+h2, h3, h4, h5, h6 {
+  font-family: "Vineyard Light", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-stretch: normal;
+  font-weight: 200;
+  letter-spacing: 0.04em !important;
+  font-weight: normal; }
+
+h1 {
+  font-size: 32pt; }
+
+h2 {
+  font-size: 20pt; }
+
+section {
+  margin-bottom: 2em; }
+  section p, section li {
+    font-size: 14pt;
+    line-height: 1.75em; }
+  section p, section ul {
+    margin-bottom: 1em; }
+  section h1 {
+    padding-top: 0.5em;
+    padding-bottom: 0.25em; }
+
+.affix {
+  top: 20px; }
+
+.logo-samples {
+  margin: 20px 0; }
+  .logo-samples img {
+    padding: 30px;
+    border-radius: 5px; }
+
+.heading-samples * {
+  padding: 20px;
+  border-radius: 5px; }
+
+.media {
+  padding-bottom: 1.5em; }
+
+.swatch {
+  width: 75px;
+  height: 75px;
+  border-radius: 5px;
+  display: block; }
+
+/* Sort out the menu on phone mode */
+@media (max-width: 767px) {
+  .affix {
+    position: static;
+    width: auto;
+    top: 0; } }
+.callout {
+  padding: 20px;
+  border-radius: 5px; }

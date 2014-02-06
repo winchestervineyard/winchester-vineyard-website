@@ -51,6 +51,20 @@ p, .wv-title {
   font-size: 150%;
 }
 
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  @media (min-width: 768px) {
+    margin-top: 20px;
+    .navbar {
+      border-radius: 4px;
+    }
+  }
+}
+
 // Make carousel fade
 // http://stackoverflow.com/questions/9526970/can-the-twitter-bootstrap-carousel-plugin-fade-in-and-out-on-slide-transition
 .carousel-inner > .item {
@@ -64,19 +78,15 @@ p, .wv-title {
 .carousel .next {left:0;opacity:1;z-index:1;}
 
 .carousel .carousel-caption {
-  background: url('/images/swatch-black25.png');
-  border-radius: 10px;
-  margin: 0 3em;
-
-  img {
-    width: 75%;
-  }
+  background: url('/images/swatch-black50.png');
+  border-radius: 4px;
+  margin: 0 2em;
+  font-size: 1.5em;
 
   a {
     color: $cornyellow;
 
     .wv-down-arrow {
-      text-decoration: none;
       color: white;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;

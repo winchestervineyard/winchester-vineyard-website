@@ -3,6 +3,7 @@ var images = {
   'news': 0,
 };
 var preloaded = {};
+var currentBackground = "";
 
 var lastTop = 0;
 
@@ -24,6 +25,9 @@ $(document).ready(function() {
   $(".nav li a:not('.dropdown-toggle')").on('click',function(){
     $('.navbar-collapse.in').collapse('hide');
   });
+
+  $('body').css("background-image", "url('/images/photos/borders/talks.jpg')");
+  currentBackground = "talks";
   $(window).scroll(function() {
     calculateSectionHeights();
 
@@ -33,8 +37,13 @@ $(document).ready(function() {
     var lastBottom = lastTop + windowHeight;
 
     for(var key in images) {
+      if (currentBackground == key) {
+        continue;
+      }
+
       if ((windowBottom > images[key].top && lastBottom <= images[key].top) ||
       (windowTop <= images[key].bottom && lastTop > images[key].bottom)) {
+        currentBackground = key;
         lastTop = windowTop;
         $('body').css("background-image", "url('/images/photos/borders/" + key + ".jpg')");
         return;

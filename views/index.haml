@@ -11,19 +11,20 @@
         %a{:href => '/'}
           %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 5px; height: 50px'}
       .navbar-collapse.collapse
-        %ul.nav.navbar-nav{:style => 'margin-top: 3px'}
-          %li
-            %a{:href => '#wv-sundays'} Sundays
-          %li
-            %a{:href => '#wv-life-groups'} Life groups
-          %li
-            %a{:href => '#wv-what-we-do'} Outreach
-          %li
-            %a{:href => '#wv-news'} Events
-          %li
-            %a{:href => '#wv-jesus'} Jesus
-          %li
-            %a{:href => '#wv-find-us'} Contact
+        .container
+          %ul.nav.navbar-nav.navbar-right{:style => 'margin-top: 3px'}
+            %li
+              %a{:href => '#wv-sundays'} Sundays
+            %li
+              %a{:href => '#wv-life-groups'} Life groups
+            %li
+              %a{:href => '#wv-what-we-do'} Outreach
+            %li
+              %a{:href => '#wv-news'} Events
+            %li
+              %a{:href => '#wv-jesus'} Jesus
+            %li
+              %a{:href => '#wv-find-us'} Contact
 
 .carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
@@ -94,27 +95,34 @@
   .shadow
   .container
     .row
-      .col-sm-12
+      .col-md-12
         %h1 sundays - what to expect
         %p We start about 10:30am, but most people come along about 15 to 20 minutes early for a cup of proper coffee. The kids groups open for check in about 10:20am.
-        .row
-          .col-sm-4
-            %h3 we start with worship...
-            %img{:src => '/images/photos/areas/sunday/worship.jpg'}
-            %p.text-muted We always have a live band playing music for about 30 minutes at the beginning of the service. They play a mixture of loud and quiet contemporary songs and hymns. The words are shown on a screen: feel free to join in, or sit and watch if you prefer.
-          .col-sm-4
-            %h3 ...learn together...
-            %img{:src => '/images/photos/areas/sunday/insight.jpg'}
-            %p.text-muted
-              After the music, there's a talk given by someone in the church or a visiting speaker based on the bible. It's not just theory: there's always ways to apply what's being shared to our day to day lives.
-              %br
-              %a{:href => '#wv-talks'} Listen to recordings of past talks &raquo;
-          .col-sm-4
-            %h3 ...and make a response
-            %img{:src => '/images/photos/areas/sunday/response.jpg'}
-            %p.text-muted We believe in the supernatural. Often during the morning God speaks to people about medical conditions that others in the room have. We always have time to pray for people for emotional and physical at this point in the morning.
+    .row
+      .col-md-4
+        %h3 we start with worship
+        %img{:src => '/images/photos/areas/sunday/worship.jpg'}
+        %p We always have a live band playing music for about 30 minutes at the beginning of the service. They play a mixture of loud and quiet contemporary songs and hymns. The words are shown on a screen: feel free to join in, or sit and watch if you prefer.
+      .col-md-4
+        %h3 learn together
+        %img{:src => '/images/photos/areas/sunday/insight.jpg'}
+        %p
+          After the music, there's a talk given by someone in the church or a visiting speaker based on the bible. It's not just theory: there's always ways to apply what's being shared to our day to day lives.
+          %br
+          %a{:href => '#wv-talks'} Listen to recordings of past talks &raquo;
+      .col-md-4
+        %h3 and make a response
+        %img{:src => '/images/photos/areas/sunday/response.jpg'}
+        %p We believe in the supernatural. Often during the morning God speaks to people about medical conditions that others in the room have. We always have time to pray for people for emotional and physical at this point in the morning.
+    .row
+      .col-sm-6
+        %h3 kids church and youth
+        %img{:src => '/images/photos/areas/sunday/kids-church.jpg'}
+        %p Church isn't only for adults. Rather than just schooling kids on Sundays, we run a variety of interactive groups for under 11s learning about Jesus with games and fun at the centre! We also have a great bunch of 11-18 year olds who meet each sunday morning in the upstairs youth room.
+      .col-sm-6
         %h3 coffee and cake
-        %p We finish up around noon with great cakes and nice coffee or teas. People collect their kids from their groups and often stick around for almost an hour before they get kicked out!
+        %img{:src => '/images/photos/areas/sunday/coffee.jpg'}
+        %p We finish up around noon, when parents collect their younger kids from their groups. We serve lovely cakes and nice coffee or teas and have a large café area for everyone to hang out. People often stick around for almost an hour to chat!
 %section#wv-talks
   .shadow
   .container
@@ -156,31 +164,32 @@
           We work hard to make a difference to people's lives. We aim to be the best friend to our local community that we can possibly be. If you'd like to volunteer to be a part of any of the activities below then
           = succeed '.' do
             %a{:href => '#wv-find-us'}> let us know
-        .col-sm-4
-          %h3 big fish
-          %img{:src => '/images/photos/areas/what-we-do/big-fish.jpg'}
-          %p.text-muted
-            On Mondays and Tuesdays from 10-12pm during term time we have hundreds of pre-school children, parents and carers for an activity morning. We have plenty of room to explore and a large selection of toys.
-          %p.text-muted
-            There is currently a waiting list:
-            %a{:href => '#wv-find-us'} call us
-            if you'd like to be on it or to find out more.
-        .col-sm-4
-          %h3 children's storehouse
-          %img{:src => '/images/photos/areas/what-we-do/store-house.jpg'}
-          %p.text-muted
-            On Thursdays from 10am-2pm we give away childrens clothes and food parcels to those in need. We use a voucher system and work with the council and other local organisations.
-          %p.text-muted
-            Please
-            %a{:href => '#wv-find-us'} get in touch
-            if you need our services.
-        .col-sm-4
-          %h3 street teams
-          %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
-          %p.text-muted
-            On Saturday nights, teams go out into Winchester city centre with soup, rolls, tea, coffee, blankets, socks, hats and a listening ear.
-          %p.text-muted
-            We help those on the streets by providing for basic needs and giving them someone to talk to.
+    .row
+      .col-md-4
+        %h3 big fish
+        %img{:src => '/images/photos/areas/what-we-do/big-fish.jpg'}
+        %p
+          On Mondays and Tuesdays from 10-12pm during term time we have hundreds of pre-school children, parents and carers for an activity morning. We have plenty of room to explore and a large selection of toys.
+        %p
+          There is currently a waiting list:
+          %a{:href => '#wv-find-us'} call us
+          if you'd like to be on it or to find out more.
+      .col-md-4
+        %h3 children's storehouse
+        %img{:src => '/images/photos/areas/what-we-do/store-house.jpg'}
+        %p
+          On Thursdays from 10am-2pm we give away childrens clothes and food parcels to those in need. We use a voucher system and work with the council and other local organisations.
+        %p
+          Please
+          %a{:href => '#wv-find-us'} get in touch
+          if you need our services.
+      .col-md-4
+        %h3 street teams
+        %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
+        %p
+          On Saturday nights, teams go out into Winchester city centre with soup, rolls, tea, coffee, blankets, socks, hats and a listening ear.
+        %p
+          We help those on the streets by providing for basic needs and giving them someone to talk to.
 
 %section#wv-news
   .container
@@ -207,7 +216,8 @@
     .row
       .col-md-6
         %h1 jesus
-
+    .row
+      .col-md-6
         %p Jesus of Nazareth was a working-class carpenter from a dusty town in the Middle East. He was born around two thousand years ago.
         %p We believe that he was unique, and special among all people to have walked the earth: that he was God in human form.
         %p He came willingly to be with us to pay the cost of humanity's selfishness and disobedience, allowing himself to be brutally executed by the authorities that we might once again have relationship with God.
@@ -217,7 +227,7 @@
 
       .col-md-6
         :plain
-          <iframe width="560" height="315" src="//www.youtube.com/embed/d2BW_yButTk" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="350" src="//www.youtube.com/embed/d2BW_yButTk" frameborder="0" allowfullscreen></iframe>
 
 %footer#wv-find-us
   .shadow

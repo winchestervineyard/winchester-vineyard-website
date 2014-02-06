@@ -6,22 +6,27 @@ var preloaded = {};
 
 var lastTop = 0;
 
+function calculateSectionHeights() {
+  for (var key in images) {
+    var section = $('#wv-' + key);
+    var top = section.offset().top;
+    images[key] = { top: top - 20, bottom: top + section.outerHeight() }
+  }
+}
+
 $(document).ready(function() {
   // Ensure navbar closes on a click
   $(".nav li a:not('.dropdown-toggle')").on('click',function(){
     $('.navbar-collapse.in').collapse('hide');
   });
-
   for (var key in images) {
-    var section = $('#wv-' + key);
-    var top = section.offset().top;
-    images[key] = { top: top, bottom: top + section.outerHeight() }
-
     preloaded[key] = new Image();
     preloaded[key].src = '/images/photos/borders/'+key+'.jpg';
   }
 
   $(window).on('scroll', function() {
+    calculateSectionHeights();
+
     var windowTop = window.pageYOffset;
     var windowHeight = $(window).height()
     var windowBottom = windowTop + windowHeight;

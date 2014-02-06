@@ -2,29 +2,28 @@
 .navbar-wrapper
   .container
     .navbar.navbar-inverse.navbar-fixed-top{:role => 'navigation'}
-      .container
-        .navbar-header
-          %button.navbar-toggle{:type => "button", :'data-toggle' => 'collapse', :'data-target' => '.navbar-collapse'}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a{:href => '/'}
-            %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 5px; height: 50px'}
-        .navbar-collapse.collapse
-          %ul.nav.navbar-nav{:style => 'margin-top: 3px'}
-            %li
-              %a{:href => '#wv-sundays'} Sundays
-            %li
-              %a{:href => '#wv-life-groups'} Life groups
-            %li
-              %a{:href => '#wv-what-we-do'} Outreach
-            %li
-              %a{:href => '#wv-news'} What's happening
-            %li
-              %a{:href => '#wv-jesus'} Jesus
-            %li
-              %a{:href => '#wv-find-us'} Contact us
+      .navbar-header
+        %button.navbar-toggle{:type => "button", :'data-toggle' => 'collapse', :'data-target' => '.navbar-collapse'}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a{:href => '/'}
+          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 5px; height: 50px'}
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav{:style => 'margin-top: 3px'}
+          %li
+            %a{:href => '#wv-sundays'} Sundays
+          %li
+            %a{:href => '#wv-life-groups'} Life groups
+          %li
+            %a{:href => '#wv-what-we-do'} Outreach
+          %li
+            %a{:href => '#wv-news'} Events
+          %li
+            %a{:href => '#wv-jesus'} Jesus
+          %li
+            %a{:href => '#wv-find-us'} Contact
 
 .carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
@@ -205,9 +204,9 @@
             .row#wv-news-further-ahead
 %section#wv-jesus
   .container
-    %h1 jesus
     .row
       .col-md-6
+        %h1 jesus
 
         %p Jesus of Nazareth was a working-class carpenter from a dusty town in the Middle East. He was born around two thousand years ago.
         %p We believe that he was unique, and special among all people to have walked the earth: that he was God in human form.

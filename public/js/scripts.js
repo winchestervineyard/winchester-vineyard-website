@@ -10,8 +10,13 @@ function calculateSectionHeights() {
   for (var key in images) {
     var section = $('#wv-' + key);
     var top = section.offset().top;
-    images[key] = { top: top - 20, bottom: top + section.outerHeight() }
+    images[key] = { top: top - 20, bottom: top + section.outerHeight() + 20 }
   }
+}
+
+for (var key in images) {
+  preloaded[key] = new Image();
+  preloaded[key].src = '/images/photos/borders/'+key+'.jpg';
 }
 
 $(document).ready(function() {
@@ -19,12 +24,7 @@ $(document).ready(function() {
   $(".nav li a:not('.dropdown-toggle')").on('click',function(){
     $('.navbar-collapse.in').collapse('hide');
   });
-  for (var key in images) {
-    preloaded[key] = new Image();
-    preloaded[key].src = '/images/photos/borders/'+key+'.jpg';
-  }
-
-  $(window).on('scroll', function() {
+  $(window).scroll(function() {
     calculateSectionHeights();
 
     var windowTop = window.pageYOffset;
@@ -35,10 +35,11 @@ $(document).ready(function() {
     for(var key in images) {
       if ((windowBottom > images[key].top && lastBottom <= images[key].top) ||
       (windowTop <= images[key].bottom && lastTop > images[key].bottom)) {
+        lastTop = windowTop;
         $('body').css("background-image", "url('/images/photos/borders/" + key + ".jpg')");
+        return;
       }
     }
-    lastTop = windowTop;
   });
 
   var news = new Firebase('https://winvin.firebaseio.com/news');

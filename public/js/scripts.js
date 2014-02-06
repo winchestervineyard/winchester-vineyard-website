@@ -7,6 +7,11 @@ var preloaded = {};
 var lastTop = 0;
 
 $(document).ready(function() {
+  // Ensure navbar closes on a click
+  $(".nav li a:not('.dropdown-toggle')").on('click',function(){
+    $('.navbar-collapse.in').collapse('hide');
+  });
+
   for (var key in images) {
     var section = $('#wv-' + key);
     var top = section.offset().top;

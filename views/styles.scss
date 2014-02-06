@@ -168,7 +168,6 @@ footer {
 
 #wv-welcome {
   @include section-padding;
-  padding-bottom: 60px;
   margin-bottom: 0px;
   background: white;
 }
@@ -191,11 +190,9 @@ footer {
   background: white;
   margin: 0;
   padding-bottom: 20px;
+  @include section-padding;
   @media (min-width: 992px) {
-    .row {
-      background: #fff url('/images/photos/areas/life-groups/life-group-background.jpg') no-repeat right bottom;
-      @include section-padding;
-    }
+    background: #fff url('/images/photos/areas/life-groups/life-group-background.jpg') no-repeat 95% top;
     iframe {
       @include shadow-iframe;
     }
@@ -203,6 +200,7 @@ footer {
 }
 
 #wv-jesus {
+  @include section-padding;
   background: white;
   margin: 0;
   iframe {

@@ -7,11 +7,6 @@ var preloaded = {};
 var lastTop = 0;
 
 $(document).ready(function() {
-  $('#top-link').topLink({
-    min: 650,
-    fadeSpeed: 100
-  });
-
   for (var key in images) {
     var section = $('#wv-' + key);
     var top = section.offset().top;

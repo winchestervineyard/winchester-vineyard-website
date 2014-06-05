@@ -75,12 +75,12 @@ p, .wv-title {
 .carousel .next {left:0;opacity:1;z-index:1;}
 
 .carousel .carousel-caption {
-  background: url('/images/swatch-black50.png');
+  /*background: #000;*/
   border-radius: 4px;
   margin: 0 0em;
 
   @media (min-width: 768px) {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   a {

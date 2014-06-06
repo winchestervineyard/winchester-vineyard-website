@@ -1,10 +1,11 @@
 $grassgreen: rgb(232, 228, 64);
 $purple: rgb(178, 67, 131);
-$red: rgb(200, 7, 45);
-$darkgrey: rgb(51, 51, 51);
+$red: rgb(200, 7, 44);
+$darkgrey: rgb(35, 35, 36);
+$blue: rgb(27, 92, 160);
 $seablue: rgb(0, 149, 126);
 $skyblue: rgb(121, 196, 198);
-$cornyellow: rgb(253, 212, 26);
+$cornyellow: rgb(253, 213, 48);
 $lightgrey: rgb(246, 246, 244);
 
 @mixin shadow-iframe {
@@ -75,9 +76,12 @@ p, .wv-title {
 .carousel .next {left:0;opacity:1;z-index:1;}
 
 .carousel .carousel-caption {
-  /*background: #000;*/
-  border-radius: 4px;
+  background: url('/images/swatch-black50.png');
   margin: 0 0em;
+  padding: 10px 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
 
   @media (min-width: 768px) {
     font-size: 2em;

@@ -28,11 +28,11 @@
 
 .carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
-    - (0..4).to_a.shuffle.each_with_index do |x, idx|
+    - (0..5).to_a.shuffle.each_with_index do |x, idx|
       .item{:class => idx == 0 ? 'active' : ''}
         %img{:src => "/images/photos/carousel/#{x}.jpg"}
         .carousel-caption
-          Rooted in God.  Transforming our community.
+          Rooted in God.  Bringing life to our community.
           %a{:href => '#wv-welcome'}
             Find out more &raquo;
 
@@ -40,15 +40,15 @@
   .shadow
   .container
     .row.wv-intro
-      .col-md-8
-        %p{:style => 'font-size: 250%'} We are Winchester Vineyard Church: a community of people who are getting to know Jesus better and bringing hope and life into our localities.
+      .col-md-6
+        %p{:style => 'font-size: 250%'} We are Winchester Vineyard Church. We're a community of people who are getting to know Jesus better and bringing hope and life into our localities.
 
         %p
           We meet on Sunday mornings at 10:30am at the Vineyard Centre, and in other locations throughout the week.
           %br
           %br
           %a{:href => '#wv-find-us'} Get directions to the Vineyard Centre &raquo;
-      .col-md-4
+      .col-md-5.col-md-offset-1
         .wv-areas
           .row
             .col-xs-6
@@ -86,13 +86,12 @@
                   .caption Contact us
 
 %section#wv-sundays
-  .shadow
   .container
     .row
       .col-md-12
         %h1 sundays - what to expect
-        %p You'll be really welcome to join us on a Sunday morning whether you are a church 'regular' or have never been before. Our service starts at 10.30am and finishes at 12 noon. Free refreshments are served for 20 minutes beforehand - come and grab a coffee. Most of us come dressed casually, but if you want to wear a brand new suit, that's fine!
-        
+        %p You are really welcome to join us on a Sunday morning whether you are a church 'regular' or have never been before. Our service starts at 10.30am and finishes at 12 noon. Free refreshments are served for 20 minutes beforehand - come and grab a coffee. Most of us come dressed casually, but if you want to wear a brand new suit, that's fine!
+
         %p
           We meet at the
           %a{:href => '#wv-find-us'} Vineyard Centre.
@@ -120,9 +119,9 @@
         %p Church isn't just for grown ups! We run age-appropriate interactive groups for 0-11s so they can learn about Jesus in a safe and fun environment. Our volunteer welcome team at the door can help your family settle in the right places. You can sign your children into their groups from 10.20am.
       .col-sm-4
         %h3 youth
-        %img{:src => '/images/photos/areas/sunday/coffee.jpg'}
+        %img{:src => '/images/photos/areas/sunday/youth.jpg'}
 
-        %p We also have a great bunch of 11-18 year olds who meet after worship in the youth cafe on a Sunday morning (about 11am). They learn more about Jesus, discuss current hot topics and play games.
+        %p 11-18 year olds meet after worship in the youth cafe on a Sunday morning.
 
         %p Our kids and youth team have up to date DBS checks.
 

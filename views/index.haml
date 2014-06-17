@@ -16,13 +16,13 @@
             %li
               %a{:href => '#wv-sundays'} Sundays
             %li
-              %a{:href => '#wv-life-groups'} Life groups
+              %a{:href => '#wv-community'} Community
             %li
-              %a{:href => '#wv-what-we-do'} Community
+              %a{:href => '#wv-growing'} Growing
+            %li
+              %a{:href => '#wv-compassion'} Compassion
             %li
               %a{:href => '#wv-news'} Events
-            %li
-              %a{:href => '#wv-jesus'} Jesus
             %li
               %a{:href => '#wv-find-us'} Contact
 
@@ -41,7 +41,10 @@
   .container
     .row.wv-intro
       .col-md-6
-        %p{:style => 'font-size: 250%'} We are Winchester Vineyard Church. We're a community of people who are getting to know Jesus better and bringing hope and life into our localities.
+        %p{:style => 'font-size: 250%'}
+          We are Winchester Vineyard Church. We're a community of people who are
+          %a{:href => '#', :title => "Find out more about Jesus"} getting to know Jesus better
+          and bringing hope and life into our localities.
 
         %p
           We meet on Sunday mornings at 10:30am at the Vineyard Centre, and in other locations throughout the week.
@@ -57,28 +60,27 @@
                   %img{:src => "/images/photos/areas/sunday.jpg"}
                   .caption Sundays
             .col-xs-6
-              %a{:href => '#wv-life-groups'}
+              %a{:href => '#wv-community'}
                 .thumbnail
                   %img{:src => "/images/photos/areas/life-groups.jpg"}
-                  .caption Life groups
+                  .caption Community
           .row
             .col-xs-6
-              %a{:href => '#wv-what-we-do'}
+              %a{:href => '#wv-growing'}
                 .thumbnail
                   %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
-                  .caption Community
+                  .caption Growing
+            .col-xs-6
+              %a{:href => '#wv-compassion'}
+                .thumbnail
+                  %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
+                  .caption Compassion
+          .row
             .col-xs-6
               %a{:href => '#wv-news'}
                 .thumbnail
                   %img{:src => "/images/news/briand.jpg"}
-                  .caption
-                    Events
-          .row
-            .col-xs-6
-              %a{:href => '#wv-jesus'}
-                .thumbnail
-                  %img{:src => '/images/jesus.png'}
-                  .caption Jesus
+                  .caption Events
             .col-xs-6
               %a{:href => '#wv-find-us'}
                 .thumbnail
@@ -86,11 +88,12 @@
                   .caption Contact us
 
 %section#wv-sundays
+  .shadow
   .container
     .row
       .col-md-12
         %h1 sundays - what to expect
-        %p You are really welcome to join us on a Sunday morning whether you are a church 'regular' or have never been before. Our service starts at 10.30am and finishes at 12 noon. Free refreshments are served for 20 minutes beforehand - come and grab a coffee. Most of us come dressed casually, but if you want to wear a brand new suit, that's fine!
+        %p You are really welcome to join us on a Sunday morning whether you are a church regular or have never been before. Our service starts at 10.30am and finishes at 12 noon. Free refreshments are served for 20 minutes beforehand - come and grab a coffee. Most of us come dressed casually, but if you want to wear a brand new suit, that's fine!
 
         %p
           We meet at the
@@ -128,7 +131,7 @@
       .col-sm-4
         %h3 finding out more
         %img{:src => '/images/photos/areas/sunday/coffee.jpg'}
-        %p The service ends about midday. If it's your first visit we'd love to meet you! You can join some of our staff team in the 'connect' area at the back of the café to have a coffee and ask any questions.
+        %p The service ends about midday. If it's your first visit we'd love to meet you! You can join some of our staff team in the connect area at the back of the café to have a coffee and ask any questions.
 
 %section#wv-talks
   .shadow
@@ -145,14 +148,13 @@
           %p
             %strong Older talks
         .row#wv-talks-older
-%section#wv-life-groups
+%section#wv-community
   .shadow
   .container
     .row
       .col-md-6.col-lg-7
         %h1 a living community
-        %p Church isn't just for sundays! PLACEHOLDER
-
+        %p We have many places for you to get involved, connect, and belong, no matter what your age or life stage.
         %h2 life groups
         %p Our Life Groups are at the heart of our church. They meet in peoples homes in Winchester and the surrounding areas. They are made up of 6-15 people and are a great place to get to know others, share both the important and the insignificant things of life and learn to do the things Jesus did.
         %h2 how to join a group
@@ -163,7 +165,6 @@
         %p
           :plain
             <iframe frameborder="0" height="300" scrolling="no" src="https://winvin.churchapp.co.uk/embed/smallgroups/map?body_bgcolor=EDECF1&group_bgcolor=ffffff&group_border_color=dddddd&avatar_bgcolor=40A284&heading_color=222222&text_color=444444&icon_color=8e8e8e&zoom=9" style="border-width:0" width="100%"></iframe>
-%section#wv-what-we-do
   .container
     .row
       .col-md-4
@@ -187,6 +188,46 @@
           friday youth
     .row
       .col-md-4
+        %h3 monday night football
+        %p
+          monday night football
+      .col-md-4
+        %h3 first monday
+        %p
+          first monday
+      .col-md-4
+        %h3 healing on the streets
+        %p
+          healing on the streets
+%section#wv-growing
+  .container
+    .row
+      .col-md-12
+        %h1 growing
+        %p Many of us struggle with the effects of the past - either things we've done which we wished we hadn’t, or things we've experienced through circumstances or relationships. God loves us and wants us to be free from the things that hold us back.
+    .row
+      .col-md-4
+        %h3 freedom in christ
+        %p
+          freedom in christ
+      .col-md-4
+        %h3 love after marriage
+        %p
+          love after marriage
+      .col-md-4
+        %h3 streams of hope
+        %p
+          first stop &amp; sozo
+%section#wv-compassion
+  .container
+    .row
+      .col-md-12
+        %h1 compassion
+        %p We care about more than just ourselves - we help and serve the needs of people in our city.
+        %p
+          %a{:href => '#wv-growing'} Get pastoral support &raquo;
+    .row
+      .col-md-8
         %h3 children's storehouse
         %img{:src => '/images/photos/areas/what-we-do/store-house.jpg'}
         %p
@@ -195,6 +236,26 @@
           Please
           %a{:href => '#wv-find-us'} get in touch
           if you need our services.
+      .col-md-4
+        %h3 food store
+        %img{:src => '/images/photos/areas/what-we-do/store-house.jpg'}
+        %p
+          food store
+        %p
+          Please
+          %a{:href => '#wv-find-us'} get in touch
+          if you need our services.
+    .row
+      .col-md-4
+        %h3 karis kids
+        %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
+        %p
+          karis kids
+      .col-md-4
+        %h3 street pastors
+        %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
+        %p
+          street pastors
       .col-md-4
         %h3 street teams
         %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
@@ -223,24 +284,6 @@
               %p
                 %strong Further ahead
             .row#wv-news-further-ahead
-%section#wv-jesus
-  .container
-    .row
-      .col-md-6
-        %h1 jesus
-    .row
-      .col-md-6
-        %p Jesus of Nazareth was a working-class carpenter from a dusty town in the Middle East. He was born around two thousand years ago.
-        %p We believe that he was unique, and special among all people to have walked the earth: that he was God in human form.
-        %p He came willingly to be with us to pay the cost of humanity's selfishness and disobedience, allowing himself to be brutally executed by the authorities that we might once again have relationship with God.
-        %p We believe that he's still alive today, and calling all people to himself to join his mission to save humanity.
-        %p
-          %a{:href => 'mailto:hello@winvin.org.uk'} I want to find out more &raquo;
-
-      .col-md-6
-        :plain
-          <iframe width="100%" height="350" src="//www.youtube.com/embed/d2BW_yButTk" frameborder="0" allowfullscreen></iframe>
-
 %footer#wv-find-us
   .shadow
   .container

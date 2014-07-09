@@ -220,14 +220,14 @@ footer {
 }
 
 p.quote {
-  background: $purple;
+  background: $blue;
   color: white;
   font-size: 1.5em;
   padding: 20px;
   border-radius: 10px;
 }
 
-#wv-growing, #wv-compassion, #wv-team {
+#wv-compassion, #wv-team {
   @include section-padding;
   background: white;
 
@@ -235,6 +235,14 @@ p.quote {
     width: 100%;
     margin-bottom: 10px;
   }
+}
+
+#wv-growing {
+  @include section-padding;
+  @include panel-photo-background;
+  color: white;
+
+  a { color: $grassgreen; }
 }
 
 #wv-news {

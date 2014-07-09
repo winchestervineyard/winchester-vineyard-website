@@ -86,8 +86,8 @@
             .col-xs-6
               %a{:href => '#wv-find-us'}
                 .thumbnail
-                  %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
-                  .caption Contact us
+                  %img{:src => "http://maps.googleapis.com/maps/api/staticmap?center=Winchester+Vineyard+Winchester+UK+SO23+9NP&zoom=13&size=600x400&maptype=roadmap&markers=color:blue%7C51.052867,-1.306236&sensor=false"}
+                  .caption Connect with us
 
 %section#wv-sundays
   .shadow
@@ -167,7 +167,7 @@
         %p
           :plain
             <iframe frameborder="0" height="300" scrolling="no" src="https://winvin.churchapp.co.uk/embed/smallgroups/map?body_bgcolor=EDECF1&group_bgcolor=ffffff&group_border_color=dddddd&avatar_bgcolor=40A284&heading_color=222222&text_color=444444&icon_color=8e8e8e&zoom=9" style="border-width:0" width="100%"></iframe>
-      #flickr.col-md-4.col-md-offset-1
+      #flickr.hidden-xs.hidden-sm.col-md-4.col-md-offset-1
         %img{:src => "/images/photos/areas/life-groups.jpg"}
         %img{:src => "/images/photos/areas/sunday.jpg"}
         %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
@@ -199,6 +199,7 @@
         %p
           Come and play football every Monday evening 8-9pm at Knightwood Leisure Centre in Chandler's Ford. All abilities welcome.
 %section#wv-growing
+  .shadow
   .container
     .row
       .col-md-12
@@ -206,35 +207,37 @@
         %p Many of us struggle with the effects of the past - either things we've done which we wished we hadn’t, or things we've experienced through circumstances or relationships. God loves us and wants us to be free from the things that hold us back.
         %p Life groups and Sunday morning services are a great place to be prayed for. If you want to go deeper there are a variety of different options which are collectively called Streams of Hope.
     .row
-      .col-md-6
+      .col-md-3
         %h3 first stop
         %p
           Not sure where to start? Contact us for a First Stop appointment to discuss how you can best move forward.
-        %p
-          %a{:href => 'mailto:enquiries@streamsofhope.org.uk'} Make an enquiry &raquo;
-      .col-md-6
+      .col-md-3
         %h3 sozo
         %p
           Sozo is a powerful yet gentle prayer session that aims to deal with the things that are stopping you from connecting deeply with God.
-        %p
-          %a{:href => '#wv-find-us'} Download the Sozo forms &raquo;
-    .row
-      .col-md-6
-        %h3 love after marriage
-        %p
-          Love After Marriage (LAM) is an 18 week course taking an in depth look at your relationship. It can revive and refresh your marriage, or help repair marriages that are struggling.
-      .col-md-6
+      .col-md-3
         %h3 freedom in christ
         %p
           Freedom in Christ is a discipleship course that shows us who we are in Christ and how to live this out in day to day life.
+      .col-md-3
+        %h3 love after marriage
+        %p
+          Love After Marriage (LAM) is an 18 week course taking an in depth look at your relationship. It can revive and refresh your marriage, or help repair marriages that are struggling.
     .row
-      .col-md-6
+      .col-md-3
+        %p
+          %a{:href => 'mailto:enquiries@streamsofhope.org.uk'} Make an enquiry &raquo;
+      .col-md-3
+        %p
+          %a{:href => '#wv-find-us'} Download the Sozo forms &raquo;
+      .col-md-3
         %p
           %a{:href => 'mailto:enquiries@streamsofhope.org.uk?subject=Love After Marriage enquiry'} Register your interest &raquo;
-      .col-md-6
+      .col-md-3
         %p
           %a{:href => 'mailto:admin@winvin.org.uk?subject=Freedom in Christ enquiry'} Register your interest &raquo;
 %section#wv-compassion
+  .shadow
   .container
     .row
       .col-md-12
@@ -319,14 +322,14 @@
       .col-md-6
         %img.team{:src => '/images/news/briand.jpg'}
       .col-md-6
-        %h2 nigel and jo
+        %h2 nigel and jo hemming
         %p Nigel and Jo have led the church since Jan 2012. They met and married in Birmingham and spent a number of years working there, before moving to Winchester to lead our church.
         %p They have three children: Becky, Zac and JJ. More amazing bio here!
     %hr
     .row
       .col-md-4
         %img.team{:src => '/images/news/briand.jpg'}
-        %h2 chris and ellie
+        %h2 chris and ellie parsons
         %p Chris &amp Ellie are part of the leadership team which assists Nigel and Jo in running the church. They coordinate life groups and Sparklers for under fives, as well as running parenting courses and being part of the team which host and leads Sunday services.
       .col-md-4
         %img.team{:src => '/images/news/briand.jpg'}
@@ -338,22 +341,23 @@
         %p bio of paul here
     %hr
     .row
-      .col-md-3
+      .col-md-4
         %h3 paul penney
         %p Paul leads the youth teams at our church.
-      .col-md-3
+      .col-md-4
         %h3 clare suffield
         %p Clare coordinates the Streams of Hope ministry
-      .col-md-3
+      .col-md-4
         %h3 jenny mackereth
         %p Jenny is reponsible for our children's storehouse and street teams work.
-      .col-md-3
+    .row
+      .col-md-4
         %h2 neil mackereth
         %p Neil chairs the trustees of the church, which oversee legal and financial aspects of the church.
-      .col-md-3
+      .col-md-4
         %h2 mike morell
         %p Mike looks after the church centre and coordinates the administration in the church, as well as being responsible for Sunday teams.
-      .col-md-3
+      .col-md-4
         %h3 clare sullivan
         %p Clare serves as our safeguarding officer, responsible for ...
 

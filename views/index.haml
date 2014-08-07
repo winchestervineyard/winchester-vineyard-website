@@ -9,24 +9,23 @@
           %span.icon-bar
           %span.icon-bar
         %a{:href => '/'}
-          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 5px; height: 50px'}
+          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 13px; height: 33px'}
       .navbar-collapse.collapse
-        .container
-          %ul.nav.navbar-nav.navbar-right{:style => 'margin-top: 3px'}
-            %li
-              %a{:href => '#wv-sundays'} Sundays
-            %li
-              %a{:href => '#wv-community'} Community
-            %li
-              %a{:href => '#wv-growing'} Growing
-            %li
-              %a{:href => '#wv-compassion'} Compassion
-            %li
-              %a{:href => '#wv-news'} Events
-            %li
-              %a{:href => '#wv-team'} Team
-            %li
-              %a{:href => '#wv-find-us'} Contact
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => '#wv-sundays'} Sundays
+          %li
+            %a{:href => '#wv-community'} Community
+          %li
+            %a{:href => '#wv-growing'} Growing
+          %li
+            %a{:href => '#wv-compassion'} Compassion
+          %li
+            %a{:href => '#wv-news'} Events
+          %li
+            %a{:href => '#wv-team'} Team
+          %li
+            %a{:href => '#wv-find-us'} Contact
 
 .carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
@@ -70,7 +69,7 @@
             .col-xs-6
               %a{:href => '#wv-growing'}
                 .thumbnail
-                  %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
+                  %img{:src => "/images/photos/areas/growing.jpg"}
                   .caption Growing
             .col-xs-6
               %a{:href => '#wv-compassion'}
@@ -81,7 +80,7 @@
             .col-xs-6
               %a{:href => '#wv-news'}
                 .thumbnail
-                  %img{:src => "/images/news/briand.jpg"}
+                  %img{:src => "/images/photos/areas/community/car-boot-sale.jpg"}
                   .caption Events
             .col-xs-6
               %a{:href => '#wv-find-us'}
@@ -168,15 +167,14 @@
           :plain
             <iframe frameborder="0" height="300" scrolling="no" src="https://winvin.churchapp.co.uk/embed/smallgroups/map?body_bgcolor=EDECF1&group_bgcolor=ffffff&group_border_color=dddddd&avatar_bgcolor=40A284&heading_color=222222&text_color=444444&icon_color=8e8e8e&zoom=9" style="border-width:0" width="100%"></iframe>
       #flickr.hidden-xs.hidden-sm.col-md-4.col-md-offset-1
-        %img{:src => "/images/photos/areas/life-groups.jpg"}
-        %img{:src => "/images/photos/areas/sunday.jpg"}
-        %img{:src => "/images/photos/areas/what-we-get-up-to.jpg"}
-        %img{:src => "/images/photos/areas/what-we-do/big-fish.jpg"}
+        %img{:src => "/images/photos/areas/community/life-group-hug.jpg"}
+        %img{:src => "/images/photos/areas/community/camping-weekend.jpg"}
+        %img{:src => "/images/photos/areas/community/family-fun-day.jpg"}
   .container
     .row
       .col-md-6
         %h3 fingerlings baby group
-        %p (!! baby photo here)
+        %img{:src => '/images/photos/areas/fingerlings.jpg'}
         %p
           Our new term time baby group meets on Wednesdays from 10-11.30am.
           Come for coffee and to chat about life with a baby ... and beyond!
@@ -200,7 +198,7 @@
           Come and play football every Monday evening 8-9pm at Knightwood Leisure Centre in Chandler's Ford. All abilities welcome.
 %section#wv-growing
   .shadow
-  .container
+  .container.wv-caption
     .row
       .col-md-12
         %h1 growing
@@ -242,7 +240,7 @@
     .row
       .col-md-12
         %h1 compassion
-        %p We live out our faith by practically serving the needs of people in our city.
+        %p We live out our faith in Jesus by practically serving the needs of people in our city.
     .row
       .col-md-12
         %p.quote A recent visitor to our storehouse said, "I didn’t realise you did school uniform, my son goes to school looking like a ragamuffin. He hates it because he is embarrassed." She was overwhelmed to receive a new uniform for her son.
@@ -256,8 +254,8 @@
         %h3 foodbank
         %img{:src => '/images/photos/areas/what-we-do/store-house.jpg'}
         %p
-          Foodbank reaches out to serve those in need by providing a simple bag of groceries
-        %p To get involved, grab a bag, fill a bag, give a bag! All you need to do is pick up a bag on a Sunday and bring it back full.
+          Foodbank reaches out to serve those in need by providing them with a simple bag of groceries.
+        %p To get involved: "grab a bag, fill a bag, give a bag!" All you need to do is pick up a bag on a Sunday and bring it back full.
     .row
       .col-md-6
         %p
@@ -320,47 +318,43 @@
         %h1 meet the team
     .row
       .col-md-6
-        %img.team{:src => '/images/news/briand.jpg'}
+        %br
+        %img.team.img-rounded{:src => '/images/news/briand.jpg'}
       .col-md-6
         %h2 nigel and jo hemming
-        %p Nigel and Jo have led the church since Jan 2012. They met and married in Birmingham and spent a number of years working there, before moving to Winchester to lead our church.
-        %p They have three children: Becky, Zac and JJ. More amazing bio here!
+        %p Nigel and Jo have led the church since 2012. Before moving to Winchester they lived in Birmingham, where they were part of the leadership team of the Vineyard Church there. Prior to that, Nigel was a musician and a teacher and Jo was an environmental protection officer. They have three wonderful children, Becky, Zac and JJ and are passionate about helping people of all ages connect with Jesus.
     %hr
     .row
       .col-md-4
-        %img.team{:src => '/images/news/briand.jpg'}
-        %h2 chris and ellie parsons
-        %p Chris &amp Ellie are part of the leadership team which assists Nigel and Jo in running the church. They coordinate life groups and Sparklers for under fives, as well as running parenting courses and being part of the team which host and leads Sunday services.
-      .col-md-4
-        %img.team{:src => '/images/news/briand.jpg'}
+        %img.team.img-rounded{:src => '/images/news/briand.jpg'}
         %h2 brian nicholson
-        %p Brian serves on the leadership team of the church, and oversees discipleship courses run at the Vineyard such as Freedom in Christ and Living Free. He also preaches on Sundays, drawing from his long experience of church leadership.
+        %p Brian serves on the Leadership Team and oversees discipleship courses including Freedom in Christ and Living Free. With his wife Hilary they lead the prayer ministry team and share their long experience of church leadership through a number of areas.
       .col-md-4
-        %img.team{:src => '/images/news/briand.jpg'}
+        %img.team.img-rounded{:src => '/images/news/briand.jpg'}
+        %h2 chris and ellie parsons
+        %p Chris and Ellie assist Nigel and Jo in leading the church. They have been part of the church for many years, serving on a wide range of teams. They serve on the leadership team and have overall responsibility for Life Groups. Chris also works in software development and Ellie has a background in nursing.
+      .col-md-4
+        %img.team.img-rounded{:src => '/images/news/briand.jpg'}
         %h2 paul phillips
-        %p bio of paul here
+        %p Paul serves on the Leadership Team and oversees the role of prayer in our church life. He also works to train and develop leaders and small groups within the church.
     %hr
     .row
-      .col-md-4
-        %h3 paul penney
-        %p Paul leads the youth teams at our church.
-      .col-md-4
-        %h3 clare suffield
-        %p Clare coordinates the Streams of Hope ministry
       .col-md-4
         %h3 jenny mackereth
-        %p Jenny is reponsible for our children's storehouse and street teams work.
-    .row
+        %p Jenny is responsible for the Childrens Storehouse and oversees our other compassion ministries.
       .col-md-4
         %h2 neil mackereth
-        %p Neil chairs the trustees of the church, which oversee legal and financial aspects of the church.
+        %p Neil chairs the trustees of the church, which oversee legal and financial aspects of what we do.
       .col-md-4
         %h2 mike morell
-        %p Mike looks after the church centre and coordinates the administration in the church, as well as being responsible for Sunday teams.
+        %p Mike is the Office Manager, responsible for administration and the vineyard centre.
+    .row
+      .col-md-4
+        %h3 clare suffield
+        %p Clare, along with her husband Mervyn, coordinates the Streams of Hope counselling and healing ministries.
       .col-md-4
         %h3 clare sullivan
-        %p Clare serves as our safeguarding officer, responsible for ...
-
+        %p Clare is our safeguarding officer, working on behalf of children and vulnerable adults.
 %footer#wv-find-us
   .shadow
   .container

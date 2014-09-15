@@ -111,11 +111,30 @@ function renderNews(data) {
 
 function applyFilters(data) {
   var date = new Date(data.datetime);
-  data.dow = date.strftime("%a");
-  data.fulldatetime = date.strftime("%a %d %b %H:%M%p");
-  data.date = date.strftime("%a %d %b %Y");
+  if (!isNaN(date)) {
+    data.dow = date.strftime("%a %e") + get_nth_suffix(date);
+    data.fulldatetime = date.strftime("%a %e %b %H:%M%p");
+    data.date = date.strftime("%a %d %b %Y");
+  }
   return data;
 }
+
+function get_nth_suffix(date) {
+   switch (date) {
+     case 1:
+     case 21:
+     case 31:
+        return 'st';
+     case 2:
+     case 22:
+        return 'nd';
+     case 3:
+     case 23:
+        return 'rd';
+     default:
+        return 'th';
+   }
+ }
 
 var FOUR_WEEKS_IN_MS = 1000 * 60 * 60 * 24 * 28;
 

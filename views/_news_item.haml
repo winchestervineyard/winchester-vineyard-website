@@ -1,6 +1,7 @@
 .col-sm-4{:id => "news-{{ id }}"}
   .panel
-    .panel-heading {{ dow }}: {{ title }}
+    .panel-heading
+      {{#dow}}{{ dow }}:{{/dow}} {{ title }}
     .panel-body.clearfix
       %img{:src => '{{ image_url }}', :style => 'width: 50%; float: right; padding: 0px 0px 0px 10px'}
       {{ text }}
@@ -8,9 +9,13 @@
       %br
     .panel-footer.clearfix
       .wv-wherewhen.pull-left
+        {{#fulldatetime}}
         {{ fulldatetime }}
         %br
+        {{/fulldatetime}}
+        {{#location_url}}
         %a{:href => '{{ location_url }}'} {{ location_title }}
+        {{/location_url}}
       {{#booking_url}}
       .pull-right
         %a.btn.btn-default{:role => 'button', :href => '{{ booking_url }}'} Book now

@@ -204,6 +204,18 @@ img.map {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8)
 }
 
+section.hellobar {
+  background: $seablue;
+  border: 0px;
+  margin-bottom: 0px;
+  padding: 20px 0 0px 0;
+  color: white;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
 section.white {
   @include section-padding;
   background: white;

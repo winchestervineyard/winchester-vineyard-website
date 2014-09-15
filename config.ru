@@ -20,6 +20,10 @@ get '/' do
   haml :index
 end
 
+get '/students/?' do
+  haml :students
+end
+
 get '/admin/?' do
   @uploader = ImageUploader.new
   @uploader.success_action_redirect = request.url

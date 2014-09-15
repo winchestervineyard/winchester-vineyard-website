@@ -194,10 +194,30 @@ footer {
   }
 
   img.map {
-    width: 100%;
     border: 10px solid #444;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8)
   }
+}
+
+img.map {
+  width: 100%;
+  border: 10px solid white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8)
+}
+
+section.white {
+  @include section-padding;
+  background: white;
+  color: $darkgrey;
+}
+
+.event-yes {
+  font-weight: bold;
+  color: #0a0;
+}
+
+.event-no {
+  font-weight: bold;
+  color: #a00;
 }
 
 #wv-sundays {

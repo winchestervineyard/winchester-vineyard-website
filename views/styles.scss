@@ -87,13 +87,32 @@ p, .wv-title {
 .carousel .carousel-caption {
   background: url('/images/swatch-black50.png');
   margin: 0 0em;
-  padding: 10px 0px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
+  padding: 30px;
 
-  @media (min-width: 768px) {
-    font-size: 2em;
+  text-align: left;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  left: 60%;
+  
+  @media (max-width: 640px) {
+    font-size: 80%;
+  }
+
+  @media (max-width: 520px) {
+    .caption-directions { display: none; }
+    font-size: 70%;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 50%;
+  }
+
+  p.caption-title {
+    @media (min-width: 1200px) { font-size: 250%; }
+    @media (min-width: 1020px) and (max-width: 1199px) { font-size: 200%; }
+    @media (max-width: 1019px) { font-size: 150%; }
+    @media (max-width: 888px) { font-size: 150%; }
   }
 
   a {

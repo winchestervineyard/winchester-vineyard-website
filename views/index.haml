@@ -27,6 +27,15 @@
           %li
             %a{:href => '#wv-find-us'} Contact
 
+%section.hellobar
+  .shadow
+  .container
+    .row
+      .col-md-12
+        %p
+          Welcome students! Check here for latest updates:
+          %a{:href => "/students"} www.winvin.org.uk/students
+
 .carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
     - (0..4).to_a.shuffle.each_with_index do |x, idx|
@@ -42,14 +51,6 @@
           %p.caption-directions
             %a{:href => '#wv-find-us'} Get directions to the Vineyard Centre &raquo;
 
-%section.hellobar
-  .shadow
-  .container
-    .row
-      .col-md-12
-        %p
-          Welcome students! Check here for latest updates:
-          %a{:href => "/students"} www.winvin.org.uk/students
 
 %section#wv-sundays
   .shadow
@@ -86,7 +87,7 @@
         %p Church isn't just for grown ups! We run age-appropriate interactive groups for 0-11s so they can learn about Jesus in a safe and fun environment. Our volunteer welcome team at the door can help your family settle in the right places. You can sign your children into their groups from 10.20am.
       .col-sm-4
         %h3 youth
-        %p (!! youth photo)
+        %img{:src => '/images/photos/youth.jpg'}
 
         %p Our youth (11-18s) meet during the service in the Youth Café. We play games and eat chocolate, whilst learning what it means to follow Jesus as a teenager today.
 
@@ -148,17 +149,21 @@
         %img{:src => '/images/photos/areas/what-we-do/big-fish.jpg'}
         %p
           Our toddler group meets on Monday and Tuesday mornings during term time from 10am - 12pm. There is plenty of room to play including an outside area, a large selection of toys and great cake!
+        %p
+          %a{:href => '#wv-find-us'} Call us for more information &raquo;
     .row
       .col-md-6
         %h3 second sunday
-        %p (!! students photo)
         %p
           Students and 20's social events, meeting 12th October, 9th November and 14th December.
+        %p
+          %a{:href => '#wv-find-us'} Call us for more information &raquo;
       .col-md-6
         %h3 monday night football
-        %p (!! football photo)
         %p
           Come and play football every Monday evening 8-9pm at Knightwood Leisure Centre in Chandler's Ford. All abilities welcome.
+        %p
+          %a{:href => '#wv-find-us'} Call us for more information &raquo;
 %section#wv-growing
   .shadow
   .container.wv-caption
@@ -193,7 +198,7 @@
           %a{:href => '#wv-find-us'} Download the Sozo forms &raquo;
       .col-md-3
         %p
-          %a{:href => 'mailto:enquiries@streamsofhope.org.uk?subject=Love After Marriage enquiry'} Register your interest &raquo;
+          %a{:href => 'mailto:office@winvin.org.uk?Freedom+In+Christ'} Register your interest &raquo;
       .col-md-3
         %p
           %a{:href => 'mailto:admin@winvin.org.uk?subject=Freedom in Christ enquiry'} Register your interest &raquo;
@@ -293,7 +298,7 @@
         %h3 brian and hilary nicholson
         %p Brian serves on the Strategic Leadership Group and oversees discipleship courses including Freedom in Christ and Living Free. With his wife Hilary they lead the prayer ministry team and share their long experience of church leadership through a number of areas.
       .col-md-4
-        %p (!! c&amp;e photo)
+        %img.team.img-rounded{:src => '/images/team/chris-and-ellie-parsons.jpg'}
         %h3 chris and ellie parsons
         %p Chris and Ellie assist Nigel and Jo in leading the church. They have been part of the church for many years, serving on a wide range of teams. They serve on the Strategic Leadership Group and have overall responsibility for Life Groups. Chris also works in software development and Ellie has a background in nursing.
       .col-md-4

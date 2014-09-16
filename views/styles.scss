@@ -59,6 +59,10 @@ p, .wv-title {
   z-index: 20;
 }
 
+.navbar-inverse {
+  background: $darkgrey;
+}
+
 .navbar-header {
   padding-right: 5px
 }
@@ -66,10 +70,6 @@ p, .wv-title {
 .navbar-right {
   margin-top: 3px;
   margin-right: 10px;
-}
-
-.carousel {
-  margin-top: 50px;
 }
 
 // Make carousel fade
@@ -205,8 +205,10 @@ img.map {
 }
 
 section.hellobar {
-  background: $seablue;
+  background: $red;
+  position: relative;
   border: 0px;
+  margin-top: 50px;
   margin-bottom: 0px;
   padding: 20px 0 0px 0;
   color: white;

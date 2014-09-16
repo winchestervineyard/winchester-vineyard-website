@@ -165,6 +165,10 @@ img.team {
   width: 100%;
 }
 
+.carousel {
+  margin-top: 50px;
+}
+
 .shadow {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
   height: 14px;
@@ -205,10 +209,10 @@ img.map {
 }
 
 section.hellobar {
-  background: $red;
+  background: $blue;
+  font-weight: bold;
   position: relative;
   border: 0px;
-  margin-top: 50px;
   margin-bottom: 0px;
   padding: 20px 0 0px 0;
   color: white;

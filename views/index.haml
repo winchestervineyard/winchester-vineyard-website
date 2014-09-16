@@ -27,6 +27,21 @@
           %li
             %a{:href => '#wv-find-us'} Contact
 
+.carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
+  .carousel-inner
+    - (0..4).to_a.shuffle.each_with_index do |x, idx|
+      .item{:class => idx == 0 ? 'active' : ''}
+        %img{:src => "/images/photos/carousel/#{x}.jpg"}
+        .carousel-caption
+          %p.caption-title
+            We are Winchester Vineyard Church: people who are
+            getting to know Jesus better
+            and bringing hope and life into our communities.
+          %p.caption-meet.hidden-xs
+            We meet on Sunday mornings at 10:30am at the Vineyard Centre, and in other locations throughout the week.
+          %p.caption-directions
+            %a{:href => '#wv-find-us'} Get directions to the Vineyard Centre &raquo;
+
 %section.hellobar
   .shadow
   .container
@@ -36,21 +51,6 @@
           Welcome students! Check here for latest updates:
           %a{:href => "/students"} www.winvin.org.uk/students
 
-.carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
-  .carousel-inner
-    - (0..4).to_a.shuffle.each_with_index do |x, idx|
-      .item{:class => idx == 0 ? 'active' : ''}
-        %img{:src => "/images/photos/carousel/#{x}.jpg"}
-        .carousel-caption
-          %p.caption-title
-            We are Winchester Vineyard Church. We're a community of people who are
-            getting to know Jesus better
-            and bringing hope and life into our localities.
-          %p.caption-meet.hidden-xs
-            We meet on Sunday mornings at 10:30am at the Vineyard Centre, and in other locations throughout the week.
-          %p.caption-directions
-            %a{:href => '#wv-find-us'} Get directions to the Vineyard Centre &raquo;
-
 
 %section#wv-sundays
   .shadow
@@ -58,7 +58,7 @@
     .row
       .col-md-12
         %h1 sundays - what to expect
-        %p You're really welcome to join us on a Sunday morning whether you are a church regular or have never been before. Our service starts at 10.30am and finishes at 12 noon. Free refreshments are served for 20 minutes beforehand - come and grab a coffee. Most of us come dressed casually, but if you want to wear a brand new suit, that's fine!
+        %p You're really welcome to join us on a Sunday morning whether you are a church regular or have never been before. Our service starts at 10.30am and finishes at midday. Free refreshments are served for 20 minutes beforehand - come and grab a coffee. We don't have a dress code: most of us come dressed casually.
 
         %p
           We meet at the
@@ -66,9 +66,9 @@
           We have a fully accessible venue with free parking including Blue Badge holder spaces.
     .row
       .col-md-4
-        %h3 we start with worship
+        %h3 we launch with worship
         %img{:src => '/images/photos/areas/sunday/worship.jpg'}
-        %p A live band leads us in about 25 minutes of expectant sung worship. The words are on the screen and you can join in or just sit back and listen.
+        %p Connecting with God is central to what we do. A live band leads us for about 25 minutes of sung worship. The words are on the screen and you can join in or just sit back and listen.
       .col-md-4
         %h3 learn together
         %img{:src => '/images/photos/areas/sunday/insight.jpg'}
@@ -79,24 +79,24 @@
       .col-md-4
         %h3 and make a response
         %img{:src => '/images/photos/areas/sunday/response.jpg'}
-        %p At the end of the talk we reflect on what we have heard and respond. There is the opportunity to choose to follow Jesus at this time, or the chance to receive prayer. There is no pressure to participate, but always the chance to respond if you wish.
+        %p At the end of the talk we reflect on what we have heard and respond. There is the opportunity to choose to follow Jesus or to receive prayer. There is no pressure to participate, but always the chance to respond if you wish.
     .row
       .col-sm-4
         %h3 kids church
         %img{:src => '/images/photos/areas/sunday/kids-church.jpg'}
-        %p Church isn't just for grown ups! We run age-appropriate interactive groups for 0-11s so they can learn about Jesus in a safe and fun environment. Our volunteer welcome team at the door can help your family settle in the right places. You can sign your children into their groups from 10.20am.
+        %p We run age-appropriate interactive groups for 0-11s so they can learn about Jesus in a safe and fun environment. Our volunteer welcome team at the door can help your family settle in the right places. You can sign your children into their groups from 10.20am.
       .col-sm-4
         %h3 youth
         %img{:src => '/images/photos/youth.jpg'}
 
-        %p Our youth (11-18s) meet during the service in the Youth Café. We play games and eat chocolate, whilst learning what it means to follow Jesus as a teenager today.
+        %p Our youth (11-18s) meet after worship in the Youth Café. We play games and eat chocolate, whilst learning what it means to follow Jesus as a teenager today.
 
         %p Our kids and youth team have up to date DBS checks.
 
       .col-sm-4
         %h3 finding out more
         %img{:src => '/images/photos/areas/sunday/coffee.jpg'}
-        %p The service ends about midday. If it's your first visit we'd love to meet you! You can join some of our staff team in the connect area at the back of the café to have a coffee and ask any questions.
+        %p The service ends about midday. If it's your first visit we'd love to meet you! You can join some of our team in the connect area to have a coffee and ask any questions.
 
 %section#wv-talks
   .shadow
@@ -121,18 +121,18 @@
         %h1 community
         %p We have many places for you to connect, belong and get involved, no matter what your age or life stage.
         %h2 life groups
-        %p Our Life Groups are at the heart of our church. They meet in people's homes in Winchester and the surrounding areas. They are made up of 6-15 people and are a great place to get to know others, share both the important and the insignificant things of life and learn to do the things Jesus did.
+        %p Our Life Groups are at the heart of our church. They meet in people's homes in Winchester and the surrounding areas. They are a great place to get to know others, share both the big and the small things of life, and learn to do the things Jesus did.
         %h2 how to join a group
         %p
-          Most groups meet weekly. You are welcome to try a few to find the one where you feel most at home. Browse the map below and
-          %a{:href => '#wv-find-us'} get in touch with the office
-          to find out more about groups.
+          Most groups meet weekly. You are welcome to try a few to find the one where you feel most at home. Browse the map below and get in touch with the office to find out more about groups.
+        %p 
+          %a{:href => '#wv-find-us'} Find out about a group &raquo;
         %p
           :plain
             <iframe frameborder="0" height="300" scrolling="no" src="https://winvin.churchapp.co.uk/embed/smallgroups/map?body_bgcolor=EDECF1&group_bgcolor=ffffff&group_border_color=dddddd&avatar_bgcolor=40A284&heading_color=222222&text_color=444444&icon_color=8e8e8e&zoom=9" style="border-width:0" width="100%"></iframe>
       #flickr.hidden-xs.hidden-sm.col-md-4.col-md-offset-1
-        %img{:src => "/images/photos/areas/community/family-fun-day.jpg"}
         %img{:src => "/images/photos/areas/community/life-group.jpg"}
+        %img{:src => "/images/photos/areas/community/family-fun-day.jpg"}
         %img{:src => "/images/photos/areas/community/quiz-night.jpg"}
   .container
     .row
@@ -140,7 +140,7 @@
         %h3 fingerlings baby group
         %img{:src => '/images/photos/areas/fingerlings.jpg'}
         %p
-          Our new term time baby group meets on Wednesdays from 10-11.30am.
+          Our term time baby group meets on Wednesdays from 10-11.30am.
           Come for coffee and to chat about life with a baby ... and beyond!
         %p
           %a{:href => '#wv-find-us'} Call us for more information &raquo;
@@ -170,17 +170,17 @@
     .row
       .col-md-12
         %h1 growing
-        %p Many of us struggle with the effects of the past - either things we've done which we wished we hadn’t, or things we've experienced through circumstances or relationships. God loves us and wants us to be free from the things that hold us back.
-        %p Life groups and Sunday morning services are a great place to be prayed for. If you want to go deeper there are a variety of different options which are collectively called Streams of Hope.
+        %p When we follow Jesus, our lives begin to change. As we grow in our faith, we may find we need to deal with the effects of the past - either things we've done which we wished we hadn’t, or things we've experienced through circumstances or relationships. God loves us and wants us to be free from the things that hold us back.
+        %p Life groups and Sunday morning services are a great place to be prayed for. If we want to go deeper there are a variety of different options which are collectively called Streams of Hope.
     .row
       .col-md-3
         %h3 first stop
         %p
-          Not sure where to start? Contact us for a First Stop appointment to discuss how you can best move forward.
+          Not sure where to start? Contact us for a First Stop appointment to discuss how we can best move forward.
       .col-md-3
         %h3 sozo
         %p
-          Sozo is a powerful yet gentle prayer session that aims to deal with the things that are stopping you from connecting deeply with God.
+          Sozo is a powerful yet gentle prayer session that aims to deal with the things that are stopping us from connecting deeply with God.
       .col-md-3
         %h3 freedom in christ
         %p
@@ -188,7 +188,7 @@
       .col-md-3
         %h3 love after marriage
         %p
-          Love After Marriage (LAM) is an 18 week course taking an in depth look at your relationship. It can revive and refresh your marriage, or help repair marriages that are struggling.
+          This course takes an in-depth look at relationships. It can revive and refresh your marriage, or help repair marriages that are struggling.
     .row
       .col-md-3
         %p
@@ -213,50 +213,58 @@
       .col-md-12
         %p.quote A recent visitor to our storehouse said, "I didn’t realise you did school uniform, my son goes to school looking like a ragamuffin. He hates it because he is embarrassed." She was overwhelmed to receive a new uniform for her son.
     .row
-      .col-md-6
+      .col-md-4
         %h3 children's storehouse
         %img{:src => '/images/photos/areas/what-we-do/store-house.jpg'}
         %p
           We provide free good quality childrens clothes and equipment to those in need. We run a voucher system and accept referrals from statutory organisations across the area. Please get in touch if you need our services or want to donate 'as new' goods.
-      .col-md-6
-        %h3 foodbank
-        %img{:src => '/images/photos/areas/what-we-do/foodbank.jpg'}
+      .col-md-4
+        %h3 street team
+        %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
         %p
-          Foodbank reaches out to serve those in need by providing them with a simple bag of groceries.
+          On Saturday nights, a team goes out into Winchester city centre with soup, rolls, tea, coffee, blankets, socks, hats and a listening ear. We help those on the streets by providing for basic needs and giving them someone to talk to.
+      .col-md-4
+        %h3 foodstore - coming soon
+        %img{:src => '/images/photos/areas/what-we-do/foodstore.jpg'}
+        %p
+          Foodstore reaches out to serve those in need by providing them with a simple bag of groceries.
         %p To get involved: "grab a bag, fill a bag, give a bag!" All you need to do is pick up a bag on a Sunday and bring it back full.
     .row
-      .col-md-6
+      .col-md-4
         %p
           %a{:href => 'mailto:hello@winvin.org.uk?subject=Storehouse'} Get in touch &raquo;
-      .col-md-6
+      -#.col-md-6
+        -#%p
+          -#%a{:href => 'mailto:hello@winvin.org.uk?subject=Foodstore'} Request a shopping list &raquo;
+      .col-md-4
         %p
-          %a{:href => 'mailto:hello@winvin.org.uk?subject=Foodbank'} Request a shopping list &raquo;
+          %a{:href => 'mailto:hello@winvin.org.uk?subject=Street+teams+enquiry'} Get involved &raquo;
     .row
       .col-md-4
-        %h3 karis kids
-        %img{:src => '/images/kariskids.png'}
+        %h3 healing on the streets
+        %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=51.062635, -1.311836&zoom=15&size=360x120&maptype=roadmap&markers=color:blue%7C51.062635,-1.311836&sensor=false'}
         %p
-          Karis Kids is an initiative that integrates Ugandan children orphaned by AIDS into adoptive families. As a church we support the full time project leader, and we link families from church here with families in Uganda.
+          Each Saturday afternoon we offer prayer for healing on the streets of Winchester. We meet on Kings Walk (near the Brooks shopping centre) from 2.30-4pm whatever the weather. This is a Winchester Churches Together initiative.
       .col-md-4
         %h3 street pastors
         %img{:src => '/images/streetpastors.jpg'}
         %p
           We support the Winchester Street Pastors scheme, joining with other local churches to send trained teams onto the streets at night from 9:30pm to 3:30am. We support vulnerable individuals and provide practical help.
       .col-md-4
-        %h3 street team
-        %img{:src => '/images/photos/areas/what-we-do/street-teams.jpg'}
+        %h3 karis kids
+        %img{:src => '/images/kariskids.png'}
         %p
-          On Saturday nights, a team goes out into Winchester city centre with soup, rolls, tea, coffee, blankets, socks, hats and a listening ear. We help those on the streets by providing for basic needs and giving them someone to talk to.
+          Karis Kids is an initiative that integrates Ugandan children orphaned by AIDS into adoptive families. As a church we support the full time project leader, and we link families from church here with families in Uganda.
     .row
       .col-md-4
         %p
-          %a{:href => 'http://kariskids.org.uk'} Visit the website &raquo;
+          %a{:href => 'http://winhealing.org.uk'} Visit the website &raquo;
       .col-md-4
         %p
           %a{:href => 'http://winchester.streepastors.org.uk'} Visit the website &raquo;
       .col-md-4
         %p
-          %a{:href => 'mailto:hello@winvin.org.uk?subject=Street+teams+enquiry'} Get involved &raquo;
+          %a{:href => 'http://kariskids.org.uk'} Visit the website &raquo;
 
 
 %section#wv-news

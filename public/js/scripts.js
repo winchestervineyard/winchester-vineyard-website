@@ -57,6 +57,7 @@ $(document).ready(function() {
     var data = snapshot.val();
     if (div = renderNews(data)) {
       $(newsDivForDate(data)).append(div);
+      sortItems(newsDivForDate(data));
     }
   });
 
@@ -65,6 +66,7 @@ $(document).ready(function() {
     $('#news-'+data.id).remove();
     if (div = renderNews(data)) {
       $(newsDivForDate(data)).append(div);
+      sortItems(newsDivForDate(data));
     }
   });
 
@@ -73,6 +75,7 @@ $(document).ready(function() {
     var data = snapshot.val();
     if (div = renderTalk(data)) {
       $(talkDivForDate(data)).append(div);
+      sortItems(talkDivForDate(data));
     }
   });
 
@@ -81,6 +84,7 @@ $(document).ready(function() {
     $('#talk-'+data.id).remove();
     if (div = renderTalk(data)) {
       $(talkDivForDate(data)).append(div);
+      sortItems(talkDivForDate(data));
     }
   });
 });
@@ -109,12 +113,29 @@ function renderNews(data) {
   return Mustache.render(div, data);
 }
 
+function sortItems(div) {
+  $(div).children().sort(function(a, b) {
+    var contentA = parseInt($(a).attr('data-sort'));
+    var contentB = parseInt($(b).attr('data-sort'));
+    return (contentA < contentB) ? -1 : (contentA > contentB) ? 1 : 0;
+  }).appendTo($(div));
+}
+
 function applyFilters(data) {
+  if (data.text) {
+    data.text = markdown.toHTML(data.text);
+  }
   var date = new Date(data.datetime);
   if (!isNaN(date)) {
-    data.dow = date.strftime("%a %e") + get_nth_suffix(date);
+    data.ms = date.getTime();
+    data.dow = date.strftime("%a %e") + get_nth_suffix(date) + date.strftime(" %b");
     data.fulldatetime = date.strftime("%a %e %b %H:%M%p");
     data.date = date.strftime("%a %d %b %Y");
+  }
+  var enddate = new Date(data.enddatetime);
+  if (!isNaN(enddate)) {
+    data.dow = "";
+    data.fulldatetime = date.strftime("%a %e %b") + " - " + enddate.strftime("%a %e %b");
   }
   return data;
 }
@@ -148,17 +169,16 @@ function talkDivForDate(data) {
   return '#wv-talks-older';
 }
 
+var MS_IN_DAY = 85400000;
+
 function newsDivForDate(data) {
   var date = new Date(data.datetime);
   var now = new Date();
   var nextSunday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + (7 - now.getDay()));
 
-  if (date < nextSunday) {
-    return '#wv-news-this-week';
-  }
-
-  if (date.getMonth() == now.getMonth() && date.getFullYear() == now.getFullYear()) {
+  if ((date - now)/MS_IN_DAY <= 30) {
     return '#wv-news-this-month';
   }
+
   return '#wv-news-further-ahead';
 }

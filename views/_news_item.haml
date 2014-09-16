@@ -1,12 +1,10 @@
-.col-sm-4{:id => "news-{{ id }}"}
+.col-sm-4{:id => "news-{{ id }}", :'data-sort' => '{{ ms }}'}
   .panel
     .panel-heading
       {{#dow}}{{ dow }}:{{/dow}} {{ title }}
     .panel-body.clearfix
       %img{:src => '{{ image_url }}', :style => 'width: 50%; float: right; padding: 0px 0px 0px 10px'}
-      {{ text }}
-      %br
-      %br
+      {{{ text }}}
     .panel-footer.clearfix
       .wv-wherewhen.pull-left
         {{#fulldatetime}}

@@ -260,6 +260,13 @@ section.white {
   .panel-heading {
     font-weight: bold;
   }
+  p {
+    font-size: 100%;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
 
 .wv-caption {

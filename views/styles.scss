@@ -94,18 +94,18 @@ p, .wv-title {
   top: 0px;
   bottom: 0px;
   left: 60%;
-  
-  @media (max-width: 640px) {
-    font-size: 80%;
-  }
 
-  @media (max-width: 520px) {
-    .caption-directions { display: none; }
-    font-size: 70%;
+  .caption-directions {
+    font-size: 100%;
   }
 
   @media (max-width: 450px) {
-    font-size: 40%;
+    .caption-meet { display: none }
+  }
+
+  @media (max-width: 640px) {
+    font-size: 80%;
+    left: 0px;
   }
 
   p.caption-title {

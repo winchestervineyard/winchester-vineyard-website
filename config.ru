@@ -36,7 +36,10 @@ get('/node/74/?') { redirect '/#wv-growing' }
 get '/node/?*' do
   redirect '/'
 end
+
 get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
+
+get('/landing-banner-code/?') { redirect '/students' }
 
 get '/audio/?*' do
   redirect '/#wv-talks'

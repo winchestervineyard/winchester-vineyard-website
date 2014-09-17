@@ -24,14 +24,22 @@ get '/students/?' do
   haml :students
 end
 
-get '/admin/?' do
-  @uploader = ImageUploader.new
-  @uploader.success_action_redirect = request.url
-  haml :admin
-end
-
 get '/css/styles.css' do
   scss :styles, :style => :expanded
+end
+
+get('/node/168/?') { redirect '/#wv-news' }
+get('/node/2/?') { redirect '/#wv-sundays' }
+get('/node/319/?') { redirect '/#wv-team' }
+get('/node/74/?') { redirect '/#wv-growing' }
+
+get '/node/?*' do
+  redirect '/'
+end
+get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
+
+get '/audio/?*' do
+  redirect '/#wv-talks'
 end
 
 run Sinatra::Application

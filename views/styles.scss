@@ -189,7 +189,7 @@ footer {
     text-decoration: underline;
   }
 
-  small {
+  small, small a {
     color: #999;
   }
 
@@ -231,6 +231,11 @@ section.white {
 .event-yes {
   font-weight: bold;
   color: #0a0;
+}
+
+.event-maybe {
+  font-weight: bold;
+  color: $red;
 }
 
 .event-no {

@@ -57,7 +57,7 @@ $(document).ready(function() {
     var data = snapshot.val();
     if (div = renderNews(data)) {
       $(newsDivForDate(data)).append(div);
-      sortItems(newsDivForDate(data));
+      sortItems(newsDivForDate(data), 1);
     }
   });
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
     $('#news-'+data.id).remove();
     if (div = renderNews(data)) {
       $(newsDivForDate(data)).append(div);
-      sortItems(newsDivForDate(data));
+      sortItems(newsDivForDate(data), 1);
     }
   });
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
     var data = snapshot.val();
     if (div = renderTalk(data)) {
       $(talkDivForDate(data)).append(div);
-      sortItems(talkDivForDate(data));
+      sortItems(talkDivForDate(data), -1);
     }
   });
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
     $('#talk-'+data.id).remove();
     if (div = renderTalk(data)) {
       $(talkDivForDate(data)).append(div);
-      sortItems(talkDivForDate(data));
+      sortItems(talkDivForDate(data), -1);
     }
   });
 });
@@ -113,11 +113,11 @@ function renderNews(data) {
   return Mustache.render(div, data);
 }
 
-function sortItems(div) {
+function sortItems(div, direction) {
   $(div).children().sort(function(a, b) {
     var contentA = parseInt($(a).attr('data-sort'));
     var contentB = parseInt($(b).attr('data-sort'));
-    return (contentA < contentB) ? -1 : (contentA > contentB) ? 1 : 0;
+    return (contentA > contentB) ? direction : (contentA < contentB) ? -direction : 0;
   }).appendTo($(div));
 }
 

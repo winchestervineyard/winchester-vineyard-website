@@ -257,9 +257,23 @@ section.white {
   a.btn {
     text-decoration: none;
   }
+
   .panel-heading {
     font-weight: bold;
+    height: 55px;
   }
+
+  &.wv-news-item {
+
+    .panel-body {
+      @media (min-width: 767px) { height: 250px; }
+    }
+
+    .panel-footer {
+      height: 60px;
+    }
+  }
+
   p {
     font-size: 100%;
     a {

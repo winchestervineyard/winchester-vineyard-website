@@ -1,10 +1,11 @@
 .col-sm-3{:id => "talk-{{ id }}", :'data-sort' => '{{ ms }}'}
-  .panel
+  .panel.wv-talk-item
+    .panel-heading
+      {{#series_name}}{{series_name}}:
+      %br
+      {{/series_name}}{{ title }}
     .panel-body
-      %strong
-        {{ date }}
-        %br
-        {{ title }}
+      {{ date }}
       %br
       {{ who }}
       %br

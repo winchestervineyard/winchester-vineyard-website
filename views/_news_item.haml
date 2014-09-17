@@ -1,5 +1,5 @@
-.col-sm-4{:id => "news-{{ id }}", :'data-sort' => '{{ ms }}'}
-  .panel
+.col-md-4{:id => "news-{{ id }}", :'data-sort' => '{{ ms }}'}
+  .panel.wv-news-item
     .panel-heading
       {{#dow}}{{ dow }}:{{/dow}} {{ title }}
     .panel-body.clearfix
@@ -13,6 +13,9 @@
         {{/fulldatetime}}
         {{#location_url}}
         %a{:href => '{{ location_url }}'} {{ location_title }}
+        {{/location_url}}
+        {{^location_url}}
+        {{ location_title }}
         {{/location_url}}
       {{#booking_url}}
       .pull-right

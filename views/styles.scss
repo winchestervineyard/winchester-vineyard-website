@@ -8,6 +8,8 @@ $skyblue: rgb(121, 196, 198);
 $cornyellow: rgb(253, 213, 48);
 $lightgrey: rgb(246, 246, 244);
 
+$mdwidth: 992px;
+
 @mixin shadow-iframe {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
@@ -26,6 +28,7 @@ $lightgrey: rgb(246, 246, 244);
       background: transparent;
       border: 0;
       font-size: 1.2em;
+      @media (min-width: $mdwidth) { font-weight: normal; font-size: 1.5em; }
     }
     .panel-footer {
       background: transparent;
@@ -265,13 +268,13 @@ section.white {
 
   .panel-heading {
     font-weight: bold;
-    height: 55px;
+    @media (min-width: $mdwidth) { height: 65px; }
   }
 
   &.wv-news-item {
 
     .panel-body {
-      @media (min-width: 767px) { height: 250px; }
+      @media (min-width: $mdwidth) { height: 270px; }
     }
 
     .panel-footer {

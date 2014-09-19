@@ -213,11 +213,15 @@ img.map {
 
 section.hellobar {
   background: $blue;
+  @media (max-width: $mdwidth) {
+    p { font-size: 1.0em; font-weight: normal; }
+  }
+
   font-weight: bold;
   position: relative;
   border: 0px;
   margin-bottom: 0px;
-  padding: 20px 0 0px 0;
+  padding: 20px 0 5px 0;
   color: white;
   a {
     color: white;

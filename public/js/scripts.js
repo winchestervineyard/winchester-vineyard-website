@@ -128,7 +128,7 @@ function applyFilters(data) {
   var date = new Date(data.datetime);
   if (!isNaN(date)) {
     data.ms = date.getTime();
-    data.dow = date.strftime("%a %e") + get_nth_suffix(date) + date.strftime(" %b");
+    data.dow = date.strftime("%a %e") + date.strftime(" %b");
     data.fulldatetime = date.strftime("%a %e %b %H:%M%p");
     data.date = date.strftime("%a %d %b %Y");
   }

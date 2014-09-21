@@ -2,6 +2,26 @@ require 'sinatra'
 require 'sass'
 
 require 'carrierwave_direct'
+require 'dalli'
+require 'rack-cache'
+#
+# Defined in ENV on Heroku. To try locally, start memcached and uncomment:
+# ENV["MEMCACHE_SERVERS"] = "localhost"
+if memcache_servers = ENV["MEMCACHE_SERVERS"]
+  use Rack::Cache,
+    verbose: true,
+    metastore:   "memcached://#{memcache_servers}",
+    entitystore: "memcached://#{memcache_servers}"
+
+  # Flush the cache
+  Dalli::Client.new.flush
+end
+
+set :static_cache_control, [:public, max_age: 1800]
+
+before do
+  cache_control :public, max_age: 1800  # 30 mins
+end
 
 CarrierWave.configure do |config|
   config.fog_credentials = {

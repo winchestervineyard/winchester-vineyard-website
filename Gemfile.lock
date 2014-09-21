@@ -27,6 +27,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
     daemons (1.1.9)
+    dalli (2.3.0)
     eventmachine (1.0.3)
     excon (0.28.0)
     fog (1.18.0)
@@ -54,6 +55,8 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-protection (1.5.0)
       rack
     ruby-hmac (0.4.0)
@@ -80,7 +83,9 @@ PLATFORMS
 
 DEPENDENCIES
   carrierwave_direct!
+  dalli
   haml
+  rack-cache
   sass
   sinatra
   thin

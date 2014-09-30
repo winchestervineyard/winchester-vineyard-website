@@ -4,6 +4,8 @@ ruby "1.9.3"
 gem 'sinatra'
 gem 'haml'
 gem 'sass'
+gem 'builder'
+gem 'firebase'
 
 gem 'unf'
 

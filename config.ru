@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sass'
+require 'builder'
 
 require 'carrierwave_direct'
 require 'dalli'
@@ -38,6 +39,28 @@ end
 
 get '/' do
   haml :index
+end
+
+helpers do
+  def talk_title(talk)
+    [
+      Time.parse(talk['datetime']).strftime("%a %d %b %Y"),
+      ": ",
+      talk['series_name'].present? ? talk['series_name'] + " - " : "",
+      talk['title'],
+      " (",
+      talk['who'],
+      ")"
+    ].join
+  end
+end
+
+get '/audio.xml' do
+  require 'firebase'
+  firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
+  @talks = firebase.get('talks').body.values
+  @talks.sort_by! {|t| Time.parse(t['datetime'])}.reverse!
+  builder :audio
 end
 
 get '/students/?' do

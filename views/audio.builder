@@ -5,11 +5,14 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
     xml.description "Talks given on Sundays and at conferences at Winchester Vineyard"
     xml.link "http://winvin.org.uk/#wv-talks"
     xml.itunes :author, "Winchester Vineyard"
-    xml.itunes :language, "English"
-    xml.itunes :email, "hello@winvin.org.uk"
+    xml.language "en-gb"
     xml.itunes :explicit, "clean"
     xml.itunes :category, :text => "Religion & Spirituality" do
       xml.itunes :category, :text => "Christianity"
+    end
+    xml.itunes :owner do
+      xml.itunes :name, "Winchester Vineyard"
+      xml.itunes :email, "hello@winvin.org.uk"
     end
     xml.itunes :image, :href => "http://winvin.org.uk/images/winvin-square-logo.png"
     xml.itunes :summary, "Talks given on Sundays and at conferences at Winchester Vineyard"

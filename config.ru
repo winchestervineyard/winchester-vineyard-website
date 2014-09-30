@@ -53,6 +53,40 @@ helpers do
       ")"
     ].join
   end
+
+  def secs_until(n)
+    Time.parse(n['datetime']) - Time.now
+  end
+end
+
+SECONDS_IN_A_DAY = 86400
+SECONDS_IN_A_WEEK = 86400 * 7
+
+get '/feed.xml' do
+  require 'firebase'
+
+  firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
+  all = firebase.get('news').body.values
+
+  soon = all.select do |n|
+    secs_until(n) >= 0 && secs_until(n) < SECONDS_IN_A_DAY
+  end
+  soon.each do |n|
+    n['id'] += '-soon'
+    n['pubDate'] = Time.parse(n['datetime']) - SECONDS_IN_A_DAY
+  end
+
+  upcoming = all.select do |n|
+    secs_until(n) >= SECONDS_IN_A_DAY && secs_until(n) < SECONDS_IN_A_WEEK
+  end
+  upcoming.each do |n|
+    n['id'] += '-upcoming'
+    n['pubDate'] = Time.parse(n['datetime']) - SECONDS_IN_A_WEEK
+  end
+
+  @news = soon + upcoming
+
+  builder :news
 end
 
 get '/audio.xml' do

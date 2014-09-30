@@ -5,13 +5,21 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
     xml.description "Talks given on Sundays and at conferences at Winchester Vineyard"
     xml.link "http://winvin.org.uk/#wv-talks"
     xml.itunes :author, "Winchester Vineyard"
-    xml.itunes :image, "http://winvin.org.uk/images/winvin-square-logo.png"
+    xml.itunes :language, "English"
+    xml.itunes :email, "hello@winvin.org.uk"
+    xml.itunes :explicit, "clean"
+    xml.itunes :category, :text => "Religion & Spirituality" do
+      xml.itunes :category, :text => "Christianity"
+    end
+    xml.itunes :image, :href => "http://winvin.org.uk/images/winvin-square-logo.png"
     xml.itunes :summary, "Talks given on Sundays and at conferences at Winchester Vineyard"
 
     @talks.each do |talk|
       if (talk['published'])
         xml.item do
-          xml.guid 'winvin-talk' + talk['id']
+          xml.guid :isPermaLink => false do
+            xml << 'winvin-talk' + talk['id']
+          end
           xml.title talk_title(talk)
           xml.enclosure :url => talk['download_url'], :type => 'audio/mpeg'
           xml.link talk['download_url']

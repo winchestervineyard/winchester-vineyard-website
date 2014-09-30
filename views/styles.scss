@@ -10,6 +10,10 @@ $lightgrey: rgb(246, 246, 244);
 
 $mdwidth: 992px;
 
+h3 {
+  font-size: 22px;
+}
+
 @mixin shadow-iframe {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }

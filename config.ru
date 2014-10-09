@@ -89,6 +89,16 @@ get '/feed.xml' do
   builder :news
 end
 
+get '/talks/:slug' do |slug|
+  require 'firebase'
+  firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
+  talk_id = firebase.get('talks-by-slug/' + slug ).body
+  halt 404 if (talk_id.nil?)
+  @talk = firebase.get('talks/' + talk_id).body
+  halt 404 if (!@talk["published"])
+  haml :talk
+end
+
 get '/audio.xml' do
   require 'firebase'
   firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
@@ -112,6 +122,11 @@ get('/node/74/?') { redirect '/#wv-growing' }
 
 get '/node/?*' do
   redirect '/'
+end
+
+not_found do
+  status 404
+  haml :not_found
 end
 
 get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }

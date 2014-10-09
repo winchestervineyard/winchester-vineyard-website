@@ -1,0 +1,26 @@
+%section#wv-talks
+  .shadow
+  .container
+    .row
+      .wv-caption
+        %h1 talk
+        .col-md-6
+          .panel.wv-talk-item
+            .panel-heading
+              %h2= (@talk['series_name'].present? ? @talk['series_name'].downcase + " - " : "" ) + @talk['title'].downcase
+            .panel-body
+              %p
+                Given by
+                = @talk['who']
+                on
+                = Time.parse(@talk['datetime']).strftime("%d %B %y") + '.'
+              %p
+                - if @talk['download_url'].present?
+                  %a.btn.btn-success{:role => 'button', :href => @talk['download_url']} download
+                - else
+                  %a.btn.btn-default{:disabled => 'disabled', :role => 'button'} coming soon
+                - if @talk['slides_url'].present?
+                  %a.btn.btn-primary{:role => 'button', :href => @talk['slides_url']} slides
+          %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
+          %p
+            %a.btn.btn-primary{:href => "/#wv-talks"} See our other talks &raquo;

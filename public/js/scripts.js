@@ -11,9 +11,13 @@ var lastTop = 0;
 function calculateSectionHeights() {
   for (var key in images) {
     var section = $('#wv-' + key);
+    if (!section.length) {
+      return false;
+    }
     var top = section.offset().top;
     images[key] = { top: top - 20, bottom: top + section.outerHeight() + 20 }
   }
+  return true;
 }
 
 for (var key in images) {
@@ -30,7 +34,9 @@ $(document).ready(function() {
   $('body').css("background-image", "url('/images/photos/borders/talks.jpg')");
   currentBackground = "talks";
   $(window).scroll(function() {
-    calculateSectionHeights();
+    if (!calculateSectionHeights()) {
+      return;
+    }
 
     var windowTop = window.pageYOffset;
     var windowHeight = $(window).height()

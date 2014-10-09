@@ -42,18 +42,6 @@ get '/' do
 end
 
 helpers do
-  def talk_title(talk)
-    [
-      Time.parse(talk['datetime']).strftime("%a %d %b %Y"),
-      ": ",
-      talk['series_name'].present? ? talk['series_name'] + " - " : "",
-      talk['title'],
-      " (",
-      talk['who'],
-      ")"
-    ].join
-  end
-
   def secs_until(n)
     Time.parse(n['datetime']) - Time.now
   end
@@ -89,21 +77,67 @@ get '/feed.xml' do
   builder :news
 end
 
+class Talk
+  attr :full_name, :who, :date, :download_url, :slides_url, :id, :slug, :series_name
+
+  def initialize(hash)
+    @id = hash['id']
+    @series_name = hash['series_name']
+    @full_name = (hash['series_name'].present? ? hash['series_name'] + " - " : "" ) + hash['title']
+    @who = hash['who']
+    @date = Time.parse(hash['datetime'])
+    @download_url = hash['download_url']
+    @slides_url = hash['slides_url']
+    @published = hash['published']
+    @slug = hash['slug']
+  end
+
+  def part_of_a_series?
+    @series_name.present?
+  end
+
+  def has_slides?
+    @slides_url.present?
+  end
+
+  def long_title
+    [
+      @date.strftime("%a %d %b %Y"),
+      ": ",
+      @full_name,
+      " (",
+      @who,
+      ")"
+    ].join
+  end
+
+  def description
+    "Given by #{@who} on #{@date.strftime("%a %d %b %y")}."
+  end
+
+  def published?
+    !!@published
+  end
+end
+
 get '/talks/:slug' do |slug|
   require 'firebase'
   firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
   talk_id = firebase.get('talks-by-slug/' + slug ).body
   halt 404 if (talk_id.nil?)
-  @talk = firebase.get('talks/' + talk_id).body
-  halt 404 if (!@talk["published"])
+  @talk = Talk.new(firebase.get('talks/' + talk_id).body)
+  halt 404 unless @talk.published?
+  @og_url = 'http://winvin.org.uk/talks/' + slug
+  @og_title = "Winchester Vineyard Talk: #{@talk.full_name}"
+  @og_description = @talk.description
   haml :talk
 end
 
 get '/audio.xml' do
   require 'firebase'
   firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
-  @talks = firebase.get('talks').body.values
-  @talks.sort_by! {|t| Time.parse(t['datetime'])}.reverse!
+  @talks = firebase.get('talks').body.values.map {|t| Talk.new(t) }
+  @talks.sort_by!(&:date).reverse!
   builder :audio
 end
 

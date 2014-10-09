@@ -18,22 +18,22 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
     xml.itunes :summary, "Talks given on Sundays and at conferences at Winchester Vineyard"
 
     @talks.each do |talk|
-      if (talk['published'])
+      if (talk.published?)
         xml.item do
           xml.guid :isPermaLink => false do
-            xml << 'winvin-talk' + talk['id']
+            xml << 'winvin-talk' + talk.id
           end
-          xml.title talk_title(talk)
-          xml.enclosure :url => talk['download_url'], :type => 'audio/mpeg'
-          xml.link talk['download_url']
+          xml.title talk.full_name
+          xml.enclosure :url => talk.download_url, :type => 'audio/mpeg'
+          xml.link 'http://winvin.org.uk/talks/' + talk.slug
           xml.description do
-            xml.cdata! talk_title(talk) + " \n\n" + (talk['slides_url'].present? ? "<a href='#{talk['slides_url']}'>Slides are available here</a>" : "")
+            xml.cdata! talk.description + " \n\n" + (talk.has_slides? ? "Slides are available on our website: <a href='http://winvin.org.uk/talks/#{talk.slug}'>http://winvin.org.uk/talks/#{talk.slug}</a>" : "")
           end
-          xml.pubDate Time.parse(talk['datetime']).rfc822()
-          if (talk['series_name'].present?)
-            xml.category talk['series_name']
+          xml.pubDate talk.date.rfc822
+          if talk.part_of_a_series?
+            xml.category talk.series_name
           end
-          xml.category talk['who']
+          xml.category talk.who
         end
       end
     end

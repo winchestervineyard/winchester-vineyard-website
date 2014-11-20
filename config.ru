@@ -133,11 +133,21 @@ get '/talks/:slug' do |slug|
   haml :talk
 end
 
+helpers do
+  def get_talks
+    require 'firebase'
+    firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
+    firebase.get('talks').body.values.map {|t| Talk.new(t) }.sort_by(&:date).reverse
+  end
+end
+
+get '/audio_plain' do
+  @talks = get_talks
+  haml :audio, :layout => false
+end
+
 get '/audio.xml' do
-  require 'firebase'
-  firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
-  @talks = firebase.get('talks').body.values.map {|t| Talk.new(t) }
-  @talks.sort_by!(&:date).reverse!
+  @talks = get_talks
   builder :audio
 end
 

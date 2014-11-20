@@ -1,0 +1,10 @@
+%h1 Talks
+- @talks.each do |talk|
+  - if (talk.published?)
+    %h2= talk.full_name
+    %p= talk.description
+    %p
+      %a{:href => talk.download_url} Download
+      - if (talk.has_slides?)
+        %p
+          %a{:href => talk.slides_url} Slides

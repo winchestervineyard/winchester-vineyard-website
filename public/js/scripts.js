@@ -58,6 +58,14 @@ $(document).ready(function() {
     }
   });
 
+  var hellobar = new Firebase('https://winvin.firebaseio.com/hellobar');
+  hellobar.on('child_added', function(snapshot) {
+    var data = snapshot.val();
+    if (div = renderHellobar(data)) {
+      $('#hellobar-here').append(div);
+    }
+  });
+
   var news = new Firebase('https://winvin.firebaseio.com/news');
   news.on('child_added', function(snapshot) {
     var data = snapshot.val();
@@ -102,6 +110,15 @@ function renderTalk(data) {
 
   data = applyFilters(data);
   var div = $('#wv-talk-item-template').html();
+  return Mustache.render(div, data);
+}
+
+function renderHellobar(data) {
+  if (!data.published) {
+    return;
+  }
+
+  var div = $('#wv-hellobar-template').html();
   return Mustache.render(div, data);
 }
 

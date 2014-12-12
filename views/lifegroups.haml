@@ -1,0 +1,37 @@
+#wv-home
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse.navbar-fixed-top{:role => 'navigation'}
+      .navbar-header
+        %a{:href => '/'}
+          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 13px; height: 33px'}
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => '/'} &laquo; Back to home
+
+%section.white
+  .shadow
+  .container
+    .row
+      .col-xs-12
+        %h1 life groups
+        %p
+          We are currently accepting signups for groups running during the Spring term 2015. Groups start the week of the 19th January.
+        %h2 how to sign up for a group
+        %ul
+          %li Scroll down the list of groups on this page and choose one group you're interested in attending this term.
+          %li
+            If you are a church member with a My Church App account, visit
+            %a{:href => 'https://winvin.churchapp.co.uk/my'}My Church App
+            and click "My Groups" to get a list of groups you can sign up to. Click on the information about a group, and click "Sign Up" to reserve your place.
+          %li
+            If you are not currently a member or you do not have a My Church App login, then
+            %a{:href => 'mailto:hello@winvin.org.uk?subject=Group sign up'} email the office
+            with your name and the name of the group you'd like to sign up for. If you like we can also sign you up for My Church App or resend you your login details.
+    .row
+      %h2 life group list
+      :plain
+        <iframe frameborder="0" height="500" scrolling="yes" src="https://winvin.churchapp.co.uk/embed/smallgroups/list?body_bgcolor=efefef&group_bgcolor=ffffff&group_border_color=ffffff&avatar_bgcolor=1B5CA0&heading_color=1b5ca0&text_color=444444&icon_color=8e8e8e" style="border-width:0" width="100%"></iframe>
+      %h2 map
+      :plain
+        <iframe frameborder="0" height="500" scrolling="yes" src="https://winvin.churchapp.co.uk/embed/smallgroups/map" style="border-width:0" width="100%"></iframe>

@@ -155,6 +155,10 @@ get '/students/?' do
   haml :students
 end
 
+get '/lifegroups/?' do
+  haml :lifegroups
+end
+
 get '/css/styles.css' do
   scss :styles, :style => :expanded
 end

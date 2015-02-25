@@ -83,7 +83,7 @@ class Talk
   def initialize(hash)
     @id = hash['id']
     @series_name = hash['series_name']
-    @full_name = (hash['series_name'].present? ? hash['series_name'] + " - " : "" ) + hash['title']
+    @full_name = (hash['series_name'].present? ? "[" + hash['series_name'] + "] " : "" ) + hash['title']
     @who = hash['who']
     @date = Time.parse(hash['datetime'])
     @download_url = hash['download_url']

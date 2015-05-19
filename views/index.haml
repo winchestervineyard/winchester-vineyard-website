@@ -110,8 +110,9 @@
         .row#wv-talks-within-last-month
         .wv-caption
           %p
-            %strong Older talks
-        .row#wv-talks-older
+            %strong
+              %a{:'data-toggle' => 'collapse', :href => '#wv-talks-older', :'aria-expanded' => 'false', :'aria-controls' => 'wv-talks-older'} See older talks
+        .row.collapse#wv-talks-older
 %section#wv-community
   .shadow
   .container

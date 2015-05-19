@@ -1,9 +1,7 @@
-.col-sm-4{:id => "talk-{{ id }}", :'data-sort' => '{{ ms }}'}
+.col-sm-6{:id => "talk-{{ id }}", :'data-sort' => '{{ ms }}'}
   .panel.wv-talk-item
     .panel-heading
-      {{#series_name}}{{series_name}}:
-      %br
-      {{/series_name}}{{ title }}
+      {{#series_name}}{{series_name}}: {{/series_name}}{{ title }}
     .panel-body
       {{ date }}
       %br

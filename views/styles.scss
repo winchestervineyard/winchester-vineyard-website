@@ -301,7 +301,11 @@ section.white {
 
 .wv-caption {
   color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6)
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  a {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 #wv-community {

@@ -6,6 +6,7 @@ gem 'haml'
 gem 'sass'
 gem 'builder'
 gem 'firebase'
+gem 'httparty'
 
 gem 'unf'
 

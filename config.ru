@@ -41,6 +41,15 @@ get '/' do
   haml :index
 end
 
+get '/groups-slideshow/?' do
+  require 'httparty'
+  churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
+
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  @groups = JSON.parse(response.body)["groups"]
+  haml :groups, layout: nil
+end
+
 helpers do
   def secs_until(n)
     Time.parse(n['datetime']) - Time.now

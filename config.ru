@@ -43,8 +43,6 @@ end
 
 get '/groups-slideshow/?' do
   require 'httparty'
-  # http://stackoverflow.com/questions/20169301/ssl-error-on-heroku
-  OpenSSL::SSL::SSLContext::DEFAULT_PARAMS[:ssl_version] = 'SSLv3'
 
   churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
 

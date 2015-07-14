@@ -43,11 +43,10 @@ end
 
 get '/groups-slideshow/?' do
   require 'httparty'
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
 
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers, :ssl_ca_path => '/usr/lib/ssl/certs/ca-certificates.crt')
   @groups = JSON.parse(response.body)["groups"]
   haml :groups, layout: nil
 end

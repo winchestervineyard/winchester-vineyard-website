@@ -43,6 +43,7 @@ end
 
 get '/groups-slideshow/?' do
   require 'httparty'
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
 

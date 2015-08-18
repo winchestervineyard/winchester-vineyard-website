@@ -19,6 +19,8 @@
         %form#contact
           .form-group
             %input.typeahead.form-control.input-lg{:type => 'search', :placeholder => 'Type part of a name', :autocomplete => 'off'}
+            .help-block
+              If the person is not shown, we don't have a current record for them. Ask them to fill in a Connect Card, and to write the name of the group they'd like to join on the back.
     .wv-select-group{:style => 'display: none'}
       .row
         .col-xs-12
@@ -26,6 +28,8 @@
             %span.text-muted
               select a group for
             %span.wv-selected-contact
+          %p
+            %button#wv-reset-form.btn.btn-default Start again
       - @groups.select{|g| g["embed_visible"] == "1"}.each_slice(3) do |group_row|
         .row
           - group_row.each do |group|
@@ -63,7 +67,13 @@
       $('.wv-select-group').show();
       current_contact = selected;
       $('.wv-selected-contact').html(selected.name);
+      $('.wv-sign-up').removeClass("btn-success btn-danger").html("Sign up");
     },
+  }).focus();
+
+  $('#wv-reset-form').click(function() {
+    $(".typeahead").val("").focus();
+    $('.wv-select-group').hide();
   });
 
   $('.wv-sign-up').click(function() {

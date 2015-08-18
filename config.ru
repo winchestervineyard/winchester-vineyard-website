@@ -41,14 +41,38 @@ get '/' do
   haml :index
 end
 
+require 'httparty'
+
+churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
+
 get '/groups-slideshow/?' do
-  require 'httparty'
-
-  churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
-
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers, :ssl_ca_path => '/usr/lib/ssl/certs/ca-certificates.crt')
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
   @groups = JSON.parse(response.body)["groups"]
   haml :groups, layout: nil
+end
+
+get '/groups-signup/?' do
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/addressbook/contacts?per_page=400', headers: churchapp_headers)
+  @contacts = JSON.parse(response.body)["contacts"]
+
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  @groups = JSON.parse(response.body)["groups"]
+
+  haml :groups_signup, layout: nil
+end
+
+post '/groups-signup/:group_id/:contact_id' do |group_id, contact_id|
+  body = {
+    "action" => "add",
+    "members" => {
+      "contacts" => [ contact_id.to_i ],
+    }
+  }.to_json
+  url = 'https://api.churchapp.co.uk/v1/smallgroups/group/'+group_id+'/members'
+  puts body, url
+  response = HTTParty.post(url, headers: churchapp_headers, body: body)
+  puts response.body
+  response.code
 end
 
 helpers do

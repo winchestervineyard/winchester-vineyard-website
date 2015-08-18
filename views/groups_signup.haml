@@ -1,0 +1,88 @@
+!!! 5
+:plain
+  <!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+%head
+  %meta{:charset => "utf-8"}/
+  %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+  %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+  %link{:href => "/favicon.ico", :rel => "icon", :type => "image/x-icon"}/
+  %link{:href => "/css/bootstrap.css", :rel => "stylesheet"}/
+  %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
+  %link{:href => "/css/styleguide.css", :rel => "stylesheet"}/
+  %link{:href => "/css/styles.css", :rel => "stylesheet"}/
+%body{:style => 'background-color: white'}
+  .container
+    .row
+      .col-xs-12
+        %h1 signup
+        %form#contact
+          .form-group
+            %input.typeahead.form-control.input-lg{:type => 'search', :placeholder => 'Type part of a name', :autocomplete => 'off'}
+    .wv-select-group{:style => 'display: none'}
+      .row
+        .col-xs-12
+          %p{:style => 'font-size: 2em; font-family: "HelveticaNeue"'}
+            %span.text-muted
+              select a group for
+            %span.wv-selected-contact
+      - @groups.select{|g| g["embed_visible"] == "1"}.each_slice(3) do |group_row|
+        .row
+          - group_row.each do |group|
+            - if group["signup_capacity"]
+              - spaces = group["signup_capacity"].to_i - group["no_members"]
+            - else
+              - spaces = 1
+            .col-md-4
+              .panel.panel-default
+                .panel-heading
+                  = group["name"]
+                  - if group["signup_capacity"]
+                    %p== (#{spaces} spaces left)
+                .panel-body.clearfix
+                  - if spaces <= 0
+                    %button.btn.btn-danger.btn-lg{:disabled => 'disabled'} FULL
+                  - else
+                    %button.wv-sign-up.btn.btn-primary.btn-lg{:'data-group-id' => group['id']}== Sign up
+
+%script{:src => "/js/jquery.js"}
+%script{:src => "/js/bootstrap.min.js"}
+%script{:src => "https://raw.githubusercontent.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.js"}
+%script
+  var contacts = [
+  - @contacts.each do |m|
+    == { name: "#{m['first_name']} #{m['last_name']}", id: #{m['id']}},
+  ];
+
+  var current_contact = 0;
+
+:javascript
+  $('.typeahead').typeahead({
+    source: contacts,
+    afterSelect: function(selected) {
+      $('.wv-select-group').show();
+      current_contact = selected;
+      $('.wv-selected-contact').html(selected.name);
+    },
+  });
+
+  $('.wv-sign-up').click(function() {
+    var button = $(this);
+    var group_id = button.attr("data-group-id");
+    console.log(group_id);
+    $.ajax({
+      method: "POST",
+      url: "/groups-signup/"+group_id+"/"+current_contact["id"],
+      statusCode: {
+        200: function() {
+          button.addClass("btn-success").html("Added");
+        },
+        409: function() {
+          button.addClass("btn-success").html("Already in group");
+        }
+      },
+      error: function() {
+        button.addClass("btn-danger").html("Try again");
+      }
+    });
+  });

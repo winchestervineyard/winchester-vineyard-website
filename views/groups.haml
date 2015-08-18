@@ -16,35 +16,36 @@
   .carousel{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
     .carousel-inner
       - @groups.each_with_index do |group, idx|
-        .item{:class => idx == 0 ? 'active' : ''}
-          .row
-            .col-xs-12
-              %h1{:style => "margin-top: 0px"}
-                = group["name"].downcase
-          .row
-            .col-md-5
-              - unless group["images"].empty?
-                %img{:src => group["images"]["square_500"], :height => '500'}
-            .col-md-6
-              %p{:style => 'font-size: 2em'}
-                = %w(Sundays Mondays Tuesdays Wednesdays Thursdays Fridays Saturdays)[group["day"].to_i]
-                at
-                == #{group["time"]}
-                - if group["signup_capacity"]
-                  - spaces = group["signup_capacity"].to_i - group["no_members"]
-                  - if spaces <= 0
-                    %span.text-danger
-                      == -
-                      FULL
-                  - else
-                    %span{:class => spaces < 5 ? "text-warning" : "text-success"}
-                      == -
-                      = spaces
-                      = spaces == 1 ? "space" : "spaces"
-                      left
-              %p
-                - unless group["location"].empty?
-                  %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=SO239NP&zoom=9&size=600x360&maptype=roadmap&markers=color:red%7C'+group["location"]["address"]+'&sensor=false', :height => '360'}
-              %p{:style => 'font-size: 2em'}= group["description"].match(/^(.*?)[.?!]\s/)
-  %script{:src => "/js/jquery.js"}
-  %script{:src => "/js/bootstrap.min.js"}
+        - if group["embed_visible"] == "1"
+          .item{:class => idx == 0 ? 'active' : ''}
+            .row
+              .col-xs-12
+                %h1{:style => "font-family: 'HelveticaNeue-Light'; font-size: 4em; margin-top: 0px"}
+                  = group["name"].downcase
+            .row
+              .col-md-6
+                - unless group["images"].empty?
+                  %img{:src => group["images"]["square_500"], :height => '600'}
+              .col-md-6
+                %p{:style => 'font-size: 2em'}
+                  = %w(Sundays Mondays Tuesdays Wednesdays Thursdays Fridays Saturdays)[group["day"].to_i]
+                  at
+                  == #{group["time"]}
+                  - if group["signup_capacity"]
+                    - spaces = group["signup_capacity"].to_i - group["no_members"]
+                    - if spaces <= 0
+                      %span.text-danger
+                        == -
+                        FULL
+                    - else
+                      %span{:class => spaces < 5 ? "text-warning" : "text-success"}
+                        == -
+                        = spaces
+                        = spaces == 1 ? "space" : "spaces"
+                        left
+                %p
+                  - unless group["location"].empty?
+                    %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=SO239NP&zoom=9&size=600x360&maptype=roadmap&markers=color:red%7C'+group["location"]["address"]+'&sensor=false', :height => '360'}
+                %p{:style => 'font-size: 2em'}= group["description"].match(/^(.*?)[.?!]\s/)
+    %script{:src => "/js/jquery.js"}
+    %script{:src => "/js/bootstrap.min.js"}

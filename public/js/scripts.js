@@ -1,6 +1,6 @@
 var images = {
   'talks': 0,
-  'growing': 0,
+  'healing': 0,
   'news': 0,
 };
 var preloaded = {};

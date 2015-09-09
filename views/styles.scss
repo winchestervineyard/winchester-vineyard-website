@@ -254,6 +254,12 @@ section.white {
   color: #a00;
 }
 
+
+.wv-students img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 #wv-sundays {
   @include section-padding;
   background: white;

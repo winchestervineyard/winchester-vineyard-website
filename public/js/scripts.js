@@ -207,7 +207,7 @@ function newsDivForDate(data) {
   var now = new Date();
   var nextSunday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + (7 - now.getDay()));
 
-  if ((date - now)/MS_IN_DAY <= 30) {
+  if ((date - now)/MS_IN_DAY <= 90) {
     return '#wv-news-this-month';
   }
 

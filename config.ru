@@ -219,6 +219,7 @@ get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXR
 get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZar84lQIMpkcZuR6bVxlzGB8r0-cSni7s/viewform?fbzx=-1795998873449154632' }
 
 get('/landing-banner-code/?') { redirect '/students' }
+get('/kidstea/?') { redirect 'https://winvin.churchapp.co.uk/events/pl5wgmwz' }
 
 get '/audio/?*' do
   redirect '/#wv-talks'

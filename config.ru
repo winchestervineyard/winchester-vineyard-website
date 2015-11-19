@@ -223,6 +223,8 @@ get('/data-protection-policy/?') { redirect 'https://s3-eu-west-1.amazonaws.com/
 get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXRk5JAPESu_Zfog7FAtCXtdMAfdHCbQ8OXs/viewform?c=0&w=1' }
 get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZar84lQIMpkcZuR6bVxlzGB8r0-cSni7s/viewform?fbzx=-1795998873449154632' }
 
+get('/connect/?') { redirect 'https://docs.google.com/forms/d/1KuBo4sLPU9tcNpCbihhY_jydWgCCKpCdx7X35sLgmgg/viewform' }
+
 get('/landing-banner-code/?') { redirect '/students' }
 get('/kidstea/?') { redirect 'https://winvin.churchapp.co.uk/events/pl5wgmwz' }
 

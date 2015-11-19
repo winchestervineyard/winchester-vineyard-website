@@ -193,6 +193,11 @@ get '/lifegroups/?' do
   haml :lifegroups
 end
 
+get '/adventconspiracy/?' do
+  haml :adventconspiracy
+end
+
+
 get '/css/styles.css' do
   scss :styles, :style => :expanded
 end

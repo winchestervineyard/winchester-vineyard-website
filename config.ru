@@ -232,4 +232,6 @@ get '/audio/?*' do
   redirect '/#wv-talks'
 end
 
+get('/events/?') { redirect '/#wv-news' }
+
 run Sinatra::Application

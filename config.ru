@@ -227,6 +227,7 @@ get('/connect/?') { redirect 'https://docs.google.com/forms/d/1KuBo4sLPU9tcNpCbi
 
 get('/landing-banner-code/?') { redirect '/students' }
 get('/kidstea/?') { redirect 'https://winvin.churchapp.co.uk/events/pl5wgmwz' }
+get('/comedynight/?') { redirect 'https://winvin.churchapp.co.uk/events/yespcs01' }
 
 get '/audio/?*' do
   redirect '/#wv-talks'

@@ -1,0 +1,32 @@
+!!! 5
+:plain
+  <!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+%head
+  -#%meta{:'http-equiv' => "refresh", :content => @groups.count * 8}
+  %meta{:charset => "utf-8"}/
+  %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+  %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+  %link{:href => "/favicon.ico", :rel => "icon", :type => "image/x-icon"}/
+  %link{:href => "/css/bootstrap.css", :rel => "stylesheet"}/
+  %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
+  %link{:href => "/css/styleguide.css", :rel => "stylesheet"}/
+  %link{:href => "/css/styles.css", :rel => "stylesheet"}/
+%body{:style => 'background-color: white'}
+  - @groups.select(&:visible?).each_slice(3) do |group_row|
+    %br
+    %br
+    .row
+      - group_row.each do |group|
+        .col-md-4
+          .media
+            .pull-left
+              - if group.image?
+                %img.media-object{:src => group.image, :style => 'width: 64px; height: 64px'}
+              - else
+                .media-object{:style => 'width: 64px; height: 64px'}
+            .media-body
+              %h2.media-heading{:style => "font-family: 'HelveticaNeue-Light'"}
+                = group.name
+%script{:src => "/js/jquery.js"}
+%script{:src => "/js/bootstrap.min.js"}

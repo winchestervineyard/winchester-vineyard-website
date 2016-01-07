@@ -73,6 +73,7 @@ get '/groups-slideshow/?' do
 end
 
 get '/groups-signup/?' do
+  redirect 'https://winchester-vineyard.herokuapp.com/groups-signup' unless request.secure?
   protect!
   response = HTTParty.get('https://api.churchapp.co.uk/v1/addressbook/contacts?per_page=400', headers: churchapp_headers)
   @contacts = JSON.parse(response.body)["contacts"]
@@ -84,6 +85,7 @@ get '/groups-signup/?' do
 end
 
 post '/groups-signup/:group_id/:contact_id' do |group_id, contact_id|
+  halt 426 unless request.secure?
   body = {
     "action" => "add",
     "members" => {

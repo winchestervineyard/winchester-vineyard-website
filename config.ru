@@ -37,6 +37,21 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWaveDirect::Uploader
 end
 
+helpers do
+  def protect!
+    unless authorized?
+      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+      throw(:halt, [401, "Not authorized\n"])
+    end
+  end
+  def authorized?
+    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+    username = ENV['GROUPS_SIGNUP_USERNAME']
+    password = ENV['GROUPS_SIGNUP_PASSWORD']
+    @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [username, password]
+  end
+end
+
 get '/' do
   haml :index
 end
@@ -58,6 +73,7 @@ get '/groups-slideshow/?' do
 end
 
 get '/groups-signup/?' do
+  protect!
   response = HTTParty.get('https://api.churchapp.co.uk/v1/addressbook/contacts?per_page=400', headers: churchapp_headers)
   @contacts = JSON.parse(response.body)["contacts"]
 

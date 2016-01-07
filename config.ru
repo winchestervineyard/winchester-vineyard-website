@@ -45,9 +45,15 @@ require 'httparty'
 
 churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
 
+get '/groups-list/?' do
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
+  haml :groups_list, layout: nil
+end
+
 get '/groups-slideshow/?' do
   response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
-  @groups = JSON.parse(response.body)["groups"]
+  @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
   haml :groups, layout: nil
 end
 
@@ -56,7 +62,7 @@ get '/groups-signup/?' do
   @contacts = JSON.parse(response.body)["contacts"]
 
   response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
-  @groups = JSON.parse(response.body)["groups"]
+  @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
 
   haml :groups_signup, layout: nil
 end
@@ -151,6 +157,66 @@ class Talk
 
   def published?
     !!@published
+  end
+end
+
+Group = Struct.new(:hash) do
+  def visible?
+    hash["embed_visible"] == "1"
+  end
+
+  def id
+    hash["id"]
+  end
+
+  def full?
+    signup? && spaces <= 0
+  end
+
+  def signup?
+    !!hash["signup_capacity"]
+  end
+
+  def image?
+    !hash["images"].empty?
+  end
+
+  def location?
+    !hash["location"].empty?
+  end
+
+  def first_sentence
+    hash["description"].match(/^(.*?)[.?!]\s/)
+  end
+
+  def address
+    hash["location"]["address"]
+  end
+
+  def image
+    hash["images"]["square_500"]
+  end
+
+  def spaces
+    if signup?
+      hash["signup_capacity"].to_i - hash["no_members"].to_i
+    end
+  end
+
+  def day
+    if (hash["day"].nil?)
+      "TBC"
+    else
+      %w(Sundays Mondays Tuesdays Wednesdays Thursdays Fridays Saturdays)[hash["day"].to_i]
+    end
+  end
+
+  def time
+    hash["time"]
+  end
+
+  def name
+    hash["name"].sub(/\(.*201.\)/, '')
   end
 end
 

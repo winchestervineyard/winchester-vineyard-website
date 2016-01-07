@@ -30,24 +30,20 @@
             %span.wv-selected-contact
           %p
             %button#wv-reset-form.btn.btn-default Start again
-      - @groups.select{|g| g["embed_visible"] == "1"}.each_slice(3) do |group_row|
+      - @groups.select(&:visible?).each_slice(3) do |group_row|
         .row
           - group_row.each do |group|
-            - if group["signup_capacity"]
-              - spaces = group["signup_capacity"].to_i - group["no_members"]
-            - else
-              - spaces = 1
             .col-md-4
               .panel.panel-default
                 .panel-heading
-                  = group["name"].sub(/\(.*201.\)/, '')
+                  = group.name
                 .panel-body.clearfix
-                  - if spaces <= 0
+                  - if group.full?
                     %button.btn.btn-danger.btn-lg{:disabled => 'disabled'} FULL
                   - else
-                    %button.wv-sign-up.btn.btn-primary.btn-lg{:'data-group-id' => group['id']} Sign up
-                    - if group["signup_capacity"]
-                      == (#{spaces} spaces left)
+                    %button.wv-sign-up.btn.btn-primary.btn-lg{:'data-group-id' => group.id} Sign up
+                    - if group.signup?
+                      == (#{group.spaces} spaces left)
 
 %script{:src => "/js/jquery.js"}
 %script{:src => "/js/bootstrap.min.js"}
@@ -79,7 +75,7 @@
   $('.wv-sign-up').click(function() {
     var button = $(this);
     var group_id = button.attr("data-group-id");
-    console.log(group_id);
+    button.html('<i class="fa fa-cog fa-spin"></i>');
     $.ajax({
       method: "POST",
       url: "/groups-signup/"+group_id+"/"+current_contact["id"],

@@ -15,36 +15,35 @@
 %body{:style => 'background-color: white'}
   #groups-carousel.carousel{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
     .carousel-inner
-      - @groups.select{|g| g["embed_visible"] == "1"}.each_with_index do |group, idx|
+      - @groups.select(&:visible?).each_with_index do |group, idx|
         .item{:class => idx == 0 ? 'active' : ''}
           .row
             .col-xs-12
               %h1{:style => "font-family: 'HelveticaNeue-Light'; font-size: 4em; margin-top: 0px"}
-                = group["name"]
+                = group.name
           .row
             .col-md-6
-              - unless group["images"].empty?
-                %img{:src => group["images"]["square_500"], :height => '600'}
+              - if group.image?
+                %img{:src => group.image, :height => '600'}
             .col-md-6
               %p{:style => 'font-size: 2em'}
-                = %w(Sundays Mondays Tuesdays Wednesdays Thursdays Fridays Saturdays)[group["day"].to_i]
+                = group.day
                 at
-                == #{group["time"]}
-                - if group["signup_capacity"]
-                  - spaces = group["signup_capacity"].to_i - group["no_members"]
-                  - if spaces <= 0
+                = group.time
+                - if group.signup?
+                  - if group.full?
                     %span.text-danger
                       == -
                       FULL
                   - else
-                    %span{:class => spaces < 5 ? "text-warning" : "text-success"}
+                    %span{:class => group.spaces < 5 ? "text-warning" : "text-success"}
                       == -
-                      = spaces
-                      = spaces == 1 ? "space" : "spaces"
+                      = group.spaces
+                      = group.spaces == 1 ? "space" : "spaces"
                       left
               %p
-                - unless group["location"].empty?
-                  %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=SO239NP&zoom=9&size=600x360&maptype=roadmap&markers=color:red%7C'+group["location"]["address"]+'&sensor=false', :height => '360'}
-              %p{:style => 'font-size: 2em'}= group["description"].match(/^(.*?)[.?!]\s/)
+                - if group.location?
+                  %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=SO239NP&zoom=9&size=600x360&maptype=roadmap&markers=color:red%7C' + group.address + '&sensor=false', :height => '360'}
+              %p{:style => 'font-size: 2em'}= group.first_sentence
   %script{:src => "/js/jquery.js"}
   %script{:src => "/js/bootstrap.min.js"}

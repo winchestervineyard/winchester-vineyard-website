@@ -40,14 +40,14 @@
             .col-md-4
               .panel.panel-default
                 .panel-heading
-                  = group["name"]
-                  - if group["signup_capacity"]
-                    %p== (#{spaces} spaces left)
+                  = group["name"].sub(/\(.*201.\)/, '')
                 .panel-body.clearfix
                   - if spaces <= 0
                     %button.btn.btn-danger.btn-lg{:disabled => 'disabled'} FULL
                   - else
-                    %button.wv-sign-up.btn.btn-primary.btn-lg{:'data-group-id' => group['id']}== Sign up
+                    %button.wv-sign-up.btn.btn-primary.btn-lg{:'data-group-id' => group['id']} Sign up
+                    - if group["signup_capacity"]
+                      == (#{spaces} spaces left)
 
 %script{:src => "/js/jquery.js"}
 %script{:src => "/js/bootstrap.min.js"}

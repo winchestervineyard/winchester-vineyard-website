@@ -74,24 +74,6 @@ $(document).ready(function() {
     }
   });
 
-  var news = new Firebase('https://winvin.firebaseio.com/news');
-  news.on('child_added', function(snapshot) {
-    var data = snapshot.val();
-    if (div = renderNews(data)) {
-      $(newsDivForDate(data)).append(div);
-      sortItems(newsDivForDate(data), 1);
-    }
-  });
-
-  news.on('child_changed', function(snapshot) {
-    var data = snapshot.val();
-    $('#news-'+data.id).remove();
-    if (div = renderNews(data)) {
-      $(newsDivForDate(data)).append(div);
-      sortItems(newsDivForDate(data), 1);
-    }
-  });
-
   var talks = new Firebase('https://winvin.firebaseio.com/talks');
   talks.on('child_added', function(snapshot) {
     var data = snapshot.val();
@@ -198,18 +180,4 @@ function talkDivForDate(data) {
   }
 
   return '#wv-talks-older';
-}
-
-var MS_IN_DAY = 85400000;
-
-function newsDivForDate(data) {
-  var date = new Date(data.datetime);
-  var now = new Date();
-  var nextSunday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + (7 - now.getDay()));
-
-  if ((date - now)/MS_IN_DAY <= 90) {
-    return '#wv-news-this-month';
-  }
-
-  return '#wv-news-further-ahead';
 }

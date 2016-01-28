@@ -37,6 +37,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWaveDirect::Uploader
 end
 
+require 'httparty'
+
+CHURCHAPP_HEADERS = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
+
 helpers do
   def protect!
     unless authorized?
@@ -50,24 +54,26 @@ helpers do
     password = ENV['GROUPS_SIGNUP_PASSWORD']
     @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [username, password]
   end
+
+  def fetch_events(page)
+    response = HTTParty.get("https://api.churchapp.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
+    JSON.parse(response.body)["events"].map { |e| Event.new(e) }
+  end
 end
 
 get '/' do
+  @events = (fetch_events(1) + fetch_events(2)).select(&:featured?)
   haml :index
 end
 
-require 'httparty'
-
-churchapp_headers = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
-
 get '/groups-list/?' do
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
   haml :groups_list, layout: nil
 end
 
 get '/groups-slideshow/?' do
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
   haml :groups, layout: nil
 end
@@ -75,10 +81,10 @@ end
 get '/groups-signup/?' do
   redirect 'https://winchester-vineyard.herokuapp.com/groups-signup' unless request.secure?
   protect!
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/addressbook/contacts?per_page=400', headers: churchapp_headers)
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/addressbook/contacts?per_page=400', headers: CHURCHAPP_HEADERS)
   @contacts = JSON.parse(response.body)["contacts"]
 
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: churchapp_headers)
+  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
 
   haml :groups_signup, layout: nil
@@ -94,7 +100,7 @@ post '/groups-signup/:group_id/:contact_id' do |group_id, contact_id|
   }.to_json
   url = 'https://api.churchapp.co.uk/v1/smallgroups/group/'+group_id+'/members'
   puts body, url
-  response = HTTParty.post(url, headers: churchapp_headers, body: body)
+  response = HTTParty.post(url, headers: CHURCHAPP_HEADERS, body: body)
   puts response.body
   response.code
 end
@@ -235,6 +241,80 @@ Group = Struct.new(:hash) do
 
   def name
     hash["name"].sub(/\(.*201.\)/, '')
+  end
+end
+
+Event = Struct.new(:hash) do
+  def featured?
+    hash["signup_options"]["public"]["featured"] == "1"
+  end
+
+  def name
+    hash["name"]
+  end
+
+  def ticket_url
+    hash["signup_options"]["tickets"]["url"]
+  end
+
+  def image?
+    !hash["images"].empty?
+  end
+
+  def image_url
+    hash["images"]["original_500"]
+  end
+
+  def start_time
+    Time.parse(hash["datetime_start"])
+  end
+
+  def start_date
+    start_time.midnight
+  end
+
+  def end_time
+    Time.parse(hash["datetime_end"])
+  end
+
+  def end_date
+    end_time.midnight
+  end
+
+  def end_date_string
+    end_date.strftime("%d %b")
+  end
+
+  def start_date_string
+    start_date.strftime("%d %b")
+  end
+
+  def start_time_string
+    start_time.strftime("%H:%M")
+  end
+
+  def end_time_string
+    end_time.strftime("%H:%M")
+  end
+
+  def full_date_string
+    if self.start_date != self.end_date
+      "#{self.start_date_string} - #{self.end_date_string}"
+    else
+      "#{self.start_date_string} #{self.start_time_string} - #{self.end_time_string}"
+    end
+  end
+
+  def location?
+    hash["location"].size > 0
+  end
+
+  def location_url
+    "http://maps.google.co.uk/?q=" + hash["location"]["address"]
+  end
+
+  def location_title
+    hash["location"]["name"]
   end
 end
 

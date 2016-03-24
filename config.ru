@@ -2,9 +2,10 @@ require 'sinatra'
 require 'sass'
 require 'builder'
 
-require 'carrierwave_direct'
 require 'dalli'
 require 'rack-cache'
+require 'active_support/core_ext/time/calculations'
+
 #
 # Defined in ENV on Heroku. To try locally, start memcached and uncomment:
 # ENV["MEMCACHE_SERVERS"] = "localhost"
@@ -22,19 +23,6 @@ set :static_cache_control, [:public, max_age: 1800]
 
 before do
   cache_control :public, max_age: 1800  # 30 mins
-end
-
-CarrierWave.configure do |config|
-  config.fog_credentials = {
-    :provider               => 'AWS',
-    :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-    :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
-  }
-  config.fog_directory  = ENV['AWS_FOG_DIRECTORY'] # bucket name
-end
-
-class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWaveDirect::Uploader
 end
 
 require 'httparty'
@@ -390,8 +378,8 @@ get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZa
 get('/connect/?') { redirect 'https://docs.google.com/forms/d/1KuBo4sLPU9tcNpCbihhY_jydWgCCKpCdx7X35sLgmgg/viewform' }
 
 get('/landing-banner-code/?') { redirect '/students' }
-get('/kidstea/?') { redirect 'https://winvin.churchapp.co.uk/events/pl5wgmwz' }
-get('/comedynight/?') { redirect 'https://winvin.churchapp.co.uk/events/yespcs01' }
+
+get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }
 
 get '/audio/?*' do
   redirect '/#wv-talks'

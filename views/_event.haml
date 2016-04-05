@@ -1,0 +1,17 @@
+.col-md-4
+  .panel.wv-news-item
+    .panel-heading
+      == #{event.start_date_string}: #{event.name}
+    .panel-body.clearfix
+      - if event.image?
+        %img{:src => event.image_url, :style => 'width: 50%; float: right; padding: 0px 0px 0px 10px'}
+      = event.hash["description"].match(/^(((.*?)[.?!]){3}|(.*))/)
+    .panel-footer.clearfix
+      .wv-wherewhen.pull-left
+        = event.full_date_string
+        - if event.location?
+          %br
+          %a{:href => event.location_url}= event.location_title
+      .pull-right
+        %a.btn{:class => 'btn-success', :role => 'button', :href => event.ticket_url}
+          More info

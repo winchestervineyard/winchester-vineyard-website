@@ -37,8 +37,11 @@ h3 {
     .panel-footer {
       background: transparent;
       border: 0px;
-      .wv-wherewhen a {
+      a {
         color: white;
+        &.btn {
+          text-shadow: 0;
+        }
       }
     }
   }
@@ -372,7 +375,7 @@ p.quote {
   @include panel-photo-background;
   color: white;
 
-  a { color: $grassgreen; }
+  a { color: white; }
 }
 
 #wv-news {

@@ -50,7 +50,9 @@ helpers do
 end
 
 get '/' do
-  @events = (fetch_events(1) + fetch_events(2)).select(&:featured?)
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3))
+  @featured_events = events.select(&:featured?)
+  @healing_events = events.select { |e| e.category == 'Healing' }
   haml :index
 end
 
@@ -235,6 +237,10 @@ end
 Event = Struct.new(:hash) do
   def featured?
     hash["signup_options"]["public"]["featured"] == "1"
+  end
+
+  def category
+    hash["category"]["name"]
   end
 
   def name

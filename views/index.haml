@@ -166,8 +166,6 @@
           Bethel Sozo is a powerful yet gentle prayer session that aims to deal with the things that are stopping us from connecting deeply with God.
         %p
           %a.btn.btn-primary{:style => 'color:white; text-decoration: none', :href => '/requestasozo'} Request a Sozo &raquo;
-        %p
-          %a{:href => 'mailto:enquiries@streamsofhope.org.uk'} Make an enquiry &raquo;
       .col-md-3
         %h3 freedom in christ
         %p
@@ -180,6 +178,13 @@
           This course takes an in-depth look at relationships. It can revive and refresh your marriage, or help repair marriages that are struggling.
         %p
           %a{:href => 'mailto:hello@winvin.org.uk?subject=Love+after+marriage=enquiry'} Register your interest &raquo;
+    .row
+      .col-xs-12
+        %h2 events
+    .row
+      - @healing_events.first(3).each do |event|
+        = haml :_event, locals: { event: event }
+
 %section#wv-compassion
   .shadow
   .container
@@ -250,24 +255,8 @@
         .row
           .col-sm-12
             .row
-              - @events.first(3).each do |event|
-                .col-md-4
-                  .panel.wv-news-item
-                    .panel-heading
-                      == #{event.start_date_string}: #{event.name}
-                    .panel-body.clearfix
-                      - if event.image?
-                        %img{:src => event.image_url, :style => 'width: 50%; float: right; padding: 0px 0px 0px 10px'}
-                      = event.hash["description"].match(/^(((.*?)[.?!]){3}|(.*))/)
-                    .panel-footer.clearfix
-                      .wv-wherewhen.pull-left
-                        = event.full_date_string
-                        - if event.location?
-                          %br
-                          %a{:href => event.location_url}= event.location_title
-                      .pull-right
-                        %a.btn{:class => 'btn-success', :role => 'button', :href => event.ticket_url}
-                          More info
+              - @featured_events.first(3).each do |event|
+                = haml :_event, locals: { event: event }
         .row
           .col-xs-12
             .calendar

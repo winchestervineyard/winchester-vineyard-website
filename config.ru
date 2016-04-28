@@ -68,6 +68,7 @@ get '/groups-slideshow/?' do
   haml :groups, layout: nil
 end
 
+
 get '/groups-signup/?' do
   redirect 'https://winchester-vineyard.herokuapp.com/groups-signup' unless request.secure?
   protect!
@@ -373,6 +374,9 @@ not_found do
   status 404
   haml :not_found
 end
+
+
+get('/groupsslideshow/?') { redirect '/groups-slideshow/' }
 
 get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
 

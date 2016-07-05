@@ -40,7 +40,7 @@
           get the welcome pack
         %img{:src => '/images/photos/areas/welcome-pack.jpg'}
         %p
-          The welcome pack contains everything you need to know about how our church ticks. Download it here:
+          The welcome pack contains everything you need to know about the basics of church life. Download it here:
         %p
           %a.btn.btn-lg.btn-success{:href => 'https://winchester-vineyard-website-assets.s3.amazonaws.com/uploads/welcome-pack.pdf'} Download PDF (27MB)
       .col-md-8
@@ -58,7 +58,7 @@
                 %br
                 = talk.who
               %td
-                %a.btn-success.btn{:href => talk.download_url}
+                %a.btn-success.btn{:href => talk.download_url, :target => 'talk-window'}
                   %i.fa.fa-headphones
                   listen
               %td
@@ -68,6 +68,9 @@
                     slides
     .row
       .col-xs-12
-        %h2#get-involved get involved
+        %h2#get-involved get connected
         :plain
-          <iframe frameborder="0" height="600" scrolling="yes" src="https://winvin.churchapp.co.uk/embed/addressbook/form?body_bgcolor=ffffff" style="border-width:0" width="100%"></iframe>
+          <iframe frameborder="0" height="1200" scrolling="yes" src="https://winvin.churchapp.co.uk/embed/addressbook/form?body_bgcolor=ffffff" style="border-width:0" width="100%"></iframe>
+        %p
+          Your information will be kept in keeping with the Data Protection Act (1998) and used internally within Winchester Vineyard Church only. For full details see
+          %a{:href => 'http://winvin.org.uk/data-protection-policy'} our data protection policy.

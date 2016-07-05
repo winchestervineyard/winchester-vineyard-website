@@ -133,7 +133,7 @@ get '/feed.xml' do
 end
 
 class Talk
-  attr :full_name, :who, :date, :download_url, :slides_url, :id, :slug, :series_name
+  attr :full_name, :who, :date, :download_url, :slides_url, :id, :slug, :series_name, :title
 
   def initialize(hash)
     @id = hash['id']
@@ -145,6 +145,7 @@ class Talk
     @slides_url = hash['slides_url']
     @published = hash['published']
     @slug = hash['slug']
+    @title = hash['title']
   end
 
   def part_of_a_series?
@@ -348,6 +349,11 @@ get '/students/?' do
   haml :students
 end
 
+get '/welcome/?' do
+  @talks = get_talks.select(&:published?).select {|t| t.series_name == "What on earth is the Vineyard" }
+  haml :welcome
+end
+
 get '/lifegroups/?' do
   haml :lifegroups
 end
@@ -385,7 +391,7 @@ get('/data-protection-policy/?') { redirect 'https://s3-eu-west-1.amazonaws.com/
 get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXRk5JAPESu_Zfog7FAtCXtdMAfdHCbQ8OXs/viewform?c=0&w=1' }
 get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZar84lQIMpkcZuR6bVxlzGB8r0-cSni7s/viewform?fbzx=-1795998873449154632' }
 
-get('/connect/?') { redirect 'https://docs.google.com/forms/d/1KuBo4sLPU9tcNpCbihhY_jydWgCCKpCdx7X35sLgmgg/viewform' }
+get('/connect/?') { redirect '/welcome' }
 
 get('/landing-banner-code/?') { redirect '/students' }
 

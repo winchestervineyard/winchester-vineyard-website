@@ -1,0 +1,73 @@
+#wv-home
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse.navbar-fixed-top{:role => 'navigation'}
+      .navbar-header
+        %a{:href => '/'}
+          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 13px; height: 33px'}
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => '/'} &laquo; Back to home
+
+%section.white.wv-students
+  .shadow
+  .container
+    .row
+      .col-xs-12
+        %h1 welcome
+    .row
+      .col-xs-8
+        %p
+          We are delighted to welcome you to Winchester Vineyard. Whether you have recently moved to the area and are looking for a new Church, or want to belong to a church family for the first time, we hope you feel at home here.
+      .col-xs-4
+        %p
+          %a{:style => 'text-decoration: none', :href => "https://www.facebook.com/winchestervineyardchurch/"}
+            %i.fa.fa-facebook
+            Like our Facebook page
+          %br
+          %a{:style => 'text-decoration: none', :href => "http://twitter.com/winvinchurch"}
+            %i.fa.fa-twitter
+            Follow us on Twitter
+    .row
+      .col-xs-12
+        %p
+          Three times a year we host a "Welcome meal" where new members can find out more about the church directly from Nigel and Jo our senior leaders. To find out when the next meal is, or to book your place, please
+          %a{:href => '#get-involved'} drop us a line.
+
+    .row
+      .col-md-4
+        %h2
+          get the welcome pack
+        %img{:src => '/images/photos/areas/welcome-pack.jpg'}
+        %p
+          The welcome pack contains everything you need to know about how our church ticks. Download it here:
+        %p
+          %a.btn.btn-lg.btn-success{:href => 'https://winchester-vineyard-website-assets.s3.amazonaws.com/uploads/welcome-pack.pdf'} Download PDF (27MB)
+      .col-md-8
+        %h2
+          listen to our introductory talks
+        %p
+          If you would like to know more about what it means to be a part of a Vineyard church, you can listen to the following talk series:
+        %table.table.table-striped
+          - @talks.reverse.each.with_index do |talk, index|
+            %tr
+              %td
+                %strong
+                  == #{index + 1}.
+                  = talk.title
+                %br
+                = talk.who
+              %td
+                %a.btn-success.btn{:href => talk.download_url}
+                  %i.fa.fa-headphones
+                  listen
+              %td
+                - if talk.has_slides?
+                  %a.btn-primary.btn{:href => talk.slides_url}
+                    %i.fa.fa-file-pdf-o
+                    slides
+    .row
+      .col-xs-12
+        %h2#get-involved get involved
+        :plain
+          <iframe frameborder="0" height="600" scrolling="yes" src="https://winvin.churchapp.co.uk/embed/addressbook/form?body_bgcolor=ffffff" style="border-width:0" width="100%"></iframe>

@@ -397,6 +397,7 @@ get('/landing-banner-code/?') { redirect '/students' }
 
 get('/find-us/?') { redirect '/#wv-find-us' }
 get('/camp/?') { redirect 'https://winvin.churchapp.co.uk/events/vqh8emhs' }
+get('/summerschool16/?') { redirect 'https://winvin.churchapp.co.uk/events/7naoumvy' }
 
 get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }
 

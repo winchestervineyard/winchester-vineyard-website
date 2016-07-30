@@ -306,7 +306,7 @@ Event = Struct.new(:hash) do
   end
 
   def location_url
-    "http://maps.google.co.uk/?q=" + hash["location"]["address"]
+    "http://maps.google.co.uk/?q=" + hash["location"]["address"] rescue nil
   end
 
   def location_title

@@ -398,6 +398,7 @@ get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZa
 
 get('/connect/?') { redirect '/welcome' }
 
+get('/men/?') { redirect 'https://winvin.churchapp.co.uk/events/jc8lexvp/' }
 get('/landing-banner-code/?') { redirect '/students' }
 
 get('/find-us/?') { redirect '/#wv-find-us' }

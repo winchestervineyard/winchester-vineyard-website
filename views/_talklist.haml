@@ -1,0 +1,18 @@
+%table.table.table-striped
+  - @talks.reverse.each.with_index do |talk, index|
+    %tr
+      %td
+        %strong
+          == #{index + 1}.
+          = talk.title
+        %br
+        = talk.who
+      %td
+        %a.btn-success.btn{:href => talk.download_url, :target => 'talk-window'}
+          %i.fa.fa-headphones
+          listen
+      %td
+        - if talk.has_slides?
+          %a.btn-primary.btn{:href => talk.slides_url}
+            %i.fa.fa-file-pdf-o
+            slides

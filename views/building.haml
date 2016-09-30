@@ -19,14 +19,17 @@
       .col-md-4
         %p
           Winchester Vineyard is a church of people who are getting to know Jesus better and bringing hope and life into our communities. Since the church started in 1994, many lives have been touched by God's love through Sunday Services, Life Groups, courses and community projects.
-
       .col-md-8
         %img{:src => "/images/venue-front.jpg"}
     .row
-      .col-xs-12
+      .col-md-6
+        %h2 it's time to invest
         %p Our building, the Vineyard Centre, has been a wonderful base from which people and communities have been impacted. Having bought it in 2000 and upgraded it in 2005, the time has now come to further invest in the Centre to make it an even better resource base to achieve our goals of bringing hope and life to Winchester and the surrounding communities.
         %p
           %a.btn.btn-lg.btn-success{:href => 'https://s3-eu-west-1.amazonaws.com/winchester-vineyard-website-assets/uploads/venue-plans-latest.pdf'} Download the plans (6MB PDF) &raquo;
+      .col-md-6
+        %h2 listen to the talks
+        = haml :_talklist, locals: { talks: @talks }
     .row
       .col-xs-12
         %h1 bringing hope and life…

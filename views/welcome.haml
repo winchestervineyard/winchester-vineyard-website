@@ -48,24 +48,7 @@
           listen to our introductory talks
         %p
           If you would like to know more about what it means to be a part of a Vineyard church, you can listen to the following talk series:
-        %table.table.table-striped
-          - @talks.reverse.each.with_index do |talk, index|
-            %tr
-              %td
-                %strong
-                  == #{index + 1}.
-                  = talk.title
-                %br
-                = talk.who
-              %td
-                %a.btn-success.btn{:href => talk.download_url, :target => 'talk-window'}
-                  %i.fa.fa-headphones
-                  listen
-              %td
-                - if talk.has_slides?
-                  %a.btn-primary.btn{:href => talk.slides_url}
-                    %i.fa.fa-file-pdf-o
-                    slides
+        = haml :_talklist, locals: { talks: @talks }
     .row
       .col-xs-12
         %h2#get-involved get connected

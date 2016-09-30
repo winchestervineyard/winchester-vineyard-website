@@ -355,7 +355,7 @@ get '/welcome/?' do
 end
 
 get '/buildingforthefuture/?' do
-  #@talks = get_talks.select(&:published?).select {|t| t.series_name == "What on earth is the Vineyard" }
+  @talks = get_talks.select(&:published?).select {|t| t.series_name == "Building for the future" }
   haml :building
 end
 

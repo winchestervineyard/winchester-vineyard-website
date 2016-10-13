@@ -373,6 +373,7 @@ get '/givehope/?' do
   haml :givehope
 end
 
+
 get '/css/styles.css' do
   scss :styles, :style => :expanded
 end

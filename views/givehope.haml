@@ -1,0 +1,80 @@
+#wv-home
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse.navbar-fixed-top{:role => 'navigation'}
+      .navbar-header
+        %a{:href => '/'}
+          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 13px; height: 33px'}
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => '/'} &laquo; Back to home
+
+%section#wv-givehope.white
+  .shadow
+  .container
+    .row
+      .col-xs-12
+        %h1
+          give hope this christmas
+          %img{:src => '/images/advent/icn-love-all.png', :style => 'width: 100px; height: 100px'}
+    .row
+      .col-xs-12
+        %p
+          We live out our faith in Jesus by trying to meet needs in our community wherever possible. Below you will find ways you can help others this Christmas.
+        %p
+          Please bring all donations between 10am and 3pm Mon-Fri to the drop-off point in our café or to our upstairs office at
+          %a{:href => 'https://www.google.co.uk/maps/place/Winchester+Vineyard/@51.0528351,-1.3089904,17z/data=!3m1!4b1!4m5!3m4!1s0x48741279301ad1dd:0xbf5c56d3959f4861!8m2!3d51.0528351!4d-1.3068017'} Winchester Vineyard Church, Bar End Industrial Estate, Bar End Rd, Winchester SO23 9NP.
+          You are also welcome to come along with donations to our service on Sundays at 10:30am.
+    .row
+      .col-md-6
+        %h2 pack a shoebox
+        %img{:src => '/images/givehope/shoeboxes.jpg'}
+        %p
+          These will be sent to children abroad who will otherwise receive no Christmas gifts.
+          %a{:href => 'https://www.samaritans-purse.org.uk/what-we-do/operation-christmas-child/how-to-pack-a-shoebox/'} Click here for instructions
+          and fill your shoe box (ready made boxes available at the Vineyard for 50p), donate £3 online or with your shoebox &amp; return to the Vineyard
+          %strong by 6 November.
+      .col-md-6
+        %h2 donate to our toy fair
+        %img{:src => '/images/givehope/toyfair.jpg'}
+        %p
+          We give away toys, books, games, stocking fillers for families in Winchester who can’t afford much for their children at Christmas. Please bring us new toys to donate for children aged 0-16
+          %strong by 4 December.
+    .row
+      .col-md-6
+        %h2 give a hamper
+        %img{:src => '/images/givehope/hamper.jpg'}
+        %p
+          Food hampers to make Christmas special for families in Winchester – please take a brown foodstore bag from our foyer with the short shopping list attached, fill the bag &amp; return it, or just bring some or all of the
+          %a{:href => 'http://winchester-vineyard-website-assets.s3.amazonaws.com/uploads/christmas-hamper-full-list-2016.pdf'} items on this list
+          to the Vineyard. Please feel free to bring just a few items or the full list
+          %strong by 11 December.
+      .col-md-6
+        %h2 the storehouse
+        %img{:src => "/images/givehope/compassion.jpg"}
+        %p
+          We continue to accept donations of good quality children’s clothes and baby equipment. These can be brought to our church foyer or office lobby.
+        %p
+          We also fill and give bags of food, toiletry and household items to families and individuals in Winchester, throughout the year. You can find the items that we collect for our brown bags -
+          %a{:href => 'https://s3-eu-west-1.amazonaws.com/winchester-vineyard-website-assets/uploads/fs-full-list.pdf '} click here for a full list.
+    .row
+      .col-xs-12
+        %p.quote
+          %strong Thank you so much for helping people in your community and beyond!
+%section#wv-news
+  .shadow
+  .container
+    .row
+      .col-xs-12
+        .wv-caption
+          %h1 christmas services
+          %p
+            You would be really welcome at our Christmas events and services. There is no need to book, just come along. For more information see below:
+        .row
+          .col-sm-12
+            .row
+              - @christmas_events.each do |event|
+                = haml :_event, locals: { event: event }
+
+:javascript
+  currentBackground = "givehope";

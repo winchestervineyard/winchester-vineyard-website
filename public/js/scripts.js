@@ -2,9 +2,12 @@ var images = {
   'talks': 0,
   'healing': 0,
   'news': 0,
+  'givehope': 0,
 };
 var preloaded = {};
-var currentBackground = "";
+if (typeof currentBackground == 'undefined') {
+  currentBackground = "talks";
+}
 
 var lastTop = 0;
 
@@ -31,8 +34,7 @@ $(document).ready(function() {
     $('.navbar-collapse.in').collapse('hide');
   });
 
-  $('body').css("background-image", "url('/images/photos/borders/talks.jpg')");
-  currentBackground = "talks";
+  $('body').css("background-image", "url('/images/photos/borders/" + currentBackground + ".jpg')");
   $(window).scroll(function() {
     if (!calculateSectionHeights()) {
       return;

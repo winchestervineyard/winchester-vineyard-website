@@ -15,13 +15,13 @@
           %li
             %a{:href => '#wv-sundays'} Sundays
           %li
-            %a{:href => '#wv-community'} Community
+            %a{:href => '#wv-community'} Life groups
           %li
             %a{:href => '#wv-healing'} Healing
           %li
             %a{:href => '#wv-compassion'} Compassion
           %li
-            %a{:href => '#wv-news'} News &amp; events
+            %a{:href => '#wv-news'} What's on
           %li
             %a{:href => '/students'} Students
           %li
@@ -118,9 +118,7 @@
   .container
     .row
       .col-md-6.col-lg-7
-        %h1 community
-        %p We have many places for you to connect, belong and get involved, no matter what your age or life stage.
-        %h2 life groups
+        %h1 life groups
         %p Our Life Groups are at the heart of our church. They meet in people's homes in Winchester and the surrounding areas. They are a great place to get to know others, share both the big and the small things of life, and learn to do the things Jesus did.
         %p Groups run on a termly basis, with some groups lasting just a term and other groups lasting longer. You are welcome to continue going to the same group for several terms.
 
@@ -183,12 +181,6 @@
           This course takes an in-depth look at relationships. It can revive and refresh your marriage, or help repair marriages that are struggling.
         %p
           %a{:href => 'mailto:hello@winvin.org.uk?subject=Love+after+marriage=enquiry'} Register your interest &raquo;
-    .row
-      .col-xs-12
-        %h2 events
-    .row
-      - @healing_events.first(3).each do |event|
-        = haml :_event, locals: { event: event }
 
 %section#wv-compassion
   .shadow
@@ -255,12 +247,17 @@
     .row
       .col-xs-12
         .wv-caption
-          %h1 what's happening
+          %h1 what's on
           %br
         .row
           .col-sm-12
             .row
               - @featured_events.first(3).each do |event|
+                = haml :_event, locals: { event: event }
+        .row
+          .col-sm-12
+            .row
+              - @featured_events[3..5].each do |event|
                 = haml :_event, locals: { event: event }
         .row
           .col-xs-12

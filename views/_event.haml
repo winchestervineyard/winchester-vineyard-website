@@ -13,5 +13,9 @@
           %br
           %a{:href => event.location_url}= event.location_title
       .pull-right
-        %a.btn{:class => 'btn-success', :role => 'button', :href => event.ticket_url}
-          More info
+        - if event.can_signup?
+          %a.btn{:class => 'btn-success', :role => 'button', :href => event.ticket_url}
+            Sign up
+        - else
+          %a.btn{:class => 'btn-primary', :role => 'button', :href => event.ticket_url}
+            More info

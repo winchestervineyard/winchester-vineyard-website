@@ -432,5 +432,6 @@ end
 
 get('/events/?') { redirect '/#wv-news' }
 get('/donate/?') { redirect 'https://winvin.churchapp.co.uk/donate/' }
+get('/fatherheart/?') { redirect 'https://winvin.churchapp.co.uk/events/c0bsvkxa' }
 
 run Sinatra::Application

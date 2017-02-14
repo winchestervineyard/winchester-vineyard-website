@@ -15,15 +15,15 @@
           %li
             %a{:href => '#wv-sundays'} Sundays
           %li
-            %a{:href => '#wv-community'} Life groups
+            %a{:href => '#wv-news'} What's on
           %li
-            %a{:href => '#wv-healing'} Healing
+            %a{:href => '#wv-community'} Life groups
           %li
             %a{:href => '#wv-compassion'} Compassion
           %li
-            %a{:href => '#wv-news'} What's on
+            %a{:href => '#wv-healing'} Healing
           %li
-            %a{:href => '/students'} Students
+            %a{:href => '#wv-talks'} Talks
           %li
             %a{:href => 'http://winvin.churchapp.co.uk/my'} My Church App
           %li
@@ -97,22 +97,31 @@
         %img{:src => '/images/photos/areas/sunday/coffee.jpg'}
         %p If it's your first visit we'd love to meet you! You can join some of our team in the connect area to have a coffee and ask any questions.
 
-%section#wv-talks
+%section#wv-news
   .shadow
   .container
     .row
       .col-xs-12
         .wv-caption
-          %h1 talk downloads
-          %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
-          %p
-            %strong Within the last month
-        .row#wv-talks-within-last-month
-        .wv-caption
-          %p
-            %strong
-              %a{:'data-toggle' => 'collapse', :href => '#wv-talks-older', :'aria-expanded' => 'false', :'aria-controls' => 'wv-talks-older'} See older talks
-        .row.collapse#wv-talks-older
+          %h1 what's on
+          %br
+        .row
+          .col-sm-12
+            .row
+              - @featured_events.first(3).each do |event|
+                = haml :_event, locals: { event: event }
+        .row
+          .col-sm-12
+            .row
+              - @featured_events[3..5].each do |event|
+                = haml :_event, locals: { event: event }
+        .row
+          .col-xs-12
+            .calendar
+              :plain
+                <iframe frameborder="0" height="600" src="https://winvin.churchapp.co.uk/embed/calendar?bgcolor=ffffff" style="border-width:0" width="100%"></iframe>
+            %br
+
 %section#wv-community
   .shadow
   .container
@@ -148,39 +157,23 @@
           Our toddler group meets on Monday and Tuesday mornings during term time from 10am - 11:30am. There is plenty of room to play including an outside area, a large selection of toys and great cake! There's a waiting list for both groups; please get in touch to be added to the list.
         %p
           %a{:href => '#wv-find-us'} Call us for more information &raquo;
-%section#wv-healing
+
+%section#wv-talks
   .shadow
-  .container.wv-caption
+  .container
     .row
-      .col-md-12
-        %h1 healing
-        %p When we follow Jesus, our lives begin to change. As we grow in our faith, we may find we need to deal with the effects of the past - either things we've done which we wished we hadn’t, or things we've experienced through circumstances or relationships. God loves us and wants us to be free from the things that hold us back.
-        %p Life groups and Sunday morning services are a great place to be prayed for. If we want to go deeper there are a variety of different options which are collectively called Streams of Hope.
-    .row
-      .col-md-3
-        %h3 first stop
-        %p
-          Not sure where to start? Contact us for a First Stop appointment to discuss how we can best move forward.
-        %p
-          %a{:href => 'mailto:enquiries@streamsofhope.org.uk'} Make an enquiry &raquo;
-      .col-md-3
-        %h3 bethel sozo
-        %p
-          Bethel Sozo is a powerful yet gentle prayer session that aims to deal with the things that are stopping us from connecting deeply with God.
-        %p
-          %a.btn.btn-primary{:style => 'color:white; text-decoration: none', :href => '/requestasozo'} Request a Sozo &raquo;
-      .col-md-3
-        %h3 freedom in christ
-        %p
-          Freedom in Christ is a discipleship course that shows us who we are in Christ and how to live this out in day to day life.
-        %p
-          %a{:href => 'mailto:hello@winvin.org.uk?subject=Freedom+In+Christ'} Register your interest &raquo;
-      .col-md-3
-        %h3 love after marriage
-        %p
-          This course takes an in-depth look at relationships. It can revive and refresh your marriage, or help repair marriages that are struggling.
-        %p
-          %a{:href => 'mailto:hello@winvin.org.uk?subject=Love+after+marriage=enquiry'} Register your interest &raquo;
+      .col-xs-12
+        .wv-caption
+          %h1 talk downloads
+          %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
+          %p
+            %strong Within the last month
+        .row#wv-talks-within-last-month
+        .wv-caption
+          %p
+            %strong
+              %a{:'data-toggle' => 'collapse', :href => '#wv-talks-older', :'aria-expanded' => 'false', :'aria-controls' => 'wv-talks-older'} See older talks
+        .row.collapse#wv-talks-older
 
 %section#wv-compassion
   .shadow
@@ -241,30 +234,40 @@
         %p
           %a{:href => 'http://kariskids.org.uk'} Visit the website &raquo;
 
-%section#wv-news
+%section#wv-healing
   .shadow
-  .container
+  .container.wv-caption
     .row
-      .col-xs-12
-        .wv-caption
-          %h1 what's on
-          %br
-        .row
-          .col-sm-12
-            .row
-              - @featured_events.first(3).each do |event|
-                = haml :_event, locals: { event: event }
-        .row
-          .col-sm-12
-            .row
-              - @featured_events[3..5].each do |event|
-                = haml :_event, locals: { event: event }
-        .row
-          .col-xs-12
-            .calendar
-              :plain
-                <iframe frameborder="0" height="600" src="https://winvin.churchapp.co.uk/embed/calendar?bgcolor=ffffff" style="border-width:0" width="100%"></iframe>
-            %br
+      .col-md-12
+        %h1 healing
+        %p When we follow Jesus, our lives begin to change. As we grow in our faith, we may find we need to deal with the effects of the past - either things we've done which we wished we hadn’t, or things we've experienced through circumstances or relationships. God loves us and wants us to be free from the things that hold us back.
+        %p Life groups and Sunday morning services are a great place to be prayed for. If we want to go deeper there are a variety of different options which are collectively called Streams of Hope.
+    .row
+      .col-md-3
+        %h3 first stop
+        %p
+          Not sure where to start? Contact us for a First Stop appointment to discuss how we can best move forward.
+        %p
+          %a{:href => 'mailto:enquiries@streamsofhope.org.uk'} Make an enquiry &raquo;
+      .col-md-3
+        %h3 bethel sozo
+        %p
+          Bethel Sozo is a powerful yet gentle prayer session that aims to deal with the things that are stopping us from connecting deeply with God.
+        %p
+          %a.btn.btn-primary{:style => 'color:white; text-decoration: none', :href => '/requestasozo'} Request a Sozo &raquo;
+      .col-md-3
+        %h3 freedom in christ
+        %p
+          Freedom in Christ is a discipleship course that shows us who we are in Christ and how to live this out in day to day life.
+        %p
+          %a{:href => 'mailto:hello@winvin.org.uk?subject=Freedom+In+Christ'} Register your interest &raquo;
+      .col-md-3
+        %h3 love after marriage
+        %p
+          This course takes an in-depth look at relationships. It can revive and refresh your marriage, or help repair marriages that are struggling.
+        %p
+          %a{:href => 'mailto:hello@winvin.org.uk?subject=Love+after+marriage=enquiry'} Register your interest &raquo;
+
 %section#wv-team.wv-team
   .container
     .row

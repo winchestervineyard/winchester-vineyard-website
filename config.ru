@@ -52,6 +52,7 @@ end
 get '/' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3))
   @featured_events = events.select(&:featured?)
+  @healing_events = events.select { |e| e.category == 'Healing' }
   haml :index
 end
 

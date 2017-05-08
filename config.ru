@@ -202,7 +202,7 @@ Group = Struct.new(:hash) do
   end
 
   def first_sentence
-    hash["description"].match(/^(.*?)[.?!]\s/)
+    hash["description"].match(/^(.*?)[.!]\s/)
   end
 
   def address
@@ -210,7 +210,7 @@ Group = Struct.new(:hash) do
   end
 
   def image
-    hash["images"]["square_500"]
+    hash["images"]["original_500"]
   end
 
   def spaces

@@ -64,6 +64,7 @@ end
 
 get '/groups-slideshow/?' do
   response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
+  puts response.body
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
   haml :groups, layout: nil
 end
@@ -202,7 +203,7 @@ Group = Struct.new(:hash) do
   end
 
   def first_sentence
-    hash["description"].match(/^(.*?)[.!]\s/)
+    hash["description"].match(/^(.*?)[.!]\s?/)
   end
 
   def address

@@ -1,0 +1,29 @@
+- if term.signup_month?
+  %p
+    %strong
+      We are currently signing up for groups for the
+      = term.name
+      term.
+    Signups started on the first of
+    = succeed '.' do
+      = term.signup_month
+    Groups will start at the beginning of
+    = term.start_month
+    and run to the end of
+    = succeed '.' do
+      = term.end_month
+  %p
+    %strong Please sign up even if you're planning on going to your existing group!
+- else
+  %p
+    = term.name
+    term groups are currently running and will finish at the end of
+    = succeed '.' do
+      = term.end_month
+    You can still sign up for a group this term if you would like to!
+  %p
+    Signups for next term will start at the beginning of
+    = succeed '.' do
+      = term.next.signup_month
+
+

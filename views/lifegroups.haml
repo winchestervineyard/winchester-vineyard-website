@@ -17,11 +17,7 @@
         %h1 life groups
     .row
       .col-md-12
-        %p
-          Signups for Spring term 2017 start on the 1st January. Groups will start at the beginning of February and run to the end of April.
-
-        %p
-          %strong Please sign up even if you're planning on going to your existing group!
+        = haml :_group_blurb, locals: { term: @term }
 
       -#.col-md-6
         -#:plain

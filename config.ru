@@ -53,6 +53,7 @@ get '/' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3))
   @featured_events = events.select(&:featured?)
   @healing_events = events.select { |e| e.category == 'Healing' }
+  @term = GroupTerm.new(Date.today)
   haml :index
 end
 
@@ -131,6 +132,53 @@ get '/feed.xml' do
   @news = soon + upcoming
 
   builder :news
+end
+
+class GroupTerm
+  DATA = {
+    spring: {
+      name: "Spring",
+      signup_month: "January",
+      start_month: "February",
+      end_month: "April"
+    },
+    summer: {
+      name: "Summer",
+      signup_month: "May",
+      start_month: "June",
+      end_month: "August"
+    },
+    autumn: {
+      name: "Autumn",
+      signup_month: "September",
+      start_month: "October",
+      end_month: "December"
+    }
+  }
+  def initialize(date)
+    @date = date
+    @term = case @date.month
+    when 1..4
+      :spring
+    when 5..8
+      :summer
+    else
+      :autumn
+    end
+  end
+
+  def next
+    GroupTerm.new(@date.advance(months: 4))
+  end
+
+  def signup_month?
+    [1, 5, 9].include? @date.month
+  end
+
+  def name; DATA[@term][:name]; end
+  def signup_month; DATA[@term][:signup_month]; end
+  def start_month; DATA[@term][:start_month]; end
+  def end_month; DATA[@term][:end_month]; end
 end
 
 class Talk
@@ -365,6 +413,7 @@ get '/buildingforthefuture/?' do
 end
 
 get '/lifegroups/?' do
+  @term = GroupTerm.new(Date.today)
   haml :lifegroups
 end
 

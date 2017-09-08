@@ -5,7 +5,7 @@
     .panel-body.clearfix
       - if event.image?
         %img{:src => event.image_url, :style => 'width: 50%; float: right; padding: 0px 0px 0px 10px'}
-      = event.hash["description"].match(/^(((.*?)[.?!]){3}|(.*))/)
+      = event.description
     .panel-footer.clearfix
       .wv-wherewhen.pull-left
         = event.full_date_string

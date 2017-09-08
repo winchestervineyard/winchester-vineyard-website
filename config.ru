@@ -286,6 +286,10 @@ Group = Struct.new(:hash) do
 end
 
 Event = Struct.new(:hash) do
+  def description
+    re = /<div[^>]*>|<\/div>/
+    hash["description"].gsub(re, '').match(/^(((.*?)[.?!]){3}|(.*))/)
+  end
   def featured?
     hash["signup_options"]["public"]["featured"] == "1"
   end

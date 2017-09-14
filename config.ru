@@ -477,7 +477,7 @@ get('/lcw2017/?') { redirect 'https://winvin.churchsuite.co.uk/events/sgs7ncl8' 
 get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }
 get('/dti/?') { redirect 'https://winvin.churchapp.co.uk/events/hmukjibb' }
 get('/soulsurvivor/?') { redirect 'https://winvin.churchapp.co.uk/events/3drddwnp' }
-get('/weekendaway/?') { redirect 'https://winvin.churchapp.co.uk/events/szhneunp' }
+get('/winteraid/?') { redirect 'https://winvin.churchsuite.co.uk/events/qauraljj' }
 
 get('/survey/?') { redirect 'https://docs.google.com/forms/d/e/1FAIpQLScpGATm9QhMj1Qsm46-ISbAecbbQx2s3XsXbpz-1Ki3sAS8qw/viewform?' + request.query_string }
 

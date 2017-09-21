@@ -488,6 +488,6 @@ end
 
 get('/events/?') { redirect '/#wv-news' }
 get('/donate/?') { redirect 'https://winvin.churchapp.co.uk/donate/' }
-get('/fatherheart/?') { redirect 'https://winvin.churchapp.co.uk/events/c0bsvkxa' }
+get('/prayer/?') { redirect 'https://www.24-7prayer.com/signup/8a3b8d' }
 
 run Sinatra::Application

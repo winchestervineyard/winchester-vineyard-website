@@ -471,7 +471,7 @@ get('/nativity/?') { redirect "https://winvin.churchapp.co.uk/events/fjj0dy8w" }
 get('/find-us/?') { redirect '/#wv-find-us' }
 get('/dy/?') { redirect 'https://winvin.churchapp.co.uk/events/o7tcilcu' }
 get('/summerschool17/?') { redirect 'https://winvin.churchsuite.co.uk/events/uobjmgas' }
-get('/bbq/?') { redirect 'https://winvin.churchapp.co.uk/events/rqtp4nfc' }
+get('/bringshare/?') { redirect 'https://docs.google.com/forms/d/e/1FAIpQLSch9tzj02Ygjt4B4lYypFTKtdBseR-K-4dVfI66Ugmgn0ErHg/viewform?usp=sf_link' }
 get('/lcw2017/?') { redirect 'https://winvin.churchsuite.co.uk/events/sgs7ncl8' }
 
 get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }

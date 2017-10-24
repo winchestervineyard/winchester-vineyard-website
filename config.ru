@@ -470,7 +470,7 @@ get('/nativity/?') { redirect "https://winvin.churchapp.co.uk/events/fjj0dy8w" }
 
 get('/find-us/?') { redirect '/#wv-find-us' }
 get('/dy/?') { redirect 'https://winvin.churchapp.co.uk/events/o7tcilcu' }
-get('/summerschool17/?') { redirect 'https://winvin.churchsuite.co.uk/events/uobjmgas' }
+get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt' }
 get('/bringshare/?') { redirect 'https://docs.google.com/forms/d/e/1FAIpQLSch9tzj02Ygjt4B4lYypFTKtdBseR-K-4dVfI66Ugmgn0ErHg/viewform?usp=sf_link' }
 get('/curry/?') { redirect 'https://winvin.churchsuite.co.uk/events/8y6cbq4r' }
 

@@ -469,7 +469,7 @@ get('/landing-banner-code/?') { redirect '/students' }
 get('/christmasdecorating/?') { redirect "https://winvin.churchsuite.co.uk/events/dxjppgse" }
 
 get('/find-us/?') { redirect '/#wv-find-us' }
-get('/dy/?') { redirect 'https://winvin.churchapp.co.uk/events/o7tcilcu' }
+get('/wreathmaking/?') { redirect 'https://winvin.churchsuite.co.uk/events/hlglz20h' }
 get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt' }
 get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }
 get('/curry/?') { redirect 'https://winvin.churchsuite.co.uk/events/8y6cbq4r' }

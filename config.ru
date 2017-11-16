@@ -463,7 +463,7 @@ get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZa
 get('/connect/?') { redirect '/welcome' }
 
 get('/men/?') { redirect 'https://winvin.churchapp.co.uk/events/jc8lexvp/' }
-get('/catchthefire/?') { redirect 'https://winvin.churchapp.co.uk/events/n3eikigm' }
+get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/faqedmum' }
 get('/landing-banner-code/?') { redirect '/students' }
 
 get('/christmasdecorating/?') { redirect "https://winvin.churchsuite.co.uk/events/dxjppgse" }

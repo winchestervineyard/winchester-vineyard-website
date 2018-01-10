@@ -1,12 +1,13 @@
 - if term.signup_month?
   %p
     %strong
-      We are currently signing up for groups for the
+      This month is signup month for the
       = term.name
       term.
-    Signups started on the first of
+    Signups will become available during
     = succeed '.' do
       = term.signup_month
+    Please keep checking back if you don't see groups yet.
     Groups will start at the beginning of
     = term.start_month
     and run to the end of

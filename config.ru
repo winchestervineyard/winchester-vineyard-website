@@ -472,7 +472,7 @@ get('/find-us/?') { redirect '/#wv-find-us' }
 get('/wreathmaking/?') { redirect 'https://winvin.churchsuite.co.uk/events/hlglz20h' }
 get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt' }
 get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }
-get('/curry/?') { redirect 'https://winvin.churchsuite.co.uk/events/8y6cbq4r' }
+get('/wordsoflife/?') { redirect 'https://winvin.churchsuite.co.uk/events/hkqgy5er' }
 
 get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }
 get('/welcome-meal/?') { redirect 'https://winvin.churchsuite.co.uk/events/jzgrs7fs' }

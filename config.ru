@@ -490,5 +490,6 @@ get('/events/?') { redirect '/#wv-news' }
 get('/donate/?') { redirect 'https://winvin.churchapp.co.uk/donate/' }
 get('/bowling/?') { redirect 'https://winvin.churchsuite.co.uk/events/eyus0lmd' }
 get('/mensbreakfast/?') { redirect 'https://winvin.churchsuite.co.uk/events/lrc8aeus' }
+get('/dads/?') { redirect 'https://winvin.churchsuite.co.uk/events/yxfacbdi' }
 
 run Sinatra::Application

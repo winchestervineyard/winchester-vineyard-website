@@ -492,5 +492,6 @@ get('/bigsleepout/?') { redirect 'https://winvin.churchsuite.co.uk/events/l8srdi
 get('/mensbreakfast/?') { redirect 'https://winvin.churchsuite.co.uk/events/lrc8aeus' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/yxfacbdi' }
 get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/4yqgbczh' }
+get('/moveablefeast/?') { redirect 'https://winvin.churchsuite.co.uk/events/1oxpnd2r' }
 
 run Sinatra::Application

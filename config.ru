@@ -495,6 +495,6 @@ get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/4yqgbc
 get('/moveablefeast/?') { redirect 'https://winvin.churchsuite.co.uk/events/1oxpnd2r' }
 get('/dy/?') { redirect 'https://drive.google.com/file/d/1_e0SApiwHuMfYJm62DR-5Ug1F7K2oRTw/view?usp=sharing' }
 get('/worshipday/?') { redirect 'https://winvin.churchsuite.co.uk/events/hz07ghag' }
-et('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }
+get('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }
 
 run Sinatra::Application

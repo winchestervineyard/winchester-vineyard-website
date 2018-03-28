@@ -498,5 +498,6 @@ get('/worshipday/?') { redirect 'https://winvin.churchsuite.co.uk/events/hz07gha
 get('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }
 get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
 get('/communitysunday/?') { redirect 'https://winvin.churchsuite.co.uk/events/abuipwae' }
+get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/xagnrvgl' }
 
 run Sinatra::Application

@@ -489,18 +489,20 @@ end
 get('/events/?') { redirect '/#wv-news' }
 get('/donate/?') { redirect 'https://winvin.churchapp.co.uk/donate/' }
 get('/bigsleepout/?') { redirect 'https://winvin.churchsuite.co.uk/events/l8srdiwg' }
-get('/mensbreakfast/?') { redirect 'https://winvin.churchsuite.co.uk/events/lrc8aeus' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/yxfacbdi' }
 get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/4yqgbczh' }
-get('/moveablefeast/?') { redirect 'https://winvin.churchsuite.co.uk/events/1oxpnd2r' }
 get('/dy/?') { redirect 'https://drive.google.com/file/d/1_e0SApiwHuMfYJm62DR-5Ug1F7K2oRTw/view?usp=sharing' }
 get('/worshipday/?') { redirect 'https://winvin.churchsuite.co.uk/events/hz07ghag' }
 get('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }
 get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
-get('/communitysunday/?') { redirect 'https://winvin.churchsuite.co.uk/events/abuipwae' }
 get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/xagnrvgl' }
 get('/bigsundaylunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/cej8eyip' }
 get('/eveningofworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ghf9dxou' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/7hyocf4b' }
+
+get('/prayer/?') { redirect 'https://winvin.churchsuite.co.uk/events/ainqnw3h' }
+get('/royalcelebration/?') { redirect 'https://winvin.churchsuite.co.uk/events/jmqq7sis' }
+get('/beacon/?') { redirect 'https://winvin.churchsuite.co.uk/events/mag7appu' }
+
 
 run Sinatra::Application

@@ -501,5 +501,6 @@ get('/communitysunday/?') { redirect 'https://winvin.churchsuite.co.uk/events/ab
 get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/xagnrvgl' }
 get('/bigsundaylunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/cej8eyip' }
 get('/eveningofworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ghf9dxou' }
+get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/7hyocf4b' }
 
 run Sinatra::Application

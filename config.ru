@@ -387,8 +387,10 @@ end
 helpers do
   def get_talks
     require 'firebase'
-    firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
-    firebase.get('talks').body.values.map {|t| Talk.new(t) }.sort_by(&:date).reverse
+    # TEMP fix until we work out what to do with the google migration
+    #firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
+    #firebase.get('talks').body.values.map {|t| Talk.new(t) }.sort_by(&:date).reverse
+    []
   end
 end
 

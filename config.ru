@@ -44,7 +44,7 @@ helpers do
   end
 
   def fetch_events(page)
-    response = HTTParty.get("https://api.churchapp.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
+    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
     JSON.parse(response.body)["events"].map { |e| Event.new(e) }
   end
 end
@@ -58,13 +58,13 @@ get '/' do
 end
 
 get '/groups-list/?' do
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
+  response = HTTParty.get('https://api.churchsuite.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
   haml :groups_list, layout: nil
 end
 
 get '/groups-slideshow/?' do
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
+  response = HTTParty.get('https://api.churchsuite.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
   puts response.body
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
   haml :groups, layout: nil
@@ -74,10 +74,10 @@ end
 get '/groups-signup/?' do
   redirect 'https://winchester-vineyard.herokuapp.com/groups-signup' unless request.secure?
   protect!
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/addressbook/contacts?per_page=400', headers: CHURCHAPP_HEADERS)
+  response = HTTParty.get('https://api.churchsuite.co.uk/v1/addressbook/contacts?per_page=400', headers: CHURCHAPP_HEADERS)
   @contacts = JSON.parse(response.body)["contacts"]
 
-  response = HTTParty.get('https://api.churchapp.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
+  response = HTTParty.get('https://api.churchsuite.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)
   @groups = JSON.parse(response.body)["groups"].map { |g| Group.new(g) }
 
   haml :groups_signup, layout: nil
@@ -91,7 +91,7 @@ post '/groups-signup/:group_id/:contact_id' do |group_id, contact_id|
       "contacts" => [ contact_id.to_i ],
     }
   }.to_json
-  url = 'https://api.churchapp.co.uk/v1/smallgroups/group/'+group_id+'/members'
+  url = 'https://api.churchsuite.co.uk/v1/smallgroups/group/'+group_id+'/members'
   puts body, url
   response = HTTParty.post(url, headers: CHURCHAPP_HEADERS, body: body)
   puts response.body
@@ -462,7 +462,7 @@ get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZa
 
 get('/connect/?') { redirect '/welcome' }
 
-get('/men/?') { redirect 'https://winvin.churchapp.co.uk/events/jc8lexvp/' }
+get('/men/?') { redirect 'https://winvin.churchsuite.co.uk/events/jc8lexvp/' }
 get('/alphaparty/?') { redirect 'https://winvin.churchsuite.co.uk/events/faqedmum' }
 get('/landing-banner-code/?') { redirect '/students' }
 
@@ -487,7 +487,7 @@ end
 
 
 get('/events/?') { redirect '/#wv-news' }
-get('/donate/?') { redirect 'https://winvin.churchapp.co.uk/donate/' }
+get('/donate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/' }
 get('/bigsleepout/?') { redirect 'https://winvin.churchsuite.co.uk/events/l8srdiwg' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/yxfacbdi' }
 get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/4yqgbczh' }

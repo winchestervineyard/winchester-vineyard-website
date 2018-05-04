@@ -156,14 +156,13 @@
         .wv-caption
           %h1 talk downloads
           %p We record every talk we give on Sunday, and a number of the talks that are delivered during the week and at special events.
-          %p Talks on our website are currently unavailable - check back soon!
-          -#%p
-            -#%strong Within the last month
+          %p
+            %strong Within the last month
         .row#wv-talks-within-last-month
-        -#.wv-caption
-          -#%p
-            -#%strong
-              -#%a{:'data-toggle' => 'collapse', :href => '#wv-talks-older', :'aria-expanded' => 'false', :'aria-controls' => 'wv-talks-older'} See older talks
+        .wv-caption
+          %p
+            %strong
+              %a{:'data-toggle' => 'collapse', :href => '#wv-talks-older', :'aria-expanded' => 'false', :'aria-controls' => 'wv-talks-older'} See older talks
         .row.collapse#wv-talks-older
 
 %section#wv-compassion

@@ -187,7 +187,7 @@ class Talk
   def initialize(hash)
     @id = hash['id']
     @series_name = hash['series_name']
-    @full_name = (hash['series_name'].present? ? "[" + hash['series_name'] + "] " : "" ) + hash['title']
+    @full_name = (!hash['series_name'].blank? ? "[" + hash['series_name'] + "] " : "" ) + hash['title']
     @who = hash['who']
     @date = Time.parse(hash['datetime'])
     @download_url = hash['download_url']
@@ -387,10 +387,8 @@ end
 helpers do
   def get_talks
     require 'firebase'
-    # TEMP fix until we work out what to do with the google migration
-    #firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
-    #firebase.get('talks').body.values.map {|t| Talk.new(t) }.sort_by(&:date).reverse
-    []
+    firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
+    firebase.get('talks').body.values.map {|t| Talk.new(t) }.sort_by(&:date).reverse
   end
 end
 

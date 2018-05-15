@@ -416,6 +416,10 @@ get '/buildingforthefuture/?' do
   haml :building
 end
 
+get '/mydata/?' do
+  haml :mydata
+end
+
 get '/lifegroups/?' do
   @term = GroupTerm.new(Date.today)
   haml :lifegroups
@@ -469,7 +473,6 @@ get('/landing-banner-code/?') { redirect '/students' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/eif6aysu' }
 
 get('/find-us/?') { redirect '/#wv-find-us' }
-get('/mydata/?') { redirect 'https://drive.google.com/file/d/1odo-8CKhf0dWCr8sHKDjX1H1X03_mcnP/view?usp=sharing' }
 get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt' }
 get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }
 get('/wordsoflife/?') { redirect 'https://winvin.churchsuite.co.uk/events/hkqgy5er' }

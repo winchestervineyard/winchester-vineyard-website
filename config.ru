@@ -504,7 +504,7 @@ get('/eveningofworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/g
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/7hyocf4b' }
 
 get('/prayer/?') { redirect 'https://winvin.churchsuite.co.uk/events/ainqnw3h' }
-get('/royalcelebration/?') { redirect 'https://winvin.churchsuite.co.uk/events/jmqq7sis' }
+get('/supernaturalkingdom/?') { redirect 'https://winvin.churchsuite.co.uk/events/koenwqhh' }
 get('/beacon/?') { redirect 'https://winvin.churchsuite.co.uk/events/mag7appu' }
 
 

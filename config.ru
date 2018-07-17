@@ -499,7 +499,7 @@ get('/worshipday/?') { redirect 'https://winvin.churchsuite.co.uk/events/hz07gha
 get('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }
 get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
 get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/xagnrvgl' }
-get('/bigsundaylunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/cej8eyip' }
+get('/storehouse/?') { redirect 'https://winvin.churchsuite.co.uk/events/luqnfryq' }
 get('/eveningofworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ghf9dxou' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/7hyocf4b' }
 

@@ -471,7 +471,7 @@ get('/requestasozo/?') { redirect 'https://docs.google.com/forms/d/16l71KEmGGhZa
 get('/connect/?') { redirect '/welcome' }
 
 get('/men/?') { redirect 'https://winvin.churchsuite.co.uk/events/jc8lexvp/' }
-get('/alphaparty/?') { redirect 'https://winvin.churchsuite.co.uk/events/faqedmum' }
+get('/bringshare/?') { redirect 'https://winvin.churchsuite.co.uk/events/fnkrprux' }
 get('/landing-banner-code/?') { redirect '/students' }
 
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/eif6aysu' }

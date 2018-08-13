@@ -509,6 +509,7 @@ get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/7hyocf
 
 get('/prayer/?') { redirect 'https://winvin.churchsuite.co.uk/events/lroufhaz' }
 get('/supernaturalkingdom/?') { redirect 'https://winvin.churchsuite.co.uk/events/koenwqhh' }
+get('/communitysunday/?') { redirect 'https://winvin.churchsuite.co.uk/events/4t78ex5u' }
 get('/beacon/?') { redirect 'https://winvin.churchsuite.co.uk/events/mag7appu' }
 
 

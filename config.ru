@@ -495,7 +495,7 @@ end
 
 get('/events/?') { redirect '/#wv-news' }
 get('/donate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/wywg9uaa' }
-get('/bigsleepout/?') { redirect 'https://winvin.churchsuite.co.uk/events/l8srdiwg' }
+get('/harvest/?') { redirect 'https://winvin.churchsuite.co.uk/events/982h6o8f' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/qnhq9acu' }
 get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/4yqgbczh' }
 get('/dy/?') { redirect 'https://drive.google.com/file/d/1_e0SApiwHuMfYJm62DR-5Ug1F7K2oRTw/view?usp=sharing' }

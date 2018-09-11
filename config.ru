@@ -429,7 +429,7 @@ get '/adventconspiracy/?' do
   haml :adventconspiracy
 end
 
-get '/donate-wip/?' do
+get '/donate/?' do
   haml :donate
 end
 
@@ -487,7 +487,6 @@ get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt'
 get('/wordsoflife/?') { redirect 'https://winvin.churchsuite.co.uk/events/hkqgy5er' }
 get('/welcomemeal/?') { redirect 'https://winvin.churchsuite.co.uk/events/cnklrdgw' }
 get('/dti/?') { redirect 'https://ti.to/vcuki/dti-nano' }
-get('/donate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/wywg9uaa' }
 get('/harvest/?') { redirect 'https://winvin.churchsuite.co.uk/events/982h6o8f' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/qnhq9acu' }
 get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/4yqgbczh' }

@@ -45,7 +45,12 @@ helpers do
 
   def fetch_events(page)
     response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
-    JSON.parse(response.body)["events"].map { |e| Event.new(e) }
+    json = JSON.parse(response.body)
+    if json["events"]
+      json["events"].map { |e| Event.new(e) }
+    else
+      []
+    end
   end
 end
 

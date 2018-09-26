@@ -485,7 +485,7 @@ get('/events/?') { redirect '/#wv-news' }
 get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
 
 # Redirect Events
-get('/menday/?') { redirect 'https://winvin.churchsuite.co.uk/events/rihzhymb' }
+get('/mensday/?') { redirect 'https://winvin.churchsuite.co.uk/events/rihzhymb' }
 get('/bringshare/?') { redirect 'https://winvin.churchsuite.co.uk/events/fnkrprux' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/eif6aysu' }
 get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt' }

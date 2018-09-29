@@ -69,10 +69,9 @@
             == All content and images &copy; #{Time.now.year} Winchester Vineyard except where noted. All rights reserved.
             %br
             Winchester Vineyard is affiliated to VINEYARD&reg; CHURCHES UK and registered as a charitable company in England and Wales. Company No. 3073426. Charity No. 1047868.
-        .col-sm-5.col-sm-offset-1
+        .col-sm-5
           %br
-          %a{:href => 'https://maps.google.co.uk/maps?q=Winchester+Vineyard,+Winchester,+UK&hl=en&ll=51.052833,-1.306343&spn=0.138984,0.308647&sll=51.053319,-1.297975&sspn=0.017373,0.038581&t=m&z=12', :target => "_new"}
-            %img.map{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=Winchester+Vineyard+Winchester+UK+SO23+9NR&zoom=12&size=600x400&maptype=roadmap&markers=color:blue%7C51.052867,-1.306236&sensor=false'}
+          %iframe.map{:width => '500', :height => '400', :frameborder => '0', :style => 'border: 10px solid #444', :src => 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAzC_vuMaSZB_3oQxR1GJihLh33omO10ac&q=Winchester+Vineyard+Winchester+UK+SO23+9NR'}
   %script{:src => "/js/jquery.js"}
   %script{:src => "/js/custom.modernizr.js"}
   %script{:src => "/js/bootstrap.min.js"}

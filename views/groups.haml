@@ -43,7 +43,7 @@
                       left
               %p
                 - if group.location?
-                  %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=SO239NP&zoom=9&size=600x360&maptype=roadmap&markers=color:red%7C' + group.address + '&sensor=false', :height => '360'}
+                  %iframe{:width => '480', :height => '360', :frameborder => '0', :style => 'border: 0', :src => 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAzC_vuMaSZB_3oQxR1GJihLh33omO10ac&q=' + group.address}
               %p{:style => 'font-size: 2em'}= group.first_sentence
   %script{:src => "/js/jquery.js"}
   %script{:src => "/js/bootstrap.min.js"}

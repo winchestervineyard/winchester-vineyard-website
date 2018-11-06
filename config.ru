@@ -494,7 +494,7 @@ get('/welcomemeal/?') { redirect 'https://winvin.churchsuite.co.uk/events/cnklrd
 get('/dti/?') { redirect 'https://ti.to/vcuki/dti-nano' }
 get('/christmasmarket/?') { redirect 'https://winvin.churchsuite.co.uk/events/myhhbjll' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/hzuhqfgi' }
-get('/mensevening/?') { redirect 'https://winvin.churchsuite.co.uk/events/kjlynod7' }
+get('/prisonwithoutbars/?') { redirect 'https://winvin.churchsuite.co.uk/events/kjlynod7' }
 get('/dy/?') { redirect 'https://drive.google.com/file/d/1_e0SApiwHuMfYJm62DR-5Ug1F7K2oRTw/view?usp=sharing' }
 get('/worshipday/?') { redirect 'https://winvin.churchsuite.co.uk/events/hz07ghag' }
 get('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }

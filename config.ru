@@ -438,6 +438,10 @@ get '/donate/?' do
   haml :donate
 end
 
+get '/yobl/?' do
+  haml :yobl
+end
+
 get '/givehope/?' do
   events = (1..4).reduce([]) { |memo, x| memo + fetch_events(x) }
   @christmas_events = events.select { |e| e.category == 'Christmas' }

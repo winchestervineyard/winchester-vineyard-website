@@ -490,7 +490,7 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8
 
 # Redirect Events
 get('/mensday/?') { redirect 'https://winvin.churchsuite.co.uk/events/rihzhymb' }
-get('/bringshare/?') { redirect 'https://winvin.churchsuite.co.uk/events/fnkrprux' }
+get('/sharedlunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/uyikbhtv' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/eif6aysu' }
 get('/nativity/?') { redirect 'https://winvin.churchsuite.co.uk/events/mh0lw4vt' }
 get('/wordsoflife/?') { redirect 'https://winvin.churchsuite.co.uk/events/hkqgy5er' }

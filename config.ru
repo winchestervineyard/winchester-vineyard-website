@@ -425,6 +425,10 @@ get '/mydata/?' do
   haml :mydata
 end
 
+get('/bethelsozo/?') do
+  haml :sozo
+end
+
 get '/lifegroups/?' do
   @term = GroupTerm.new(Date.today)
   haml :lifegroups
@@ -479,7 +483,6 @@ get('/groupsslideshow/?') { redirect '/groups-slideshow/' }
 get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
 get('/data-protection-policy/?') { redirect 'https://s3-eu-west-1.amazonaws.com/winchester-vineyard-website-assets/uploads/data-protection-policy.pdf' }
 get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXRk5JAPESu_Zfog7FAtCXtdMAfdHCbQ8OXs/viewform?c=0&w=1' }
-get('/requestasozo/?') { redirect 'https://docs.google.com/document/d/1Bva4gVFyVtRsTLDV_EzCRxtOPgjzaZveP1IGrYfdaBE/edit?usp=sharing' }
 get('/connect/?') { redirect '/welcome' }
 get('/landing-banner-code/?') { redirect '/students' }
 get('/find-us/?') { redirect '/#wv-find-us' }

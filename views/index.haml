@@ -114,12 +114,13 @@
         .wv-caption
           %h1 what's on
           %br
-        - if @featured_events.size >= 6
+        - if @featured_events.size >= 3
           .row
             .col-sm-12
               .row
                 - @featured_events.first(3).each do |event|
                   = haml :_event, locals: { event: event }
+        - if @featured_events.size >= 6
           .row
             .col-sm-12
               .row

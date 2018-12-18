@@ -55,7 +55,7 @@ helpers do
 end
 
 get '/' do
-  events = (fetch_events(1) + fetch_events(2) + fetch_events(3))
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @featured_events = events.select(&:featured?)
   @healing_events = events.select { |e| e.category == 'Healing' }
   @term = GroupTerm.new(Date.today)

@@ -501,7 +501,7 @@ get('/welcomemeal/?') { redirect 'https://winvin.churchsuite.co.uk/events/cnklrd
 get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/pektpqqj' }
 get('/christmasmarket/?') { redirect 'https://winvin.churchsuite.co.uk/events/myhhbjll' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/hzuhqfgi' }
-get('/lam/?') { redirect 'https://winvin.churchsuite.co.uk/events/qtyug4pg' }
+get('/lam/?') { redirect 'https://winvin.churchsuite.co.uk/events/iz0wb1tx' }
 get('/dy/?') { redirect 'https://drive.google.com/file/d/1_e0SApiwHuMfYJm62DR-5Ug1F7K2oRTw/view?usp=sharing' }
 get('/worshipday/?') { redirect 'https://winvin.churchsuite.co.uk/events/hz07ghag' }
 get('/parenting/?') { redirect 'https://winvin.churchsuite.co.uk/groups/uaebyqql' }

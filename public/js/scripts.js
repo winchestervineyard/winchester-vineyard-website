@@ -60,21 +60,21 @@ $(document).ready(function() {
     }
   });
 
-  var hellobar = new Firebase('https://winvin.firebaseio.com/hellobar');
-  hellobar.on('child_added', function(snapshot) {
-    var data = snapshot.val();
-    if (div = renderHellobar(data)) {
-      $('#hellobar-here').append(div);
-    }
-  });
+  //var hellobar = new Firebase('https://winvin.firebaseio.com/hellobar');
+  //hellobar.on('child_added', function(snapshot) {
+    //var data = snapshot.val();
+    //if (div = renderHellobar(data)) {
+      //$('#hellobar-here').append(div);
+    //}
+  //});
 
-  hellobar.on('child_changed', function(snapshot) {
-    $('#hellobar-here section').remove();
-    var data = snapshot.val();
-    if (div = renderHellobar(data)) {
-      $('#hellobar-here').append(div);
-    }
-  });
+  //hellobar.on('child_changed', function(snapshot) {
+    //$('#hellobar-here section').remove();
+    //var data = snapshot.val();
+    //if (div = renderHellobar(data)) {
+      //$('#hellobar-here').append(div);
+    //}
+  //});
 
   var talks = new Firebase('https://winvin.firebaseio.com/talks');
   talks.on('child_added', function(snapshot) {

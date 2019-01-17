@@ -460,6 +460,7 @@ get '/donate/?' do
 end
 
 get '/yobl/?' do
+  @talks = get_talks.select(&:published?).select {|t| t.series_name == "Year of Biblical Literacy" }
   haml :yobl
 end
 

@@ -10,6 +10,8 @@ gem 'firebase'
 gem 'httparty'
 gem 'activesupport'
 
+gem 'google_drive'
+
 gem 'unf'
 
 gem "dalli"

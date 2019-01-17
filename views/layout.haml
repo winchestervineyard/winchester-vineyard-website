@@ -18,10 +18,6 @@
   %meta{:property => "og:url", :content => @og_url || "http://winvin.org.uk/"}
   %meta{:property => "og:title", :content => @og_title || "Winchester Vineyard Church"}
   %meta{:property => "og:description", :content => @og_description || "We are Winchester Vineyard Church: people who are getting to know Jesus better and bringing hope and life into our communities."}
-  %script#wv-news-item-template{:type => 'text/template'}
-    = haml :_news_item
-  %script#wv-talk-item-template{:type => 'text/template'}
-    = haml :_talk_item
   %script#wv-hellobar-template{:type => 'text/template'}
     = haml :_hellobar
 %body

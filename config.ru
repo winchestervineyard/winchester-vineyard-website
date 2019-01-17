@@ -29,6 +29,8 @@ require 'httparty'
 
 CHURCHAPP_HEADERS = {"Content-type" => "application/json", "X-Account" => "winvin", "X-Application" => "Group Slideshow", "X-Auth" => ENV['CHURCHAPP_AUTH']}
 
+require 'google_drive'
+
 helpers do
   def protect!
     unless authorized?
@@ -59,6 +61,7 @@ get '/' do
   @featured_events = events.select(&:featured?)
   @healing_events = events.select { |e| e.category == 'Healing' }
   @term = GroupTerm.new(Date.today)
+  @talks = get_talks
   haml :index
 end
 
@@ -187,19 +190,21 @@ class GroupTerm
 end
 
 class Talk
-  attr :full_name, :who, :date, :download_url, :slides_url, :id, :slug, :series_name, :title
+  attr :full_name, :who, :date, :download_url, :slides_url, :slug, :series_name, :title
 
   def initialize(hash)
-    @id = hash['id']
-    @series_name = hash['series_name']
-    @full_name = (!hash['series_name'].blank? ? "[" + hash['series_name'] + "] " : "" ) + hash['title']
-    @who = hash['who']
-    @date = Time.parse(hash['datetime'])
-    @download_url = hash['download_url']
-    @slides_url = hash['slides_url']
-    @published = hash['published']
-    @slug = hash['slug']
-    @title = hash['title']
+    @series_name = hash['Series']
+    @full_name = (!hash['Series'].blank? ? "[" + hash['Series'] + "] " : "" ) + hash['Title']
+    @who = hash['Speaker(s)']
+    @date = Time.parse(hash['Date'])
+    @download_url = hash['Talk URL']
+    @slides_url = hash['Slides URL']
+    @slug = hash['Slug']
+    @title = hash['Title']
+  end
+
+  def id
+    @slug
   end
 
   def part_of_a_series?
@@ -226,7 +231,7 @@ class Talk
   end
 
   def published?
-    !!@published
+    true
   end
 end
 
@@ -377,12 +382,9 @@ Event = Struct.new(:hash) do
 end
 
 get '/talks/:slug' do |slug|
-  require 'firebase'
-  firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
-  talk_id = firebase.get('talks-by-slug/' + slug ).body
-  halt 404 if (talk_id.nil?)
-  @talk = Talk.new(firebase.get('talks/' + talk_id).body)
-  halt 404 unless @talk.published?
+  talk_row = talks.select { |t| t["Slug"] == slug }
+  halt 404 if (talk_row.nil? or talk_row["Date"].empty?)
+  @talk = Talk.new(talk_row)
   @og_url = 'http://winvin.org.uk/talks/' + slug
   @og_title = "Winchester Vineyard Talk: #{@talk.full_name}"
   @og_description = @talk.description
@@ -390,10 +392,25 @@ get '/talks/:slug' do |slug|
 end
 
 helpers do
+  def sheet
+    session = GoogleDrive::Session.from_service_account_key(ENV["GOOGLE_API_SECRET"] ? StringIO.new(ENV["GOOGLE_API_SECRET"]) : "secret.json")
+    session.spreadsheet_by_key("1B9G8efynCzeWsHBoHAJeJRpO00AdrzaAZQaS50QCwXI")
+  end
+
+  def hellobar
+    sheet.worksheet_by_sheet_id(0)
+  end
+
+  def talks
+    sheet.worksheet_by_sheet_id("1813659711").list
+  end
+
   def get_talks
-    require 'firebase'
-    firebase = Firebase::Client.new('https://winvin.firebaseio.com/')
-    firebase.get('talks').body.values.map {|t| Talk.new(t) }.sort_by(&:date).reverse
+    talks.
+      select {|t| t["Date"].present? }.
+      map { |t| Talk.new(t) }.
+      sort_by(&:date).
+      reverse
   end
 end
 

@@ -18,3 +18,4 @@ tmp
 _yardoc
 doc/
 .sass-cache
+secret.json

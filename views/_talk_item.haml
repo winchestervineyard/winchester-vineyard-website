@@ -1,21 +1,16 @@
-.col-sm-6{:id => "talk-{{ id }}", :'data-sort' => '{{ ms }}'}
+.col-sm-6{:id => "talk-#{talk.id}"}
   .panel.wv-talk-item
     .panel-heading
-      {{#series_name}}{{series_name}}: {{/series_name}}{{ title }}
+      = talk.full_name
     .panel-body
-      {{ date }}
+      = talk.date.strftime("%a %d %b %Y")
       %br
-      {{ who }}
+      = talk.who
       %br
       %br
-      {{#download_url}}
-      %a.btn.btn-success{:role => 'button', :href => '{{ download_url }}'} download
-      {{/download_url}}
-      {{^download_url}}
-      %a.btn.btn-default{:disabled => 'disabled', :role => 'button'} coming soon
-      {{/download_url}}
-      {{#slides_url}}
-      %a.btn.btn-default{:role => 'button', :href => '{{ slides_url }}'} slides
-      {{/slides_url}}
-
-
+      - if talk.download_url
+        %a.btn.btn-success{:role => 'button', :href => talk.download_url} download
+      - else
+        %a.btn.btn-default{:disabled => 'disabled', :role => 'button'} coming soon
+      - if talk.slides_url
+        %a.btn.btn-default{:role => 'button', :href => talk.slides_url} slides

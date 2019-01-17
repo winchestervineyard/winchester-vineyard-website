@@ -76,23 +76,23 @@ $(document).ready(function() {
     //}
   //});
 
-  var talks = new Firebase('https://winvin.firebaseio.com/talks');
-  talks.on('child_added', function(snapshot) {
-    var data = snapshot.val();
-    if (div = renderTalk(data)) {
-      $(talkDivForDate(data)).append(div);
-      sortItems(talkDivForDate(data), -1);
-    }
-  });
+  //var talks = new Firebase('https://winvin.firebaseio.com/talks');
+  //talks.on('child_added', function(snapshot) {
+    //var data = snapshot.val();
+    //if (div = renderTalk(data)) {
+      //$(talkDivForDate(data)).append(div);
+      //sortItems(talkDivForDate(data), -1);
+    //}
+  //});
 
-  talks.on('child_changed', function(snapshot) {
-    var data = snapshot.val();
-    $('#talk-'+data.id).remove();
-    if (div = renderTalk(data)) {
-      $(talkDivForDate(data)).append(div);
-      sortItems(talkDivForDate(data), -1);
-    }
-  });
+  //talks.on('child_changed', function(snapshot) {
+    //var data = snapshot.val();
+    //$('#talk-'+data.id).remove();
+    //if (div = renderTalk(data)) {
+      //$(talkDivForDate(data)).append(div);
+      //sortItems(talkDivForDate(data), -1);
+    //}
+  //});
 });
 
 function renderTalk(data) {
@@ -173,13 +173,3 @@ function get_nth_suffix(date) {
  }
 
 var FOUR_WEEKS_IN_MS = 1000 * 60 * 60 * 24 * 28;
-
-function talkDivForDate(data) {
-  var date = new Date(data.datetime);
-  var now = new Date();
-  if (date >= (now - FOUR_WEEKS_IN_MS)) {
-    return '#wv-talks-within-last-month';
-  }
-
-  return '#wv-talks-older';
-}

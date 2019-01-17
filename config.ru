@@ -510,7 +510,7 @@ get('/eveningofworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/g
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/7hyocf4b' }
 get('/prayer/?') { redirect 'https://winvin.churchsuite.co.uk/events/lroufhaz' }
 get('/supernaturalkingdom/?') { redirect 'https://winvin.churchsuite.co.uk/events/koenwqhh' }
-get('/adamandeve/?') { redirect 'https://winvin.churchsuite.co.uk/events/9b4foy4a' }
+get('/adamandeve/?') { redirect 'https://winvin.churchsuite.co.uk/events/pnsws8wj' }
 
 
 run Sinatra::Application

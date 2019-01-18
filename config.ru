@@ -62,6 +62,7 @@ get '/' do
   @healing_events = events.select { |e| e.category == 'Healing' }
   @term = GroupTerm.new(Date.today)
   @talks = get_talks
+  @hellobar = hellobar
   haml :index
 end
 
@@ -398,7 +399,8 @@ helpers do
   end
 
   def hellobar
-    sheet.worksheet_by_sheet_id(0)
+    worksheet = sheet.worksheet_by_sheet_id(0)
+    [worksheet[1, 2], worksheet[2, 2]]
   end
 
   def talks

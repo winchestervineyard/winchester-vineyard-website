@@ -50,7 +50,9 @@
           %p.caption-directions
             %a{:href => '#wv-find-us'} Get directions to the Vineyard Centre &raquo;
 
-#hellobar-here
+#hellobar
+  - if @hellobar.first.present?
+    = haml :_hellobar, locals: { text: @hellobar.first, link: @hellobar.last }
 
 %section#wv-sundays
   .shadow

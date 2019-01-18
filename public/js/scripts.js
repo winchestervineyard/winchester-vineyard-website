@@ -59,60 +59,7 @@ $(document).ready(function() {
       }
     }
   });
-
-  //var hellobar = new Firebase('https://winvin.firebaseio.com/hellobar');
-  //hellobar.on('child_added', function(snapshot) {
-    //var data = snapshot.val();
-    //if (div = renderHellobar(data)) {
-      //$('#hellobar-here').append(div);
-    //}
-  //});
-
-  //hellobar.on('child_changed', function(snapshot) {
-    //$('#hellobar-here section').remove();
-    //var data = snapshot.val();
-    //if (div = renderHellobar(data)) {
-      //$('#hellobar-here').append(div);
-    //}
-  //});
-
-  //var talks = new Firebase('https://winvin.firebaseio.com/talks');
-  //talks.on('child_added', function(snapshot) {
-    //var data = snapshot.val();
-    //if (div = renderTalk(data)) {
-      //$(talkDivForDate(data)).append(div);
-      //sortItems(talkDivForDate(data), -1);
-    //}
-  //});
-
-  //talks.on('child_changed', function(snapshot) {
-    //var data = snapshot.val();
-    //$('#talk-'+data.id).remove();
-    //if (div = renderTalk(data)) {
-      //$(talkDivForDate(data)).append(div);
-      //sortItems(talkDivForDate(data), -1);
-    //}
-  //});
 });
-
-function renderTalk(data) {
-  if (!data.published) {
-    return;
-  }
-
-  data = applyFilters(data);
-  var div = $('#wv-talk-item-template').html();
-  return Mustache.render(div, data);
-}
-
-function renderHellobar(data) {
-  if (!data.published) {
-    return;
-  }
-
-  var div = $('#wv-hellobar-template').html();
-  return Mustache.render(div, data);
-}
 
 function renderNews(data) {
   if (!data.published) {

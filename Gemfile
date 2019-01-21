@@ -16,5 +16,6 @@ gem 'unf'
 
 gem "dalli"
 gem "rack-cache"
+gem "kgio"
 
 gem "thin"

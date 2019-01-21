@@ -4,19 +4,27 @@ require 'builder'
 
 require 'dalli'
 require 'rack-cache'
+require 'kgio'
 require 'active_support/core_ext/time/calculations'
 
 #
 # Defined in ENV on Heroku. To try locally, start memcached and uncomment:
 # ENV["MEMCACHE_SERVERS"] = "localhost"
 if memcache_servers = ENV["MEMCACHE_SERVERS"]
+  client = Dalli::Client.new(ENV["MEMCACHIER_SERVERS"],
+                             :username => ENV["MEMCACHIER_USERNAME"],
+                             :password => ENV["MEMCACHIER_PASSWORD"],
+                             :failover => true,
+                             :socket_timeout => 1.5,
+                             :socket_failure_delay => 0.2,
+                             :value_max_bytes => 10485760)
   use Rack::Cache,
     verbose: true,
-    metastore:   "memcached://#{memcache_servers}",
-    entitystore: "memcached://#{memcache_servers}"
+    metastore:   client,
+    entitystore: client
 
   # Flush the cache
-  Dalli::Client.new.flush
+  client.flush
 end
 
 set :static_cache_control, [:public, max_age: 1800]

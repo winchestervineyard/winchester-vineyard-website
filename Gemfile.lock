@@ -51,6 +51,7 @@ GEM
       concurrent-ruby (~> 1.0)
     json (2.1.0)
     jwt (2.1.0)
+    kgio (2.11.2)
     memoist (0.16.0)
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
@@ -120,6 +121,7 @@ DEPENDENCIES
   google_drive
   haml
   httparty
+  kgio
   rack-cache
   sass
   shotgun

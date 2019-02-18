@@ -521,7 +521,7 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8
 
 # Redirect Events
 get('/destinycoaching/?') { redirect 'https://winvin.churchsuite.co.uk/events/y0eeyqoc' }
-get('/churchweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }' }
+get('/churchweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/5vyns9qq' }' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/6l58mblr' }
 get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/ng61rjiz' }
 get('/welcomemeal/?') { redirect 'https://winvin.churchsuite.co.uk/events/hbjj6voi' }

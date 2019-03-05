@@ -516,6 +516,8 @@ get('/find-us/?') { redirect '/#wv-find-us' }
 get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }
 get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }
 get('/events/?') { redirect '/#wv-news' }
+get('/compassion/?') { redirect '/#wv-compassion' }
+get('/healing/?') { redirect '/#wv-healing' }
 get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
 
 # Redirect Events

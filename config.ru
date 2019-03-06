@@ -536,8 +536,6 @@ get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/
 get('/storehouse/?') { redirect 'https://winvin.churchsuite.co.uk/events/luqnfryq' }
 get('/ginny/?') { redirect 'https://winvin.churchsuite.co.uk/events/nlgadj1k' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }
-get('/supernaturalkingdom/?') { redirect 'https://winvin.churchsuite.co.uk/events/koenwqhh' }
-get('/adamandeve/?') { redirect 'https://winvin.churchsuite.co.uk/events/xkkds56t' }
-get('/gather/?') { redirect 'https://winvin.churchsuite.co.uk/events/jbzn0nqm' }
+get('/encounternight/?') { redirect 'https://www.eventbrite.co.uk/e/encounter-night-winchester-tickets-57728444331' }
 
 run Sinatra::Application

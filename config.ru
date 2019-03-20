@@ -529,7 +529,7 @@ get('/destinycoaching/?') { redirect 'https://winvin.churchsuite.co.uk/events/y0
 get('/deuteronomy/?') { redirect 'https://winvin.churchsuite.co.uk/events/l44qxu0g' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/6l58mblr' }
 get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/ng61rjiz' }
-get('/welcomemeal/?') { redirect 'https://winvin.churchsuite.co.uk/events/hbjj6voi' }
+get('/elderberries/?') { redirect 'https://winvin.churchsuite.co.uk/events/887zrwpp' }
 get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/pektpqqj' }
 get('/kingdomtheology/?') { redirect 'https://winvin.churchsuite.co.uk/events/wetbbhmc' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/lbxthqh9' }

@@ -528,7 +528,7 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8
 get('/destinycoaching/?') { redirect 'https://winvin.churchsuite.co.uk/events/y0eeyqoc' }
 get('/deuteronomy/?') { redirect 'https://winvin.churchsuite.co.uk/events/l44qxu0g' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/6l58mblr' }
-get('/dna/?') { redirect 'https://winvin.churchsuite.co.uk/events/5v06pdyo' }
+get('/dna/?') { redirect 'https://winvin.churchsuite.co.uk/events/xt3ipa6x' }
 get('/elderberries/?') { redirect 'https://winvin.churchsuite.co.uk/events/887zrwpp' }
 get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/pektpqqj' }
 get('/kingdomtheology/?') { redirect 'https://winvin.churchsuite.co.uk/events/wetbbhmc' }

@@ -540,6 +540,6 @@ get('/regionalworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ag
 get('/storehouse/?') { redirect 'https://winvin.churchsuite.co.uk/events/luqnfryq' }
 get('/ginny/?') { redirect 'https://winvin.churchsuite.co.uk/events/nlgadj1k' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }
-get('/encounternight/?') { redirect 'https://www.eventbrite.co.uk/e/encounter-night-winchester-tickets-57728444331' }
+get('/pentecostchoir/?') { redirect 'https://winvin.churchsuite.co.uk/events/yuunt3vb' }
 
 run Sinatra::Application

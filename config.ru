@@ -538,7 +538,7 @@ get('/worship/?') { redirect 'https://winvin.churchsuite.co.uk/events/1viau2gi' 
 get('/servantsbanquet/?') { redirect 'https://winvin.churchsuite.co.uk/events/xvqvymfm' }
 get('/regionalworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ag2pvw28' }
 get('/storehouse/?') { redirect 'https://winvin.churchsuite.co.uk/events/luqnfryq' }
-get('/ginny/?') { redirect 'https://winvin.churchsuite.co.uk/events/nlgadj1k' }
+get('/bowdown/?') { redirect 'https://winvin.churchsuite.co.uk/events/yn0qgq3b' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }
 get('/pentecostchoir/?') { redirect 'https://winvin.churchsuite.co.uk/events/yuunt3vb' }
 

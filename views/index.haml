@@ -252,7 +252,7 @@
     .row
       .col-xs-12
         %h2 events
-    .row
+    //.row
       - @healing_events.first(3).each do |event|
         = haml :_event, locals: { event: event }
 

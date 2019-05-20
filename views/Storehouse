@@ -1,1 +1,39 @@
-%a{:href => "http://winvin.churchsuite.co.uk/my"} MyChurchSuite.
+#wv-home
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse.navbar-fixed-top{:role => 'navigation'}
+      .navbar-header
+        %a{:href => '/'}
+          %img{:src => '/images/logo-400w-white-on-clear.png', :style=> 'margin-top: 13px; height: 33px'}
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => '/'} &laquo; Back to home
+
+%section.white.wv-students
+  .shadow
+  .container
+    .row
+      .col-sm-8
+        %h1 Winchester Vineyard Storehouse
+    .row
+      .col-md-12
+        %p Winchester Vineyard Church is committed to the protection of personal privacy.  Your privacy is really important to us and we understand how important it is to you. Our aim is to be clear and open as possible about what we do with your personal data and why we do it.
+
+        %p In compliance with General Data Protection Regulations (GDPR) the data you provide will be held by Winchester Vineyard Church under lawful grounds for processing data, typically by consent, by fulfilment of contract, legitimate interest or legal obligation.
+
+        %p The data will be held during the time of your involvement with Winchester Vineyard, after which the data will be removed from our records except where there are financial or legal requirements to keep data. We will only use the information you have provided in relation to activities associated with Winchester Vineyard.
+
+        %p We process personal information to enable us to help people get involved in the church community; to help us serve the church community effectively, manage / support staff and to process donations and Gift Aid Claims.  Some of our data is held externally by third party providers (in-line with EU Data Regulations). Records will be periodically reviewed to ensure we only hold details for those still linked to the church community.
+
+        %p
+          We process information relevant to the above reasons/purposes. This may include personal data and Sensitive Personal data (also known as ‘Special Category Data’). In relation to the GDPR you have the right to: obtain a copy; rectify any mistakes; request erasure; restrict processing; request data portability; object to processing and automated decision making or profiling. For more information about your rights please visit
+          %a{:href => "http://www.ico.org.uk"} www.ico.org.uk.
+
+        %p
+          You can update, view, or remove your records at any time by contacting the church office via email:
+          %a{:href => "mailto:hello@winvin.org.uk"}hello@winvin.org.uk
+          or by visiting
+          %a{:href => "http://winvin.churchsuite.co.uk/my"} MyChurchSuite.
+
+        %p
+          For our full Data Privacy Notice

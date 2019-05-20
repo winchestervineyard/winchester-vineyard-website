@@ -17,23 +17,36 @@
         %h1 Winchester Vineyard Storehouse
     .row
       .col-md-12
-        %p Winchester Vineyard Church is committed to the protection of personal privacy.  Your privacy is really important to us and we understand how important it is to you. Our aim is to be clear and open as possible about what we do with your personal data and why we do it.
+        %p The Storehouse is open on Mondays & Thursdays in term time, from 10am-12:30pm
 
-        %p In compliance with General Data Protection Regulations (GDPR) the data you provide will be held by Winchester Vineyard Church under lawful grounds for processing data, typically by consent, by fulfilment of contract, legitimate interest or legal obligation.
+        %p Need some help?
 
-        %p The data will be held during the time of your involvement with Winchester Vineyard, after which the data will be removed from our records except where there are financial or legal requirements to keep data. We will only use the information you have provided in relation to activities associated with Winchester Vineyard.
+        %p If you are struggling to buy food, household items, or children's clothing or equipment, please do speak to your support worker, ask for a voucher, or call us to book an appointment – 01962 863 217. We will help you find just the right items for you.
+        
+        %p Want to make a donation?
+        
+        %p If you want to make a donation of items to The Storehouse, please read these guidelines:
 
-        %p We process personal information to enable us to help people get involved in the church community; to help us serve the church community effectively, manage / support staff and to process donations and Gift Aid Claims.  Some of our data is held externally by third party providers (in-line with EU Data Regulations). Records will be periodically reviewed to ensure we only hold details for those still linked to the church community.
+        %p All items must be in good clean condition.
 
-        %p
-          We process information relevant to the above reasons/purposes. This may include personal data and Sensitive Personal data (also known as ‘Special Category Data’). In relation to the GDPR you have the right to: obtain a copy; rectify any mistakes; request erasure; restrict processing; request data portability; object to processing and automated decision making or profiling. For more information about your rights please visit
-          %a{:href => "http://www.ico.org.uk"} www.ico.org.uk.
-
-        %p
-          You can update, view, or remove your records at any time by contacting the church office via email:
-          %a{:href => "mailto:hello@winvin.org.uk"}hello@winvin.org.uk
-          or by visiting
-          %a{:href => "http://winvin.churchsuite.co.uk/my"} MyChurchSuite.
-
-        %p
-          For our full Data Privacy Notice
+        %p We can currently accept donations of:
+        %p •	clothing for children aged 2-16 years
+        %p •	baby monitors
+        %p •	moses baskets
+        %p •	twin pushchairs 
+        %p •	stair gates
+        %p •	food, toiletries or household items - see our list here
+        
+        %p We are sorry we can not take any other baby equipment or children’s toys at this time.
+        
+        %p It is our desire to provide the best possible clothing, equipment and food for our clients. 
+        
+        %p Please leave donations in our office foyer during office hours Mon-Fri 10am-3pm. Thank you!
+        
+        %p Any queries, please call 01962 863 217 or email: storehouse@winvin.org.uk
+        
+        %p Someone is normally in the office to take calls Mon - Fri 10am-3pm.
+        
+        %p How to Find us: Winchester Vineyard Church, Unit A Bar End Industrial Estate, Bar End Road, Winchester, SO23 9NR
+        
+        

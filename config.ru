@@ -532,7 +532,7 @@ get('/dna/?') { redirect 'https://winvin.churchsuite.co.uk/events/xt3ipa6x' }
 get('/storehouse/?') { redirect 'https://winvin.churchsuite.co.uk/events/ytcsxg77' }
 get('/dtidonate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/afc9ezmg' }
 get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/a5ythcjv' }
-get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/5r9hw6lf' }
+get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/vrunqw3v' }
 get('/labyrinth/?') { redirect 'https://winvin.churchsuite.co.uk/events/6f6cncfq' }
 get('/worship/?') { redirect 'https://winvin.churchsuite.co.uk/events/1viau2gi' }
 get('/servantsbanquet/?') { redirect 'https://winvin.churchsuite.co.uk/events/xvqvymfm' }

@@ -472,6 +472,10 @@ get '/dy/?' do
   haml :dy
 end
 
+get '/storehousebeta/?' do
+  haml :storehouse
+end
+
 get '/yobl/?' do
   @talks = get_talks.select(&:published?).select {|t| t.series_name == "Year of Biblical Literacy" }
   haml :yobl
@@ -523,6 +527,7 @@ get('/whatson/?') { redirect '/#wv-news' }
 get('/compassion/?') { redirect '/#wv-compassion' }
 get('/healing/?') { redirect '/#wv-healing' }
 get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
+
 
 # Redirect Events
 get('/destinycoaching/?') { redirect 'https://winvin.churchsuite.co.uk/events/y0eeyqoc' }

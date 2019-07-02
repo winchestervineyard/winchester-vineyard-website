@@ -539,7 +539,7 @@ get('/mensweekend/?') { redirect 'https://winvin.churchsuite.co.uk/events/a5ythc
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/vrunqw3v' }
 get('/labyrinth/?') { redirect 'https://winvin.churchsuite.co.uk/events/6f6cncfq' }
 get('/worship/?') { redirect 'https://winvin.churchsuite.co.uk/events/1viau2gi' }
-get('/servantsbanquet/?') { redirect 'https://winvin.churchsuite.co.uk/events/xvqvymfm' }
+get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }
 get('/regionalworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ag2pvw28' }
 get('/bowdown/?') { redirect 'https://winvin.churchsuite.co.uk/events/yn0qgq3b' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }

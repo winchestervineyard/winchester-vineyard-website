@@ -544,6 +544,6 @@ get('/regionalworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ag
 get('/bowdown/?') { redirect 'https://winvin.churchsuite.co.uk/events/yn0qgq3b' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }
 get('/pentecostchoir/?') { redirect 'https://winvin.churchsuite.co.uk/events/yuunt3vb' }
-get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/g15equxn' }
+get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/mgu7mm58' }
 
 run Sinatra::Application

@@ -541,7 +541,7 @@ get('/bbq/?') { redirect 'https://winvin.churchsuite.co.uk/events/ywoxviaf' }
 get('/worship/?') { redirect 'https://winvin.churchsuite.co.uk/events/1viau2gi' }
 get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }
 get('/regionalworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ag2pvw28' }
-get('/bowdown/?') { redirect 'https://winvin.churchsuite.co.uk/events/yn0qgq3b' }
+get('/sozotraining/?') { redirect 'https://winvin.churchsuite.co.uk/events/squ6fpcj' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/xisvgl0h' }
 get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
 get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/mgu7mm58' }

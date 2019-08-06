@@ -546,5 +546,6 @@ get('/mindfulness/?') { redirect 'https://winvin.churchsuite.co.uk/events/ggf9rz
 get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
 get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/pdmeqdxn' }
 get('/comedynight/?') { redirect 'https://winvin.churchsuite.co.uk/events/kzd3shlq' }
+get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbcf' }
 
 run Sinatra::Application

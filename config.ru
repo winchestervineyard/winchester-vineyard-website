@@ -547,5 +547,6 @@ get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
 get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/pdmeqdxn' }
 get('/comedynight/?') { redirect 'https://winvin.churchsuite.co.uk/events/kzd3shlq' }
 get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbcf' }
+get('/deeper/?') { redirect 'https://winvin.churchsuite.co.uk/events/nhzazfdq' }
 
 run Sinatra::Application

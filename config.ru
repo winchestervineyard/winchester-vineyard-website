@@ -512,42 +512,4 @@ get '/audio/?*' do
 end
 
 
-get('/survey/?') { redirect 'https://docs.google.com/forms/d/e/1FAIpQLScpGATm9QhMj1Qsm46-ISbAecbbQx2s3XsXbpz-1Ki3sAS8qw/viewform?' + request.query_string }
-get('/mystory/?') { redirect 'https://goo.gl/forms/TlkzGBBkzctP1azp2' }
-get('/groupsslideshow/?') { redirect '/groups-slideshow/' }
-get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
-get('/data-protection-policy/?') { redirect 'https://s3-eu-west-1.amazonaws.com/winchester-vineyard-website-assets/uploads/data-protection-policy.pdf' }
-get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXRk5JAPESu_Zfog7FAtCXtdMAfdHCbQ8OXs/viewform?c=0&w=1' }
-get('/connect/?') { redirect '/welcome' }
-get('/landing-banner-code/?') { redirect '/students' }
-get('/find-us/?') { redirect '/#wv-find-us' }
-get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }
-get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s3.amazonaws.com/assets/Focus%20on%20Kids%20and%20Youth%20Vision.pdf' }
-get('/whatson/?') { redirect '/#wv-news' }
-get('/compassion/?') { redirect '/#wv-compassion' }
-get('/healing/?') { redirect '/#wv-healing' }
-get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
 
-
-# Redirect Events
-get('/destinyactivator/?') { redirect 'https://winvin.churchsuite.co.uk/events/lvgzikzj' }
-get('/reset/?') { redirect 'https://winvin.churchsuite.co.uk/events/6huru7lc' }
-get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/juc5yyeq' }
-get('/dna/?') { redirect 'https://winvin.churchsuite.co.uk/events/xt3ipa6x' }
-get('/dtidonate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/afc9ezmg' }
-get('/lggl/?') { redirect 'https://winvin.churchsuite.co.uk/events/zdqmm234' }
-get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/5kb8ci1g' }
-get('/breakthrough/?') { redirect 'https://winvin.churchsuite.co.uk/events/fkfjjukg' }
-get('/worship/?') { redirect 'https://winvin.churchsuite.co.uk/events/1viau2gi' }
-get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }
-get('/regionalworship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ag2pvw28' }
-get('/sozotraining/?') { redirect 'https://winvin.churchsuite.co.uk/events/squ6fpcj' }
-get('/mindfulness/?') { redirect 'https://winvin.churchsuite.co.uk/events/ggf9rzml' }
-get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
-get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/pdmeqdxn' }
-get('/comedynight/?') { redirect 'https://winvin.churchsuite.co.uk/events/kzd3shlq' }
-get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbcf' }
-get('/deeper/?') { redirect 'https://winvin.churchsuite.co.uk/events/nhzazfdq' }
-get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/0drrferu' }
-
-run Sinatra::Application

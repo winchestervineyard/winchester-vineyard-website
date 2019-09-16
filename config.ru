@@ -51,17 +51,6 @@ helpers do
     password = ENV['GROUPS_SIGNUP_PASSWORD']
     @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [username, password]
   end
-  
-  def fetch_courses(page)
-    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?featured=(1)/page=#{page}", headers: CHURCHAPP_HEADERS)
-    json = JSON.parse(response.body)
-    if json["events"]
-      json["events"].map { |e| Event.new(e) }
-    else
-      []
-    end
-  end
-end
     
   def fetch_events(page)
     response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
@@ -83,13 +72,6 @@ get '/' do
   @hellobar = hellobar
   haml :index
 end
-
-get '/courses' do
-  events = (fetch_event(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
-  @courses_events = events.select { |e| e.category == 'Courses' }
-  haml :courses
-end
-
 
 get '/groups-list/?' do
   response = HTTParty.get('https://api.churchsuite.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)

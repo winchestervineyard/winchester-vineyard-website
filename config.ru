@@ -67,12 +67,22 @@ get '/' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @featured_events = events.select(&:featured?)
   @healing_events = events.select { |e| e.category == 'Healing' }
+  @term = GroupTerm.new(Date.today)
+  @talks = get_talks
+  @hellobar = hellobar
+  haml :index
+end
+
+get '/courses' do
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
+  @featured_events = events.select(&:featured?)
   @courses_events = events.select { |e| e.category == 'Courses' }
   @term = GroupTerm.new(Date.today)
   @talks = get_talks
   @hellobar = hellobar
-  haml :index, courses
+  haml :courses
 end
+
 
 get '/groups-list/?' do
   response = HTTParty.get('https://api.churchsuite.co.uk/v1/smallgroups/groups?view=active', headers: CHURCHAPP_HEADERS)

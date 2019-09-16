@@ -71,7 +71,7 @@ get '/' do
   @term = GroupTerm.new(Date.today)
   @talks = get_talks
   @hellobar = hellobar
-  haml :index
+  haml :index, courses
 end
 
 get '/groups-list/?' do

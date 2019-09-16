@@ -53,7 +53,7 @@ helpers do
   end
     
   def fetch_events(page)
-    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
+    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}+featured=(1)", headers: CHURCHAPP_HEADERS)
     json = JSON.parse(response.body)
     if json["events"]
       json["events"].map { |e| Event.new(e) }
@@ -71,6 +71,12 @@ get '/' do
   @talks = get_talks
   @hellobar = hellobar
   haml :index
+end
+
+get '/' do
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
+  @courses_events = events.select { |e| e.category == 'Healing' }
+  haml :courses
 end
 
 get '/groups-list/?' do

@@ -53,17 +53,6 @@ helpers do
   end
     
   def fetch_events(page)
-    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
-    json = JSON.parse(response.body)
-    if json["events"]
-      json["events"].map { |e| Event.new(e) }
-    else
-      []
-    end
-  end
-end
-
-  def fetch_courses(page)
     response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}&featured=1", headers: CHURCHAPP_HEADERS)
     json = JSON.parse(response.body)
     if json["events"]
@@ -73,6 +62,7 @@ end
     end
   end
 end
+
 
 get '/' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)

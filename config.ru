@@ -67,6 +67,7 @@ get '/' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @featured_events = events.select(&:featured?)
   @healing_events = events.select { |e| e.category == 'Healing' }
+  @courses_events = events.select { |e| e.category == 'Courses' }
   @term = GroupTerm.new(Date.today)
   @talks = get_talks
   @hellobar = hellobar
@@ -449,6 +450,10 @@ end
 
 get '/mydata/?' do
   haml :mydata
+end
+
+get '/courses/?' do
+  haml :courses
 end
 
 get('/bethelsozo/?') do

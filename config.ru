@@ -74,9 +74,8 @@ get '/' do
 end
 
 get '/courses' do
-  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
-  @courses_events = events.select { |e| e.category == 'Courses' } + events.select(&:featured?)
-
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3) + events.select(&:featured?)).uniq(&:start_time)
+  @courses_events = events.select { |e| e.category == 'Courses' } 
   haml :courses
 end
 

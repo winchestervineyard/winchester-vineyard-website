@@ -52,8 +52,8 @@ helpers do
     @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [username, password]
   end
     
-  def fetch_events
-    response = HTTParty.get("https://winvin.churchsuite.co.uk/embed/calendar/json")
+  def fetch_events(page)
+    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}&featured=1", headers: CHURCHAPP_HEADERS)
     json = JSON.parse(response.body)
     if json["events"]
       json["events"].map { |e| Event.new(e) }
@@ -65,7 +65,7 @@ end
 
 
 get '/' do
-  events = (fetch_events.uniq(&:start_time)
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @featured_events = events.select(&:featured?)
   @healing_events = events.select { |e| e.category == 'Healing' }
   @term = GroupTerm.new(Date.today)
@@ -75,7 +75,7 @@ get '/' do
 end
 
 get '/courses' do
-  events = (fetch_events.uniq(&:start_time)
+  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @courses_events = events.select { |e| e.category == 'Courses' }
   haml :courses
 end

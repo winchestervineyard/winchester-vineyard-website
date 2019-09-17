@@ -53,7 +53,7 @@ helpers do
   end
     
   def fetch_events
-    response = HTTParty.get("https://winvin.churchsuite.co.uk/embed/calendar/json", headers: CHURCHAPP_HEADERS)
+    response = HTTParty.get("https://winvin.churchsuite.co.uk/embed/calendar/json")
     json = JSON.parse(response.body)
     if json["events"]
       json["events"].map { |e| Event.new(e) }

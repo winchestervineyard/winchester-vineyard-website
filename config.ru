@@ -77,8 +77,8 @@ end
   def fetch_courses(page)
     response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}&featured=1", headers: CHURCHAPP_HEADERS)
     json = JSON.parse(response.body)
-    if json["events"]
-      json["events"].map { |e| Event.new(e) }
+    if json["courses"]
+      json["courses"].map { |e| Course.new(e) }
     else
       []
     end
@@ -87,7 +87,7 @@ end
 
 get '/courses' do
   events = (fetch_courses(1) + fetch_courses(2) + fetch_courses(3)).uniq(&:start_time)
-  @courses_events = events.select { |e| e.category == 'Courses' }
+  @courses_events = courses.select { |e| e.category == 'Courses' }
   haml :courses
 end
 

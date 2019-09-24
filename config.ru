@@ -51,9 +51,9 @@ helpers do
     password = ENV['GROUPS_SIGNUP_PASSWORD']
     @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [username, password]
   end
-    
+
   def fetch_events(page)
-    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}&featured=1", headers: CHURCHAPP_HEADERS)
+    response = HTTParty.get("https://api.churchsuite.co.uk/v1/calendar/events?page=#{page}", headers: CHURCHAPP_HEADERS)
     json = JSON.parse(response.body)
     if json["events"]
       json["events"].map { |e| Event.new(e) }
@@ -63,7 +63,6 @@ helpers do
   end
 end
 
-
 get '/' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @featured_events = events.select(&:featured?)
@@ -72,12 +71,6 @@ get '/' do
   @talks = get_talks
   @hellobar = hellobar
   haml :index
-end
-
-get '/courses' do
-  events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
-  @courses_events = events.select { |e| e.category == 'Courses' }
-  haml :courses
 end
 
 get '/groups-list/?' do
@@ -458,10 +451,6 @@ get '/mydata/?' do
   haml :mydata
 end
 
-get '/courses/?' do
-  haml :courses
-end
-
 get('/bethelsozo/?') do
   haml :sozo
 end
@@ -562,4 +551,3 @@ get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/0drrferu
 get('/welcomelunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/knbmcc2z' }
 
 run Sinatra::Application
-

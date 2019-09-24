@@ -130,7 +130,7 @@
           .row
             .col-sm-12
               .row
-                - @featured_events[3..5].each do |event|
+                - @featured_events[3..7].each do |event|
                   = haml :_event, locals: { event: event }
         .row
           .col-xs-12

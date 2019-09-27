@@ -19,3 +19,5 @@ gem "rack-cache"
 gem "kgio"
 
 gem "thin"
+
+gem "nokogiri", ">= 1.10.4"

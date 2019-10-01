@@ -10,20 +10,28 @@
           %a{:href => '/'} &laquo; Back to home
 
 
-.row
+  .shadow
+  .container
+    .row
       .col-xs-12
         .wv-caption
           %h1 what's on
           %br
-        - if @courses.size >= 3
+        - if @featured_events.size >= 3
           .row
             .col-sm-12
               .row
-                - @courses.first(3).each do |event|
+                - @featured_events.first(3).each do |event|
                   = haml :_event, locals: { event: event }
-        - if @courses.size >= 6
+        - if @featured_events.size >= 6
           .row
             .col-sm-12
               .row
-                - @courses[3..5].each do |event|
+                - @featured_events[3..5].each do |event|
                   = haml :_event, locals: { event: event }
+        .row
+          .col-xs-12
+            .calendar
+              :plain
+                <iframe frameborder="0" height="600" src="https://winvin.churchsuite.co.uk/embed/calendar?bgcolor=ffffff" style="border-width:0" width="100%"></iframe>
+            %br

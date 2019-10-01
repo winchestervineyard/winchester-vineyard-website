@@ -66,6 +66,7 @@ end
 get '/courses/?' do
   events = (fetch_events(1) + fetch_events(2) + fetch_events(3)).uniq(&:start_time)
   @courses = events.select { |e| e.category == 'Courses' }
+  @featured_events = events.select(&:featured?)
 end
   
 

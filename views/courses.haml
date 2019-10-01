@@ -19,15 +19,15 @@
           %h1 courses
           %h3 Upcoming courses running at Winchester Vineyard. Please do get in touch if you have any queries.
           %br
-        - if @courses_events.size >= 3
+        - if @courses.size >= 3
           .row
             .col-sm-12
               .row
-                - @courses_events.first(3).each do |event|
+                - @courses.first(3).each do |event|
                   = haml :_event, locals: { event: event }
         - if @courses_events.size >= 6
           .row
             .col-sm-12
               .row
-                - @courses_events[3..5].each do |event|
+                - @courses[3..5].each do |event|
                   = haml :_event, locals: { event: event }

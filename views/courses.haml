@@ -25,7 +25,7 @@
               .row
                 - @courses.first(3).each do |event|
                   = haml :_event, locals: { event: event }
-        - if @courses_events.size >= 6
+        - if @courses.size >= 6
           .row
             .col-sm-12
               .row

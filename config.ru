@@ -546,7 +546,7 @@ get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/whuurj
 get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/juc5yyeq' }
 get('/christmasmarket/?') { redirect 'https://winvin.churchsuite.co.uk/events/hhbwxg2y' }
 get('/dtidonate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/afc9ezmg' }
-get('/lggl/?') { redirect 'https://winvin.churchsuite.co.uk/events/zdqmm234' }
+get('/hampers/?') { redirect 'https://winvin.churchsuite.co.uk/events/w0irpja4' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/5kb8ci1g' }
 get('/breakthrough/?') { redirect 'https://winvin.churchsuite.co.uk/events/e2xi3lut' }
 get('/worship/?') { redirect 'https://winvin.churchsuite.co.uk/events/ka5xr32x' }

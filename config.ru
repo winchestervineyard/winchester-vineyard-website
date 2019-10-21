@@ -561,6 +561,6 @@ get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbc
 get('/deeper/?') { redirect 'https://winvin.churchsuite.co.uk/events/l6bz0z9b' }
 get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/0drrferu' }
 get('/welcomelunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/knbmcc2z' }
-get('/worshiptraining/?') { redirect 'https://winvin.churchsuite.co.uk/events/ka5xr32x' }
+get('/christmascraft/?') { redirect 'https://winvin.churchsuite.co.uk/events/cltftmou' }
 
 run Sinatra::Application

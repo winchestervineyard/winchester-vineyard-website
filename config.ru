@@ -555,7 +555,7 @@ get('/sozotraining/?') { redirect 'https://winvin.churchsuite.co.uk/events/squ6f
 get('/sozo/?') { redirect 'https://winvin.churchsuite.co.uk/events/squ6fpcj' }
 get('/mindfulness/?') { redirect 'https://winvin.churchsuite.co.uk/events/ggf9rzml' }
 get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
-get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/qidifllq' }
+get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/d1zigj8n' }
 get('/fireworks/?') { redirect 'https://winvin.churchsuite.co.uk/events/blfoyof5' }
 get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbcf' }
 get('/deeper/?') { redirect 'https://winvin.churchsuite.co.uk/events/ywaztpfg' }

@@ -542,6 +542,7 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8
 
 # Redirect Events
 get('/deeperbowling/?') { redirect'https://winvin.churchsuite.co.uk/events/puffawma' }
+get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/chrheftx' }
 get('/destinyactivator/?') { redirect 'https://winvin.churchsuite.co.uk/events/dgaiyjxa' }
 get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/whuurjly' }
 get('/sharedlunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/cfo4ipma' }
@@ -563,7 +564,6 @@ get('/deeper/?') { redirect 'https://winvin.churchsuite.co.uk/events/ywaztpfg' }
 get('/decorate/?') { redirect 'https://winvin.churchsuite.co.uk/events/oobocdcq' }
 get('/welcomelunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/knbmcc2z' }
 get('/christmascraft/?') { redirect 'https://winvin.churchsuite.co.uk/events/cltftmou' }
-get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/chrheftx' }
 
 
 run Sinatra::Application

@@ -541,6 +541,7 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8
 
 
 # Redirect Events
+get('/dtinano/?') { redirect'https://winvin.churchsuite.co.uk/events/im0gqsna' }
 get('/deeperbowling/?') { redirect'https://winvin.churchsuite.co.uk/events/puffawma' }
 get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/chrheftx' }
 get('/destinyactivator/?') { redirect 'https://winvin.churchsuite.co.uk/events/dgaiyjxa' }

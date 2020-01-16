@@ -1,8 +1,8 @@
 xml.instruct! :xml, :version => '1.0'
 xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcast-1.0.dtd" do
   xml.channel do
-    xml.title "Winchester Vineyard Sunday Talks"
-    xml.description "Talks given on Sundays and at conferences at Winchester Vineyard"
+    xml.title "Sunday Podcasts"
+    xml.description "Winchester Vineyard Church are people who are getting to know Jesus better and bringing hope and life into our communities. These podcasts are taken from our Sunday morning gatherings."
     xml.link "http://winvin.org.uk/#wv-talks"
     xml.itunes :author, "Winchester Vineyard"
     xml.language "en-gb"
@@ -14,8 +14,8 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
       xml.itunes :name, "Winchester Vineyard"
       xml.itunes :email, "hello@winvin.org.uk"
     end
-    xml.itunes :image, :href => "http://winvin.org.uk/images/winvin-square-logo.png"
-    xml.itunes :summary, "Talks given on Sundays and at conferences at Winchester Vineyard"
+    xml.itunes :image, :href => "http://winvin.org.uk/images/winvin_logo_podcast.png"
+    xml.itunes :summary, "Winchester Vineyard Church are people who are getting to know Jesus better and bringing hope and life into our communities. These podcasts are taken from our Sunday morning gatherings."
 
     @talks.each do |talk|
       if (talk.published?)

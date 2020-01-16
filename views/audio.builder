@@ -25,7 +25,7 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
           end
           xml.title talk.full_name
           xml.enclosure :url => talk.download_url, :type => 'audio/mpeg'
-          xml.link 'http://winvin.org.uk/talks/' + talk.slug
+          xml.link 'http://winvin.org.uk/'
           xml.description talk.description
           xml.pubDate talk.date.rfc822
           if talk.part_of_a_series?

@@ -12,7 +12,7 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
     end
     xml.itunes :owner do
       xml.itunes :name, "Winchester Vineyard"
-      xml.itunes :email, "hello@winvin.org.uk"
+      xml.itunes :email, "chris@winvin.org.uk"
     end
     xml.itunes :image, :href => "http://winvin.org.uk/images/winvin_logo_podcast.png"
     xml.itunes :summary, "Winchester Vineyard Church are people who are getting to know Jesus better and bringing hope and life into our communities. These podcasts are taken from our Sunday morning gatherings."

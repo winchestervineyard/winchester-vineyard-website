@@ -537,7 +537,7 @@ get('/focus-on-kids/?') { redirect 'https://winchester-vineyard-website-assets.s
 get('/whatson/?') { redirect '/#wv-news' }
 get('/compassion/?') { redirect '/#wv-compassion' }
 get('/healing/?') { redirect '/#wv-healing' }
-get('/missions/?') { redirect 'https://drive.google.com/file/d/1L0hBqZDUXfOuVkA8maERoBZGE2qKL8Ji/view' }
+get('/missions/?') { redirect 'https://drive.google.com/file/d/1jUKjgqFaowFnWMAWBT6ZNFNQXllUqzOj/view' }
 
 
 # Redirect Events

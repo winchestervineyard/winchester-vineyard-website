@@ -556,7 +556,7 @@ get('/bible/?') { redirect 'https://winvin.churchsuite.co.uk/events/11j2ncqy' }
 get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }
 get('/miningforgold/?') { redirect 'https://winvin.churchsuite.co.uk/events/47wqqfpr' }
 get('/sozo/?') { redirect 'https://winvin.churchsuite.co.uk/events/squ6fpcj' }
-get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/vunj1wkp' }
+get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/qzqackdt' }
 get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
 get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/pkmjeccw' }
 get('/beautifulone/?') { redirect 'https://winvin.churchsuite.co.uk/events/seigfxsm' }

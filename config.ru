@@ -566,6 +566,8 @@ get('/churchlunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/j8h2cy
 get('/welcomelunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/j565c9zs' }
 get('/quiznight/?') { redirect 'https://winvin.churchsuite.co.uk/events/cxzzvtlc' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/y3jpavuz' }
+get('/puppetshow/?') { redirect 'https://winvin.churchsuite.co.uk/events/8k71ode8' }
+
 
 
 run Sinatra::Application

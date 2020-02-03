@@ -550,7 +550,7 @@ get('/sharedlunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/cfo4ip
 get('/lifegroupleaders/?') { redirect 'https://winvin.churchsuite.co.uk/events/v43gm5rr' }
 get('/dtidonate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/afc9ezmg' }
 get('/community/?') { redirect 'https://winvin.churchsuite.co.uk/events/sit30isc' }
-get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/n7n9v2ao' }
+get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/fwykh9ny'}
 get('/breakthrough/?') { redirect 'https://winvin.churchsuite.co.uk/events/e2xi3lut' }
 get('/bible/?') { redirect 'https://winvin.churchsuite.co.uk/events/11j2ncqy' }
 get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }

@@ -563,7 +563,7 @@ get('/beautifulone/?') { redirect 'https://winvin.churchsuite.co.uk/events/seigf
 get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbcf' }
 get('/deeper/?') { redirect 'https://winvin.churchsuite.co.uk/events/eyb79mld' }
 get('/worshipnight/?') { redirect 'https://winvin.churchsuite.co.uk/events/p0onw3id' }
-get('/welcomelunch/?') { redirect 'https://winvin.churchsuite.co.uk/events/j565c9zs' }
+get('/lam/?') { redirect 'https://winvin.churchsuite.co.uk/events/bfutublc' }
 get('/quiznight/?') { redirect 'https://winvin.churchsuite.co.uk/events/cxzzvtlc' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/y3jpavuz' }
 get('/puppetshow/?') { redirect 'https://winvin.churchsuite.co.uk/events/8k71ode8' }

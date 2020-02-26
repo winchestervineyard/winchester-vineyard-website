@@ -567,6 +567,7 @@ get('/lam/?') { redirect 'https://winvin.churchsuite.co.uk/events/bfutublc' }
 get('/pastorsretreat/?') { redirect 'https://winvin.churchsuite.co.uk/events/34uzogjs' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/y3jpavuz' }
 get('/puppetshow/?') { redirect 'https://winvin.churchsuite.co.uk/events/8k71ode8' }
+get('/youthlinks/?') { redirect 'https://linktr.ee/winchestervineyardyouth' }
 
 
 

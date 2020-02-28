@@ -555,7 +555,7 @@ get('/breakthrough/?') { redirect 'https://winvin.churchsuite.co.uk/events/e2xi3
 get('/team/?') { redirect 'https://winvin.churchsuite.co.uk/events/bumxqg8t' }
 get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }
 get('/miningforgold/?') { redirect 'https://winvin.churchsuite.co.uk/events/47wqqfpr' }
-get('/sozo/?') { redirect 'https://www.streamsofhope.org.uk/' }
+get('/sozo/?') { redirect 'https://www.streamsofhope.org.uk/sozo' }
 get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/qzqackdt' }
 get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
 get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/mzejsqws' }

@@ -484,6 +484,10 @@ get '/spreadlove/?' do
   haml :spreadlove
 end
 
+get '/live/?' do
+  haml :live
+end
+
 get '/storehouse/?' do
   haml :storehouse
 end

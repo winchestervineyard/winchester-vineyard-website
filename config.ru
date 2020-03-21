@@ -488,6 +488,10 @@ get '/live/?' do
   haml :live
 end
 
+get '/live__test__page/?' do
+  haml :live__test__page
+end
+
 get '/storehouse/?' do
   haml :storehouse
 end

@@ -10,7 +10,7 @@ require 'active_support/core_ext/time/calculations'
 # Defined in ENV on Heroku. To try locally, start memcached and uncomment:
 # ENV["MEMCACHE_SERVERS"] = "localhost"
 if memcache_servers = ENV["MEMCACHIER_SERVERS"]
-  Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
+  client = Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
                       {:username => ENV["MEMCACHIER_USERNAME"],
                        :password => ENV["MEMCACHIER_PASSWORD"],
                        :failover => true,            # default is true

@@ -10,13 +10,14 @@ require 'active_support/core_ext/time/calculations'
 # Defined in ENV on Heroku. To try locally, start memcached and uncomment:
 # ENV["MEMCACHE_SERVERS"] = "localhost"
 if memcache_servers = ENV["MEMCACHIER_SERVERS"]
-  client = Dalli::Client.new(ENV["MEMCACHIER_SERVERS"],
-                             :username => ENV["MEMCACHIER_USERNAME"],
-                             :password => ENV["MEMCACHIER_PASSWORD"],
-                             :failover => true,
-                             :socket_timeout => 1.5,
-                             :socket_failure_delay => 0.2,
-                             :value_max_bytes => 10485760)
+  Dalli::Client.new((ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                      {:username => ENV["MEMCACHIER_USERNAME"],
+                       :password => ENV["MEMCACHIER_PASSWORD"],
+                       :failover => true,            # default is true
+                       :socket_timeout => 1.5,       # default is 0.5
+                       :socket_failure_delay => 0.2, # default is 0.01
+                       :down_retry_delay => 60       # default is 60
+  })
   use Rack::Cache,
     verbose: true,
     metastore:   client,

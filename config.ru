@@ -497,6 +497,10 @@ get '/storehouse/?' do
   haml :storehouse
 end
 
+get '/virus/?' do
+  haml :virus
+end
+
 get '/courses/?' do
   haml :courses
 end

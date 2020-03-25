@@ -497,8 +497,8 @@ get '/storehouse/?' do
   haml :storehouse
 end
 
-get '/virus/?' do
-  haml :virus
+get '/keepconnected/?' do
+  haml :keepconnected
 end
 
 get '/courses/?' do

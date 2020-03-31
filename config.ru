@@ -446,6 +446,10 @@ get '/students/?' do
   haml :students
 end
 
+get '/resources/?' do
+  haml :resources
+end
+
 get '/welcome/?' do
   @talks = get_talks.select(&:published?).select {|t| t.series_name == "What on earth is the Vineyard" }
   haml :welcome

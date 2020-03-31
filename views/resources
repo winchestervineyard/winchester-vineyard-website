@@ -27,8 +27,13 @@
           %a{:href => 'http://www.winvin.org.uk/live/'} winvin.org.uk/live.
         %p  
           Sunday 29 March:
-        %p  
-          Sunday 29 March:
+        %p
+          %a{:href => 'https://downloads.24-7prayer.com/prayer_course/2019/resources/pdfs/17%20Silent%20Prayer.pdf'} Silent Prayer Tool
+          %br
+          %a{:href => 'https://prayercourse.org/session/contemplation/'} Prayer Course Contemplation Session
+          %br
+          %a{:href => 'https://drive.google.com/open?id=1U5KRJczql5t-x8hyMGIQve-Tu8yTL8pu&authuser=nigel.hemming@winvin.org.uk&usp=drive_fs'} Kids Fun Page.
+          %br
         %h2 prayer
         %p  
           Here are som resources for prayer.

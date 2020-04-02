@@ -550,7 +550,7 @@ get('/groupsslideshow/?') { redirect '/groups-slideshow/' }
 get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
 get('/data-protection-policy/?') { redirect 'https://s3-eu-west-1.amazonaws.com/winchester-vineyard-website-assets/uploads/data-protection-policy.pdf' }
 get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXRk5JAPESu_Zfog7FAtCXtdMAfdHCbQ8OXs/viewform?c=0&w=1' }
-get('/connect/?') { redirect '/welcome' }
+get('/connect/?') { redirect '/keepconnected' }
 get('/landing-banner-code/?') { redirect '/students' }
 get('/find-us/?') { redirect '/#wv-find-us' }
 get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }
@@ -572,7 +572,7 @@ get('/lifegroupleaders/?') { redirect 'https://winvin.churchsuite.co.uk/events/v
 get('/dtidonate/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/afc9ezmg' }
 get('/weekendaway/?') { redirect 'https://winvin.churchsuite.co.uk/events/nln3ajyv' }
 get('/dadsgroup/?') { redirect 'https://winvin.churchsuite.co.uk/events/jqtpmskg'}
-get('/breakthrough/?') { redirect 'https://winvin.churchsuite.co.uk/events/e2xi3lut' }
+get('/breakthrough/?') { redirect 'https://winvin.churchsuite.co.uk/events/isf4unmy' }
 get('/team/?') { redirect 'https://winvin.churchsuite.co.uk/events/bumxqg8t' }
 get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/0bzjr20p' }
 get('/prayer/?') { redirect 'https://www.24-7prayer.com/signup/266ce1' }

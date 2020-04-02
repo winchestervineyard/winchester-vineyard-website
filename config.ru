@@ -578,7 +578,7 @@ get('/scatteredservants/?') { redirect 'https://winvin.churchsuite.co.uk/events/
 get('/prayer/?') { redirect 'https://www.24-7prayer.com/signup/266ce1' }
 get('/sozo/?') { redirect 'https://www.streamsofhope.org.uk/sozo' }
 get('/datenight/?') { redirect 'https://winvin.churchsuite.co.uk/events/qzqackdt' }
-get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/rrqeumey' }
+get('/reach/?') { redirect 'https://winvin.churchsuite.co.uk/events/kk9bmw5a' }
 get('/hunger/?') { redirect 'https://winvin.churchsuite.co.uk/events/pdppp8p9' }
 get('/beautifulone/?') { redirect 'https://winvin.churchsuite.co.uk/events/seigfxsm' }
 get('/leadership/?') { redirect 'https://winvin.churchsuite.co.uk/events/jxkyfbcf' }

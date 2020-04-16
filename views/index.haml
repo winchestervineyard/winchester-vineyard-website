@@ -35,7 +35,7 @@
 
 .carousel.slide{:'data-ride' => 'carousel', :'data-interval' => '8000', :'data-pause' => 'false'}
   .carousel-inner
-    - (0..4).to_a.shuffle.each_with_index do |x, idx|
+    - (0..3).to_a.shuffle.each_with_index do |x, idx|
       .item{:class => idx == 0 ? 'active' : ''}
         %img{:src => "/images/photos/carousel/#{x}.jpg"}
         .carousel-caption

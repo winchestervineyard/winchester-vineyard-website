@@ -565,7 +565,7 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1jUKjgqFaowFnWMAW
 get('/ministry/?') { redirect'https://winvin.churchsuite.co.uk/events/viwiopst' }
 get('/prophetic/?') { redirect'https://winvin.churchsuite.co.uk/events/leoluqsv' }
 get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/chrheftx' }
-get('/destinyactivator/?') { redirect 'https://winvin.churchsuite.co.uk/events/dgaiyjxa' }
+get('/destinyactivator/?') { redirect 'https://winvin.churchsuite.co.uk/events/eomxxeoi' }
 get('/fatherheart/?') { redirect 'https://winvin.churchsuite.co.uk/events/whuurjly' }
 get('/welcomemeal/?') { redirect 'https://winvin.churchsuite.co.uk/events/xv2ryxkq' }
 get('/lifegroupleaders/?') { redirect 'https://winvin.churchsuite.co.uk/events/v43gm5rr' }

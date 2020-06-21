@@ -480,7 +480,7 @@ end
 get '/donate/?' do
   haml :donate
 end
-get('/donations/?') { redirect 'https://winvin.org.uk/donate' }
+get('/donations/?') { redirect '/donate' }
 
 get '/dy/?' do
   haml :dy

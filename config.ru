@@ -597,5 +597,6 @@ get('/youthleadersgathering/?') { redirect 'https://winvin.churchsuite.co.uk/eve
 get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/dwljimlp' }
 get('/bignightin/?') { redirect 'https://winvin.churchsuite.co.uk/events/d02g3bri' }
 get('/nightin/?') { redirect 'https://winvin.churchsuite.co.uk/events/d02g3bri' }
+get('/lggl/?') { redirect 'https://winvin.churchsuite.co.uk/events/b0wgz2gc' }
 
 run Sinatra::Application

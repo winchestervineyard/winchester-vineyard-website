@@ -564,10 +564,10 @@ get('/missions/?') { redirect 'https://drive.google.com/file/d/1jUKjgqFaowFnWMAW
 
 # Redirect Events
 get('/coffee/?') { redirect'https://winvin.churchsuite.co.uk/events/jygyq0tl' }
+get('/breakthrough/?') { redirect'https://winvin.churchsuite.co.uk/events/gju0fbts' }
 get('/ministry/?') { redirect'https://winvin.churchsuite.co.uk/events/ssfojfcd' }
 get('/catchup/?') { redirect'https://winvin.churchsuite.co.uk/events/aottjtqi' }
 get('/chat/?') { redirect'https://winvin.churchsuite.co.uk/events/ssfojfcd' }
-get('/breakthrough/?') { redirect'https://winvin.churchsuite.co.uk/events/1mxoh7z2' }
 get('/prophetic/?') { redirect'https://winvin.churchsuite.co.uk/events/leoluqsv' }
 get('/dti/?') { redirect 'https://winvin.churchsuite.co.uk/events/chrheftx' }
 get('/destinyactivator/?') { redirect 'https://winvin.churchsuite.co.uk/events/eomxxeoi' }

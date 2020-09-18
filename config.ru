@@ -597,7 +597,7 @@ get('/youthlinks/?') { redirect 'https://linktr.ee/winchestervineyardyouth' }
 get('/youthleadersgathering/?') { redirect 'https://winvin.churchsuite.co.uk/events/zl3ese94' }
 get('/alpha/?') { redirect 'https://winvin.churchsuite.co.uk/events/fvn9cbm2' }
 get('/churchonsite/?') { redirect 'https://winvin.churchsuite.co.uk/events/xyynu4o0' }
-get('/nightin/?') { redirect 'https://winvin.churchsuite.co.uk/events/d02g3bri' }
+get('/familychurch/?') { redirect 'https://winvin.churchsuite.co.uk/events/cpmvvgyi' }
 get('/lggl/?') { redirect 'https://winvin.churchsuite.co.uk/events/eh2vruma' }
 
 run Sinatra::Application

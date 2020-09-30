@@ -1,30 +1,8 @@
 - if term.signup_month?
   %p
-    %strong
-      This month is signup month for the
-      = term.name
-      term.
-    Signups will become available during
-    = succeed '.' do
-      = term.signup_month
+    It is great to be connected to others and grow closer to God through a Life Group
+  %p   
     Please keep checking back if you don't see groups yet.
-    Groups will start at the beginning of
-    = term.start_month
-    and run to the end of
-    = succeed '.' do
-      = term.end_month
   %p
     %strong Please sign up even if you're planning on going to your existing group!
-- else
-  %p
-    = term.name
-    term groups are currently running and will finish at the end of
-    = succeed '.' do
-      = term.end_month
-    You can still sign up for a group this term if you would like to!
-  %p
-    Signups for next term will start at the beginning of
-    = succeed '.' do
-      = term.next.signup_month
-
-
+    

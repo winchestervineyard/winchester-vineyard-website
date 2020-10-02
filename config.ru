@@ -490,6 +490,10 @@ get '/spreadlove/?' do
   haml :spreadlove
 end
 
+get '/roomhire/?' do
+  haml :roomhire
+end
+
 get '/live/?' do
   haml :live
 end

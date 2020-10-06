@@ -555,7 +555,7 @@ get('/groupsslideshow/?') { redirect '/groups-slideshow/' }
 get('/feedback/?') { redirect 'https://docs.google.com/forms/d/10iS6tahkIYb_rFu1uNUB9ytjsy_xS138PJcs915qASo/viewform?usp=send_form' }
 get('/data-protection-policy/?') { redirect 'https://s3-eu-west-1.amazonaws.com/winchester-vineyard-website-assets/uploads/data-protection-policy.pdf' }
 get('/makingithappen/?') { redirect 'https://docs.google.com/forms/d/12LKbZo-FXRk5JAPESu_Zfog7FAtCXtdMAfdHCbQ8OXs/viewform?c=0&w=1' }
-get('/connect/?') { redirect '/keepconnected' }
+get('/connect/?') { redirect 'https://winvin.churchsuite.co.uk/embed/addressbook/form?body_bgcolor=ffffff' }
 get('/landing-banner-code/?') { redirect '/students' }
 get('/find-us/?') { redirect '/#wv-find-us' }
 get('/globalpartners/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/0sfturgn' }

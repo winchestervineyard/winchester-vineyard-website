@@ -66,16 +66,16 @@ body {
   border-radius: 0px; }
 
 h1 {
-  font-family: "Vineyard Light", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 200;
   font-stretch: normal;
-  text-transform: lowercase;
+  text-transform: uppercase;
   letter-spacing: 0.04em !important; }
 
 h2, h3, h4, h5, h6 {
-  font-family: "Vineyard Light", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-stretch: normal;
-  text-transform: lowercase;
+  text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 0.04em !important;
   font-weight: normal; }

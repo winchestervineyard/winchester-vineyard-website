@@ -603,5 +603,6 @@ get('/give/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/wywg9uaa
 get('/churchonsite/?') { redirect 'https://winvin.churchsuite.co.uk/events/8mydlqwx' }
 get('/familychurch/?') { redirect 'https://winvin.churchsuite.co.uk/events/3ppepk0g' }
 get('/lggl/?') { redirect 'https://winvin.churchsuite.co.uk/events/evzogxt8' }
+get('/youtube/?') { redirect 'https://www.youtube.com/channel/UCrz4VsDe4tuh3A8IhWT7ztA' }
 
 run Sinatra::Application

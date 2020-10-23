@@ -596,7 +596,7 @@ get('/worshipnight/?') { redirect 'https://winvin.churchsuite.co.uk/events/p0onw
 get('/lam/?') { redirect 'https://winvin.churchsuite.co.uk/events/bfutublc' }
 get('/pastorsretreat/?') { redirect 'https://winvin.churchsuite.co.uk/events/34uzogjs' }
 get('/spree/?') { redirect 'https://winvin.churchsuite.co.uk/events/y3jpavuz' }
-get('/puppetshow/?') { redirect 'https://winvin.churchsuite.co.uk/events/8k71ode8' }
+get('/bringhope/?') { redirect 'https://winvin.churchsuite.co.uk/events/tjm3ctqg' }
 get('/youthlinks/?') { redirect 'https://linktr.ee/winchestervineyardyouth' }
 get('/youthleadersgathering/?') { redirect 'https://winvin.churchsuite.co.uk/events/zl3ese94' }
 get('/give/?') { redirect 'https://winvin.churchsuite.co.uk/donate/fund/wywg9uaa' }

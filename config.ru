@@ -604,5 +604,7 @@ get('/churchonsite/?') { redirect 'https://winvin.churchsuite.co.uk/events/8mydl
 get('/familychurch/?') { redirect 'https://winvin.churchsuite.co.uk/events/3ppepk0g' }
 get('/lggl/?') { redirect 'https://winvin.churchsuite.co.uk/events/evzogxt8' }
 get('/youtube/?') { redirect 'https://www.youtube.com/channel/UCrz4VsDe4tuh3A8IhWT7ztA' }
+get('/lightparty/?') { redirect 'https://winvin.churchsuite.co.uk/events/zlqruuti' }
+
 
 run Sinatra::Application

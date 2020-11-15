@@ -6,6 +6,8 @@ xml.rss :version => "2.0", :'xmlns:itunes' => "http://www.itunes.com/dtds/podcas
     xml.link "http://winvin.org.uk/#wv-talks"
     xml.itunes :author, "Winchester Vineyard"
     xml.language "en-gb"
+    xml.copyright "539120"
+    xml.itunes :keywords, "539120"
     xml.itunes :explicit, "clean"
     xml.itunes :category, :text => "Religion & Spirituality" do
       xml.itunes :category, :text => "Christianity"
